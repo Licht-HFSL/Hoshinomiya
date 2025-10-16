@@ -12,12 +12,12 @@
   "gender": "女",
   "age": "不明",
   "birthday": "4月25日",
-  "birthdayicon": "顔アイコン/.png",
+  "birthdayicon": "顔アイコン/Licht.png",
   "race": "神様",
   "attribute": "無",
   "weapon": "槍",
   "skills": [],
-  "appearance": "立ち絵/.png",
+  "appearance": "立ち絵/Licht.png",
   "personality": "あ",
   "background": "あ",
   "motivation": "あ",
@@ -47,5 +47,55 @@
   "notes": "",
   "tags": [],
   "detailUrl": "chara.html?id=Licht"
+},
+{
+  "id": "medeio",
+  "name": "メデ・イオ",
+  "name_alias": "",
+  "full_name": "メデ・イオ",
+  "title": "",
+  "world": "星海のサルヴァトーレ",
+  "affiliation": "",
+  "rank": "",
+  "role": "",
+  "gender": "女",
+  "age": "",
+  "birthday": "",
+  "race": "妖精",
+  "attribute": "木",
+  "weapon": "杖",
+  "skills": [],
+  "appearance": "立ち絵/妖精王エウスト.png",
+  "personality": "",
+  "background": "",
+  "motivation": "",
+  "likes": [],
+  "dislikes": [],
+  "hobbies": [],
+  "image": "icon/.png",
+  "gallery": [],
+  "voice": "",
+  "theme_song": "",
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "quotes": [],
+  "story_appearances": [
+    {
+      "title": "",
+      "role": "",
+      "summary": ""
+    }
+  ],
+  "notes": "",
+  "tags": [],
+ "detailUrl": "character.html?id=medeio"
+
 }
+
 ]

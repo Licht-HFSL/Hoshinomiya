@@ -1,0 +1,51 @@
+[
+{
+  "id": "Licht",
+  "name": "Licht",
+  "name_alias": "",
+  "full_name": "",
+  "title": "",
+  "world": "Лаплавень",
+  "affiliation": "星光の子",
+  "rank": "あ",
+  "role": "あ",
+  "gender": "女",
+  "age": "不明",
+  "birthday": "4月25日",
+  "birthdayicon": "顔アイコン/.png",
+  "race": "神様",
+  "attribute": "無",
+  "weapon": "槍",
+  "skills": [],
+  "appearance": "立ち絵/.png",
+  "personality": "あ",
+  "background": "あ",
+  "motivation": "あ",
+  "likes": [],
+  "dislikes": [],
+  "hobbies": [],
+  "image": "icon/Licht.jpg",
+  "gallery": [],
+  "voice": "あ",
+  "theme_song": "あ",
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "quotes": [],
+  "story_appearances": [
+    {
+      "title": "",
+      "role": "",
+      "summary": ""
+    }
+  ],
+  "notes": "",
+  "tags": [],
+  "detailUrl": "chara.html?id=Licht"
+}
+]

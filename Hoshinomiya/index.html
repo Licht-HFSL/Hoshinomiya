@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星の宮</title>
+  <link rel="stylesheet" href="index.css"> <!-- CSSを外部ファイルで読み込み -->
+</head>
+
+ <!-- ヘッダー -->
+  <header>
+    <nav>
+      <a href="characters.html">キャラクター図鑑</a>
+      <a href="Лаплавень.html">Лаплавень</a>
+      <a href="World WAR a VisiON.html">World WAR a VisiON</a>
+      <a href="妖行脚百鬼夜行物語.html">妖行脚百鬼夜行物語</a>
+      <a href="不毛論争.html">不毛論争</a>
+      <a href="Lisnoir.html">Lisnoir</a>
+      <!-- 必要に応じて作品を追加 -->
+    </nav>
+  </header>
+
+
+
+<body>
+   <!-- タイトル & 詩 -->
+  <section id="intro">
+    <h1>Лаплавень</h1>
+    <p>星の導きと神の慈愛に運命を委ねて<br></p>
+  </section>
+
+  <!-- 世界観への扉 -->
+  <section id="world-doors">
+    <a href="Лаплавень.html" class="door">
+      <img src="img/極光.jpg" alt="Лаплавень">
+      <div class="door-title">Лаплавень</div>
+    </a>
+    <a href="World WAR a VisiON.html" class="door">
+      <img src="img/World WAR a VisiON.jpg" alt="World WAR a VisiON">
+      <div class="door-title">World WAR a VisiON</div>
+    </a>
+    <a href="妖行脚百鬼夜行物語.html" class="door">
+      <img src="img/妖行脚百鬼夜行物語.jpg" alt="妖行脚百鬼夜行物語">
+      <div class="door-title">妖行脚百鬼夜行物語</div>
+    </a>
+    <a href="不毛論争.html" class="door">
+      <img src="img/不毛論争.jpg" alt="不毛論争">
+      <div class="door-title">不毛論争</div>
+    </a>
+    <a href="Lisnoir.html" class="door">
+      <img src="img/L魔物.jpg" alt="Lisnoir">
+      <div class="door-title">Lisnoir</div>
+    </a>
+    <a href="https://seikai-salvator.jimdofree.com/" class="door">
+      <img src="img/星海.png" alt="星海のサルヴァトーレ">
+      <div class="door-title">星海のサルヴァトーレ</div>
+    </a>
+
+
+
+    <!-- 必要なだけ追加 -->
+  </section>
+
+<div class="calendar-button-container">
+<a href="誕生日カレンダー.html" class="calendar-button">誕生日カレンダー</a>
+</div>
+
+  <!-- フッター -->
+  <footer>
+    © 2025 Licht_HFSL
+  </footer>
+
+<canvas id="starfield"></canvas>
+
+<script>
+const canvas = document.getElementById('starfield');
+const ctx = canvas.getContext('2d');
+
+let stars = [];
+const numStars = 200;
+let nebulas = [];
+
+// 画面サイズ設定
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resize);
+resize();
+
+// 星を作る
+for(let i = 0; i < numStars; i++) {
+  stars.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    size: Math.random() * 2 + 0.5,
+    brightness: Math.random(),
+    color: `hsl(${Math.random()*360}, 90%, 95%)`,
+    blinkSpeed: Math.random() * 0.01 + 0.005,
+    speedY: Math.random()*0.05 + 0.01 // ゆっくり降る
+  });
+}
+
+// 星雲を作る
+for(let i = 0; i < 5; i++) {
+  nebulas.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    radius: Math.random() * 300 + 150,
+    hue: Math.random() * 360, // 色相
+    saturation: Math.random()*40 + 60,
+    lightness: Math.random()*20 + 30,
+    alpha: Math.random()*0.2 + 0.1,
+    speedX: (Math.random()-0.5)*0.02,
+    speedY: (Math.random()-0.5)*0.02,
+    hueSpeed: Math.random()*0.05 + 0.01 // 色相の変化速度
+  });
+}
+
+// 星雲描画関数
+function drawNebula(n) {
+  const color = `hsla(${n.hue}, ${n.saturation}%, ${n.lightness}%, ${n.alpha})`;
+  const grad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.radius);
+  grad.addColorStop(0, color);
+  grad.addColorStop(1, "rgba(0,0,0,0)");
+  
+  ctx.fillStyle = grad;
+  ctx.beginPath();
+  ctx.arc(n.x, n.y, n.radius, 0, Math.PI*2);
+  ctx.fill();
+  
+  // 移動
+  n.x += n.speedX;
+  n.y += n.speedY;
+  n.hue += n.hueSpeed; // 色相変化
+
+  // 端を超えたら反対側に
+  if(n.x - n.radius > canvas.width) n.x = -n.radius;
+  if(n.x + n.radius < 0) n.x = canvas.width + n.radius;
+  if(n.y - n.radius > canvas.height) n.y = -n.radius;
+  if(n.y + n.radius < 0) n.y = canvas.height + n.radius;
+}
+
+// 星描画関数
+function drawStars() {
+  stars.forEach(s => {
+    s.brightness += s.blinkSpeed;
+    if(s.brightness > 1 || s.brightness < 0) s.blinkSpeed *= -1;
+
+    ctx.fillStyle = `hsla(${s.color.match(/\d+/g)[0]}, ${s.color.match(/\d+/g)[1]}%, ${s.color.match(/\d+/g)[2]}%, ${s.brightness})`;
+    ctx.beginPath();
+    ctx.arc(s.x, s.y, s.size, 0, Math.PI*2);
+    ctx.fill();
+
+    s.y += s.speedY;
+    if(s.y > canvas.height) {
+      s.y = 0;
+      s.x = Math.random() * canvas.width;
+    }
+  });
+}
+
+// アニメーション
+function animate() {
+  ctx.fillStyle = "#0b0018"; // 背景
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  nebulas.forEach(drawNebula);
+  drawStars();
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+
+
+</body>
+
+</html>

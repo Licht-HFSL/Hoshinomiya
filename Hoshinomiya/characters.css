@@ -1,0 +1,115 @@
+body {
+  font-family: "Yu Gothic", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at 20% 30%, #1b0033, #000011 80%);
+  color: #f2d58a;
+}
+
+
+header, footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+#characterList {
+  display: flex;
+  flex-wrap: wrap;      /* 横並びで折り返す */
+  gap: 20px;            /* カード間の余白 */
+  justify-content: center;
+  padding: 20px;
+}
+
+.character-card {
+  width: 200px;         /* カードの幅 */
+  background-color: #e9e1cd;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  color: #000;
+  padding: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* カード内リンクのスタイル */
+.character-card a {
+  color: inherit;         /* 親要素の文字色に合わせる */
+  text-decoration: none;  /* 下線を消す */
+  display: block;         /* カード全体をクリック可能に */
+}
+
+.character-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+.character-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.character-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1em;
+}
+
+.character-card p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+
+
+/* 作品ごとに色指定 */
+.character-card.work-world-war-a-vision {
+  background-color: #e6f2ff;
+  border: 1px solid #3399ff;
+}
+
+.character-card.work-妖行脚百鬼夜行物語 {
+  background-color: #fff0f5;
+  border: 1px solid #cc3366;
+}
+
+.character-card.work-不毛論争 {
+  background-color: #f5f5f5;
+  border: 1px solid #666666;
+}
+
+.character-card.work-world-war-a-vision {
+  background-color: #e6f2ff;
+  border: 1px solid #3399ff;
+}
+
+.character-card.work-world-war-a-vision {
+  background-color: #e6f2ff;
+  border: 1px solid #3399ff;
+}
+
+.character-card.work-world-war-a-vision {
+  background-color: #e6f2ff;
+  border: 1px solid #3399ff;
+}
+
+.character-card.work-world-war-a-vision {
+  background-color: #e6f2ff;
+  border: 1px solid #3399ff;
+}
+
+
+

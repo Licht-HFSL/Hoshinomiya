@@ -1,0 +1,124 @@
+body {
+  font-family: "Yu Gothic", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at 20% 30%, #1b0033, #0d0011 80%);
+  color: #f2d58a;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* タイトル & 詩 */
+#intro {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+/* 世界観への扉 */
+#world-doors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 2rem;
+}
+
+.door {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.door img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.7);
+  transition: filter 0.3s, transform 0.3s;
+}
+
+.door-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  padding: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* ホバー演出 */
+.door:hover img {
+  filter: brightness(1);
+  transform: scale(1.05);
+}
+
+.door:hover {
+  box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+}
+
+
+.calendar-button {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 12px 24px;
+  background-color: #17184b; /* 緑系などに変更OK */
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.calendar-button-container {
+  text-align: center;
+}
+
+
+.calendar-button:hover {
+  background-color: #0d0015;
+  transform: scale(1.05);
+}
+
+
+/* 星背景用キャンバス */
+#starfield {
+  position: fixed;      /* スクロールしても背景として固定 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;          /* 他の要素の下に置く */
+}
+
+/* 扉やカードを少し透明にして星が見えるように */
+.door, .character-card {
+  background-color: rgba(255, 255, 255, 0.1);  /* 透明度調整OK */
+  backdrop-filter: blur(5px); /* 背景を少しぼかす効果で幻想的に */
+}
+
+
+
+

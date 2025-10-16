@@ -1,0 +1,185 @@
+/* ===============================================
+   🌍 World WAR a VisiON 設定ページ スタイルシート
+   制作者向けメモ付きバージョン
+   -----------------------------------------------
+   テーマ: WWI×魔術×戦記×幻想
+   コンセプト: 荘厳・軍事的・少し幻想的な世界観
+   =============================================== */
+
+/* ------------- 色・フォント変数定義 ------------- */
+/* ここを変えると全体のトーンを統一的に調整できます */
+:root {
+  --bg: #0a0a0c;             /* 背景の基調：黒に近い深灰 */
+  --panel: #101218;          /* セクション背景 */
+  --accent: #e63946;         /* 赤：戦争・血の象徴 */
+  --accent2: #b8b8ff;        /* 青：魔力・霊的な光 */
+  --text: #e8ecf0;           /* メインテキストカラー */
+  --muted: #a2a8b3;          /* 補助テキストや説明文用 */
+  --radius: 8px;             /* 角の丸み。デザイン統一の要 */
+  --max-width: 960px;        /* コンテンツ幅（中央揃え） */
+  --font-sans: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  --font-title: "Orbitron", "Rajdhani", var(--font-sans);
+}
+
+/* ------------- 初期リセット ------------- */
+/* 余白・枠線を一旦リセットして統一する */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------- 本体設定 ------------- */
+/* 全体を中央揃えにし、背景をダークトーンで統一 */
+body {
+  font-family: var(--font-sans);
+  background: radial-gradient(circle at 20% 20%, #14161a, #050507 80%);
+  color: var(--text);
+  line-height: 1.7;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* ★ 全体の文字を中央寄せにする */
+}
+
+
+
+/* ------------- タイトル類 ------------- */
+h1, h2 {
+  font-family: var(--font-title);
+  letter-spacing: 0.08em;
+}
+
+/* メインタイトル */
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--accent);
+  text-shadow: 0 0 12px rgba(230, 57, 70, 0.5); /* 光のぼかしで浮かせる */
+  margin-bottom: 1.2em;
+
+}
+
+/* セクションタイトル */
+h2 {
+  padding-left: 0.5em;
+  font-size: 1.3rem;
+  margin: 2em 0 0.8em;
+  color: var(--accent2);
+}
+
+/* ------------- ナビゲーション ------------- */
+/* 金属パネルのような見た目に調整 */
+header {
+  background: rgba(0, 0, 0, 0.85); /* 半透明 */
+  backdrop-filter: blur(4px);
+  padding: 15px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* ナビ内リンク。ホバーで光る */
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  transition: 0.2s;
+  font-weight: 600;
+  background: rgba(255,255,255,0.02);
+}
+
+nav a:hover {
+  background: var(--accent);
+  color: #fff;
+  text-shadow: 0 0 6px rgba(255,255,255,0.6);
+}
+
+/* ------------- セクション本体 ------------- */
+/* 各ブロックをカード風にする */
+section {
+  width: 100%;
+  max-width: var(--max-width);
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 1.5em 2em;
+  margin-bottom: 1.5em;
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.02),
+              0 6px 20px rgba(0,0,0,0.4);
+}
+
+p {
+  margin: 0.8em 0;
+  color: var(--text);
+}
+
+/* ------------- 定義リスト (用語集) ------------- */
+dl {
+  margin-left: 1em;
+}
+dt {
+  font-weight: bold;
+  color: var(--accent);
+  margin-top: 0.8em;
+}
+dd {
+  margin-left: 1em;
+  color: var(--muted);
+}
+
+/* ------------- 箇条書きリスト ------------- */
+/* 通常の●をやめて、装飾記号（◆）を使う */
+ul {
+  list-style: none;
+  padding-left: 1em;
+}
+li::before {
+  content: "◆ ";
+  color: var(--accent2);
+}
+
+/* ------------- 画像 ------------- */
+img {
+  width: 100%;
+  border-radius: var(--radius);
+  margin-top: 0.6em;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ------------- 一般リンク ------------- */
+a {
+  color: var(--accent2);
+}
+a:hover {
+  color: var(--accent);
+}
+
+/* ------------- フッター（任意で追加） ------------- */
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-top: 3em;
+}
+
+/* ------------- スマホ対応 ------------- */
+/* 小さい画面では余白を減らし、文字サイズを少し下げる */
+@media (max-width: 600px) {
+  section {
+    padding: 1.2em;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+}

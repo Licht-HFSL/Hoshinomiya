@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>World WAR a VisiON</title>
+  <link rel="stylesheet" href="World WAR a VisiON.css"> <!-- CSSを外部ファイルで読み込み -->
+
+</head>
+<body>
+  <h1>World WAR a VisiON設定</h1>
+ <!-- ヘッダー -->
+  <header>
+    <nav>
+      <a href="index.html">トップ</a>
+      <a href="characters.html">キャラクター図鑑</a>
+      <a href="Лаплавень.html">Лаплавень</a>
+      <a href="妖行脚百鬼夜行物語.html">妖行脚百鬼夜行物語</a>
+      <a href="不毛論争.html">不毛論争</a>
+      <a href="Lisnoir.html">Lisnoir</a>
+      <!-- 必要に応じて作品を追加 -->
+    </nav>
+  </header>
+
+  <!-- 世界概要 -->
+  <section>
+    <h2>世界の概要</h2>
+    <p>
+      WW1WW2から着想を得た世界観で魔法と魔術が存在する。<br>
+      魔力を持つものと持たぬものがいて国同士で戦争しあったり共通の敵と戦ったりしている。
+    </p>
+  </section>
+
+  <!-- 設定用語 -->
+  <section>
+    <h2>重要設定・用語</h2>
+    <dl>
+      <dt>魔力</dt>
+      <dd>魔力は一部の人にしか与えられない力の一つである。属性や使い方に個人差はあるが魔力そのものに違いはほとんど見られない。</dd>
+      <dt>魔力泉</dt>
+      <dd>魔力が湧き出る土地の事。多くは列強諸国主要都市に大きく分布していてそれを持つ国もあれば持たぬ国もある。</dd>
+      <dt>魔物</dt>
+      <dd>いつからか世界全体を襲い始めた脅威。どこからやってくるのかも何のために襲うのかも全く不明。これらを排除せねば我らに明日の光は届かない。</dd>
+    </dl>
+  </section>
+
+  <!-- 主要国家・組織 -->
+  <section>
+    <h2>主要国家・組織</h2>
+    <ul>
+      <li>国家A：国家の特徴や歴史、政治体制など</li>
+      <li>国家B：特徴や関係性</li>
+      <li>組織X：役割や活動</li>
+      <li>組織Y：役割や活動</li>
+    </ul>
+  </section>
+
+
+  <!-- 補足イメージ -->
+  <section>
+    <h2>補足資料・イメージ</h2>
+    <img src="images/world_map_A.jpg" alt="作品A 世界地図">
+    <p>地理や都市の位置関係を示す地図やイラスト。</p>
+  </section>
+
+
+  <!-- フッター -->
+  <footer>
+    © 2025 Licht_HFSL
+  </footer>
+
+<canvas id="calmFire"></canvas>
+
+<script>
+/* ===============================================
+   🔥 Calm Horizon Fire Effect
+   -----------------------------------------------
+   ・炎の明滅を除去して滑らかに燃え続ける
+   ・フェードを緩やかに
+   ・一定のグローとゆらぎのみを維持
+   =============================================== */
+
+const canvas = document.getElementById("calmFire");
+const ctx = canvas.getContext("2d");
+
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener("resize", resize);
+resize();
+
+// 炎の色
+const fireColors = [
+  "rgba(255,120,40,0.7)",
+  "rgba(255,80,10,0.6)",
+  "rgba(255,200,100,0.5)"
+];
+
+const particles = [];
+const count = 160;
+
+// 炎の粒生成
+for (let i = 0; i < count; i++) {
+  particles.push({
+    x: Math.random() * canvas.width,
+    y: canvas.height - Math.random() * 80,
+    size: Math.random() * 12 + 6,
+    speedY: Math.random() * 1.2 + 0.6,
+    sway: Math.random() * 0.6 + 0.4, // 横揺れ強さ
+    color: fireColors[Math.floor(Math.random() * fireColors.length)]
+  });
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // 夜空のグラデーション
+  const bg = ctx.createLinearGradient(0, canvas.height, 0, 0);
+  bg.addColorStop(0, "#090303");
+  bg.addColorStop(0.4, "#220909");
+  bg.addColorStop(1, "#050510");
+  ctx.fillStyle = bg;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  // 地平線の赤いグロー層
+  const glow = ctx.createLinearGradient(0, canvas.height, 0, canvas.height - 250);
+  glow.addColorStop(0, "rgba(255,90,20,0.6)");
+  glow.addColorStop(0.5, "rgba(255,60,10,0.3)");
+  glow.addColorStop(1, "rgba(255,60,10,0)");
+  ctx.fillStyle = glow;
+  ctx.fillRect(0, canvas.height - 250, canvas.width, 250);
+
+  // 光の合成モード（加算）でやや滑らかに
+  ctx.globalCompositeOperation = "lighter";
+
+ 
+  requestAnimationFrame(draw);
+}
+
+draw();
+</script>
+
+<style>
+#calmFire {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+body {
+  background: #070506;
+  color: #f2f2f2;
+  text-align: center;
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 0;
+}
+</style>
+
+
+</body>
+</html>

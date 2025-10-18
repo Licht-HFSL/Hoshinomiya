@@ -1,0 +1,106 @@
+/* ===== 全体レイアウト ===== */
+body {
+  font-family: 'Sawarabi Mincho', 'Noto Serif JP', serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #272520, #79775d, #150d00 ); /* 背景色: ここを変える */
+  color: #f2d58a;               /* 文字色: ここを変える */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* ★ 全体の文字を中央寄せにする */
+
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;        /* 画面いっぱいに */
+}
+
+
+/* ===== ヘッダー ===== */
+header {
+  background: rgba(49, 29, 6, 0.85); /* 半透明 */
+  backdrop-filter: blur(4px);
+  padding: 15px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* ナビ内リンク。ホバーで光る */
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  transition: 0.2s;
+  font-weight: 600;
+  background: rgba(255,255,255,0.02);
+}
+
+nav a:hover {
+  background: var(--accent);
+  color: #fff;
+  text-shadow: 0 0 6px rgba(255,255,255,0.6);
+}
+
+/* ===== 見出し ===== */
+
+h1 {
+  font-family: "Yu Mincho", serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 30px 0 10px 0;
+  color: #f2d58a; /* 色 */
+  text-shadow: 0 0 6px rgba(255,140,0,0.6);
+}
+
+h2 {
+  font-family: "Yu Mincho", serif;
+  font-size: 1.8rem;
+  margin-top: 25px;
+  color: #e7d9bb; /* 和風赤 */
+}
+
+/* ===== セクションボックス ===== */
+section {
+  background-color: #241b02; /* 背景色 */
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 900px;
+  box-shadow: 0 0 12px rgba(255,165,0,0.3);
+  backdrop-filter: blur(4px);
+}
+
+/* ===== 定義(用語？)リスト ===== */
+
+dl {
+  margin-left: 1em;
+}
+dt {
+  font-weight: bold;
+  color: #dad9ba;
+  margin-top: 0.8em;
+}
+dd {
+  margin-left: 1em;
+}
+
+footer {
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+  font-size: 0.9rem;
+}

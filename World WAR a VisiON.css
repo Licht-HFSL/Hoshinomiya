@@ -173,13 +173,20 @@ footer {
   margin-top: 3em;
 }
 
-/* ------------- スマホ対応 ------------- */
-/* 小さい画面では余白を減らし、文字サイズを少し下げる */
-@media (max-width: 600px) {
-  section {
-    padding: 1.2em;
+/* スマホ向け（幅600px以下） */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px; /* 文字を少し小さく */
   }
-  h2 {
-    font-size: 1.1rem;
+  .container {
+    flex-direction: column; /* 横並びを縦並びに変更 */
+    gap: 10px;
+  }
+}
+
+/* タブレット向け（幅900px以下） */
+@media screen and (max-width: 900px) {
+  .menu {
+    font-size: 16px;
   }
 }

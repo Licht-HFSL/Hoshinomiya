@@ -116,3 +116,21 @@ footer {
   font-size: 0.9rem;
   border-top: 1px solid rgba(255,165,0,0.3);
 }
+
+/* スマホ向け（幅600px以下） */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px; /* 文字を少し小さく */
+  }
+  .container {
+    flex-direction: column; /* 横並びを縦並びに変更 */
+    gap: 10px;
+  }
+}
+
+/* タブレット向け（幅900px以下） */
+@media screen and (max-width: 900px) {
+  .menu {
+    font-size: 16px;
+  }
+}

@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background: linear-gradient(to bottom, #272520, #79775d, #150d00 ); /* 背景色: ここを変える */
+  background-attachment: fixed;
   color: #f2d58a;               /* 文字色: ここを変える */
   display: flex;
   flex-direction: column;
@@ -104,3 +105,4 @@ footer {
   margin-top: 30px;
   font-size: 0.9rem;
 }
+

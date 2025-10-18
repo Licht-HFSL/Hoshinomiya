@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background: radial-gradient(circle at 20% 30%, #1b0033, #000011 80%);
+  background-attachment: fixed;
   color: #f2d58a;
 }
 

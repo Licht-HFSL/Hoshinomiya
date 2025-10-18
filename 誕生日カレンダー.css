@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background: radial-gradient(ellipse at top, #0a0a2a, #000);
+  background-attachment: fixed;
   color: #ffec99;
   display: flex;
   flex-direction: column;

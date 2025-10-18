@@ -5,6 +5,7 @@ body {
   font-family: "Hannari", "Yu Mincho", serif;
   color: #2E1F14; /* 暗めの茶色で読みやすく */
   background: linear-gradient(to bottom, #6c272d, #FFD180); /* 朱色→オレンジ→金色 */
+  background-attachment: fixed;
   font-size: 1rem; /* 約16pxを基準に */
   line-height: 1.7;
   margin: 0;

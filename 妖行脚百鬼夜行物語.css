@@ -5,6 +5,8 @@ body {
   font-family: "Hannari", "Yu Mincho", serif;
   color: #2E1F14; /* 暗めの茶色で読みやすく */
   background: linear-gradient(to bottom, #6c272d, #FFD180); /* 朱色→オレンジ→金色 */
+  font-size: 1rem; /* 約16pxを基準に */
+  line-height: 1.7;
   margin: 0;
   padding: 0;
   line-height: 1.7;
@@ -118,15 +120,36 @@ footer {
 }
 
 /* スマホ向け（幅600px以下） */
+/* スマホ向け（幅600px以下） */
 @media screen and (max-width: 600px) {
   body {
-    font-size: 14px; /* 文字を少し小さく */
+    font-size: 1.1rem; /* 少し大きく（約17〜18px） */
+    line-height: 1.8;  /* 行間を広げて読みやすく */
+    padding: 10px;     /* 端ギリギリを避ける */
   }
-  .container {
-    flex-direction: column; /* 横並びを縦並びに変更 */
-    gap: 10px;
+
+  header {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2rem; /* 少し小さめに調整（タイトルが画面を圧迫しないように） */
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  section {
+    padding: 15px;
+    width: 95%; /* 余白を少し減らして画面いっぱいに近づける */
+  }
+
+  footer {
+    font-size: 1rem;
   }
 }
+
 
 /* タブレット向け（幅900px以下） */
 @media screen and (max-width: 900px) {

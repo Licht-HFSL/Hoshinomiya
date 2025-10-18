@@ -1,5 +1,104 @@
 [
 {
+  "id": "kagamiandrea",
+  "name": "アンドレア",
+  "name_alias": "",
+  "full_name": "アンドレア",
+  "title": "",
+  "world": "鏡楽君主",
+  "affiliation": "アリュギエールファミリー",
+  "rank": "インディトリオリーダー",
+  "role": "",
+  "gender": "男",
+  "age": "32",
+  "birthday": "11/8",
+  "race": "人間",
+  "attribute": "無",
+  "weapon": "拳銃",
+  "skills": [],
+  "appearance": "立ち絵/鏡アンドレア.png",
+  "personality": "",
+  "background": "",
+  "motivation": "",
+  "likes": [],
+  "dislikes": [],
+  "hobbies": [],
+  "image": "icon/アンドレア.png",
+  "gallery": [],
+  "voice": "",
+  "theme_song": "",
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "quotes": [],
+  "story_appearances": [
+    {
+      "title": "",
+      "role": "",
+      "summary": ""
+    }
+  ],
+  "notes": "",
+  "tags": [],
+ "detailUrl": "chara.html?id=kagamiandrea"
+
+},
+
+{
+  "id": "aigirisiro",
+  "name": "哀霧士郎",
+  "name_alias": "",
+  "full_name": "哀霧士郎",
+  "title": "",
+  "world": "妖行脚百鬼夜行物語",
+  "affiliation": "桜組",
+  "rank": "",
+  "role": "",
+  "gender": "男",
+  "age": "18歳",
+  "birthday": "6/17",
+  "race": "人間",
+  "attribute": "無",
+  "weapon": "打刀",
+  "skills": [],
+  "appearance": "立ち絵/.png",
+  "personality": "",
+  "background": "",
+  "motivation": "",
+  "likes": [],
+  "dislikes": [],
+  "hobbies": [],
+  "image": "icon/哀霧士郎.png",
+  "gallery": [],
+  "voice": "",
+  "theme_song": "",
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "quotes": [],
+  "story_appearances": [
+    {
+      "title": "",
+      "role": "",
+      "summary": ""
+    }
+  ],
+  "notes": "",
+  "tags": [],
+ "detailUrl": "chara.html?id=aigirisiro"
+
+},
+{
   "id": "Licht",
   "name": "Licht",
   "name_alias": "",
@@ -7,8 +106,8 @@
   "title": "",
   "world": "Лаплавень",
   "affiliation": "星光の子",
-  "rank": "あ",
-  "role": "あ",
+  "rank": "",
+  "role": "",
   "gender": "女",
   "age": "不明",
   "birthday": "4/25",
@@ -18,9 +117,9 @@
   "weapon": "槍",
   "skills": [],
   "appearance": "立ち絵/Licht.png",
-  "personality": "あ",
-  "background": "あ",
-  "motivation": "あ",
+  "personality": "自由奔放、放任主義。誰に対しても甘めの対応。",
+  "background": "",
+  "motivation": "",
   "likes": [],
   "dislikes": [],
   "hobbies": [],
@@ -47,55 +146,5 @@
   "notes": "",
   "tags": [],
   "detailUrl": "chara.html?id=Licht"
-},
-{
-  "id": "medeio",
-  "name": "メデ・イオ",
-  "name_alias": "",
-  "full_name": "メデ・イオ",
-  "title": "",
-  "world": "星海のサルヴァトーレ",
-  "affiliation": "",
-  "rank": "",
-  "role": "",
-  "gender": "女",
-  "age": "",
-  "birthday": "",
-  "race": "妖精",
-  "attribute": "木",
-  "weapon": "杖",
-  "skills": [],
-  "appearance": "立ち絵/妖精王エウスト.png",
-  "personality": "",
-  "background": "",
-  "motivation": "",
-  "likes": [],
-  "dislikes": [],
-  "hobbies": [],
-  "image": "icon/.png",
-  "gallery": [],
-  "voice": "",
-  "theme_song": "",
-  "relationships": [
-    {
-      "id": "",
-      "name": "",
-      "type": "",
-      "note": ""
-    }
-  ],
-  "quotes": [],
-  "story_appearances": [
-    {
-      "title": "",
-      "role": "",
-      "summary": ""
-    }
-  ],
-  "notes": "",
-  "tags": [],
- "detailUrl": "chara.html?id=medeio"
-
 }
-
 ]

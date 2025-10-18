@@ -175,7 +175,7 @@ body{
 
 /* 共通デフォルト */
 body {
-  background: linear-gradient(180deg, #071022 0%, #8723b6 100%);
+  background: linear-gradient(180deg, #071022 0%, #4d1866 100%);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; /* 追加 */
@@ -201,11 +201,11 @@ body.world-World_WAR_a_VisiON {
 }
 
 body.world-妖行脚百鬼夜行物語 {
-  background: linear-gradient(180deg, #f5f3e7 0%, #d6cbb7 100%);
+  background: linear-gradient(180deg, #ec2b1d 0%, #d8d673 100%);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  color: #2b2b2b;
+  color: #e7ca8b;
 }
 
 body.world-不毛論争 {
@@ -241,7 +241,7 @@ body.world-World_WAR_a_VisiON .quote {
 body.world-妖行脚百鬼夜行物語 .panel,
 body.world-妖行脚百鬼夜行物語 .relation-item,
 body.world-妖行脚百鬼夜行物語 .quote {
-  color: #2b2b2b;
+  color: #d4a849;
 }
 
 body.world-不毛論争 .panel,

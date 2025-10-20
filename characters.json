@@ -1,132 +1,44 @@
 [
 {
-  "id": "kagamiandrea",
-  "name": "アンドレア",
-  "name_alias": "",
-  "full_name": "アンドレア",
-  "title": "",
-  "world": "鏡楽君主",
-  "affiliation": "アリュギエールファミリー",
-  "rank": "インディトリオリーダー",
-  "role": "",
-  "gender": "男",
-  "age": "32",
-  "birthday": "11/8",
-  "race": "人間",
-  "attribute": "無",
-  "weapon": "拳銃",
-  "skills": [],
-  "appearance": "立ち絵/鏡アンドレア.png",
-  "personality": "",
-  "background": "",
-  "motivation": "",
-  "likes": [],
-  "dislikes": [],
-  "hobbies": [],
-  "image": "icon/アンドレア.jpg",
-  "gallery": [],
-  "voice": "",
-  "theme_song": "",
-  "relationships": [
-    {
-      "id": "",
-      "name": "",
-      "type": "",
-      "note": ""
-    }
-  ],
-  "quotes": [],
-  "story_appearances": [
-    {
-      "title": "",
-      "role": "",
-      "summary": ""
-    }
-  ],
-  "notes": "",
-  "tags": [],
- "detailUrl": "chara.html?id=kagamiandrea"
-
-},
-
-{
-  "id": "aigirisiro",
-  "name": "哀霧士郎",
-  "name_alias": "",
-  "full_name": "哀霧士郎",
-  "title": "",
-  "world": "妖行脚百鬼夜行物語",
-  "affiliation": "桜組",
-  "rank": "",
-  "role": "",
-  "gender": "男",
-  "age": "18歳",
-  "birthday": "6/17",
-  "race": "人間",
-  "attribute": "無",
-  "weapon": "打刀",
-  "skills": [],
-  "appearance": "立ち絵/.png",
-  "personality": "",
-  "background": "",
-  "motivation": "",
-  "likes": [],
-  "dislikes": [],
-  "hobbies": [],
-  "image": "icon/哀霧士郎.jpg",
-  "gallery": [],
-  "voice": "",
-  "theme_song": "",
-  "relationships": [
-    {
-      "id": "",
-      "name": "",
-      "type": "",
-      "note": ""
-    }
-  ],
-  "quotes": [],
-  "story_appearances": [
-    {
-      "title": "",
-      "role": "",
-      "summary": ""
-    }
-  ],
-  "notes": "",
-  "tags": [],
- "detailUrl": "chara.html?id=aigirisiro"
-
-},
-{
   "id": "Licht",
   "name": "Licht",
-  "name_alias": "",
-  "full_name": "",
-  "title": "",
+  "appearance": "立ち絵/Licht.png",
+  "image": "icon/Licht.jpg",
   "world": "Лаплавень",
   "affiliation": "星光の子",
-  "rank": "",
-  "role": "",
-  "gender": "女",
-  "age": "不明",
-  "birthday": "4/25",
-  "birthdayicon": "顔アイコン/Licht.png",
   "race": "神様",
-  "attribute": "無",
+  "attribute": "無属性",
+  "gender": "女性",
+  "age": "ー",
+  "birthday": "4月25日",
+  "zodiacsign": "牡牛座",
+  "birthdayicon": "顔アイコン/.png",
+  "hometown": "ー",
+  "height": "151㎝",
+  "personality": "",
+  "thinking": "",
+  "firstperson": "私",
+  "secondperson": "君",
   "weapon": "槍",
-  "skills": [],
-  "appearance": "立ち絵/Licht.png",
-  "personality": "自由奔放、放任主義。誰に対しても甘めの対応。",
-  "background": "",
-  "motivation": "",
+  "finisher": "",
+  "skills": [
+      {
+    "name": "",
+    "type": "攻撃",
+    "description": ""
+  }
+  ],
+  "abilities": [
+      {
+    "name": "",
+    "type": "攻撃",
+    "description": ""
+  }
+  ],
   "likes": [],
   "dislikes": [],
   "hobbies": [],
-  "image": "icon/Licht.jpg",
-  "gallery": [],
-  "voice": "あ",
-  "theme_song": "あ",
+  "quotes": [],
   "relationships": [
     {
       "id": "",
@@ -135,16 +47,10 @@
       "note": ""
     }
   ],
-  "quotes": [],
-  "story_appearances": [
-    {
-      "title": "",
-      "role": "",
-      "summary": ""
-    }
+  "shortstories": [
+    "",
+    ""
   ],
-  "notes": "",
-  "tags": [],
-  "detailUrl": "chara.html?id=Licht"
+  "detailUrl": "makai.html?id=Licht"
 }
 ]

@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Character Detail</title>
+  <link rel="stylesheet" href="makai.css" />
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <a class="back" href="characters.html">← キャラ一覧へ</a>
+    <h1 id="page-title">キャラクター詳細</h1>
+
+  </header>
+
+  <!-- メインコンテナ: 左立ち絵 / 右カード -->
+  <main id="character-page" class="container">
+    
+    <!-- 左: 立ち絵 -->
+    <!-- メモ: CSSで縦長全身対応 -->
+    <aside class="portrait-wrap">
+      <img id="char-image" src="" alt="キャラクター立ち絵" />
+    </aside>
+
+    <!-- 右: 情報カード -->
+    <aside class="profile-card">
+      <h2 id="char-name">—</h2>
+      <p id="char-title" class="muted">—</p>
+
+      <div class="panel meta-grid">
+        <h3>基礎情報</h3>
+        <div><strong>世界</strong><div id="char-world" class="muted">—</div></div>
+        <div><strong>所属</strong><div id="char-affiliation" class="muted">—</div></div>
+        <div><strong>種族</strong><div id="char-race" class="muted">—</div></div>
+        <div><strong>属性</strong><div id="char-attribute" class="muted">—</div></div>
+        <div><strong>性別</strong><div id="char-gender" class="muted">—</div></div>
+        <div><strong>年齢</strong><div id="char-age" class="muted">—</div></div>
+        <div><strong>誕生日</strong><div id="char-birthday" class="muted">—</div></div>
+        <div><strong>星座</strong><div id="char-zodiacsign" class="muted">—</div></div>
+        <div><strong>出身</strong><div id="char-hometown" class="muted">—</div></div>
+        <div><strong>身長</strong><div id="char-height" class="muted">—</div></div>
+      </div>
+
+      <div class="tags" id="char-tags"></div>
+
+      <!-- 性格・目的 -->
+      <section class="panel two-col">
+        <div>
+          <h3>性格</h3>
+          <p id="char-personality">—</p>
+        </div>
+        <div>
+          <h3>考え方</h3>
+          <p id="char-thinking">—</p>
+        </div>
+      </section>
+
+      <!-- 性格・目的 の次に追加 -->
+     <section class="panel">
+       <h3>口調</h3>
+       <div class="two-col">
+      <div>
+       <strong>一人称</strong>
+       <p><span id="char-firstperson">—</span><br>
+       <strong>二人称</strong>
+       <p><span id="char-secondperson">—</span></p>
+      </div>
+     </div>
+    </section>
+
+    <!-- 戦闘スタイル -->
+    <section class="panel">
+      <div>
+      <h3>武器</h3>
+      <p id="char-weapon">—</p>
+      </div>
+      <div>
+      <h3>必殺技</h3>
+      <p id="char-finisher">—</p>
+      </div>
+      <div>
+      <h3>スキル</h3>
+      <ul id="char-skills" class="list-plain"></ul>
+      </div>
+      <div>
+      <h3>アビリティ</h3>
+      <ul id="char-abilities" class="list-plain"></ul>
+      </div>
+    </section>
+
+
+    <!-- 嗜好 -->
+    <section class="panel two-col">
+     <div>
+      <h3>好きなもの</h3>
+      <p id="char-likes">—</p>
+     </div>
+     <div>
+      <h3>嫌いなもの</h3>
+      <p id="char-dislikes">—</p>
+     </div>
+    </section>
+
+    <section class="panel">
+      <h3>趣味</h3>
+      <p id="char-hobbies">—</p>
+    </section>
+
+    <!-- 台詞・名言 -->
+    <section class="panel">
+      <h3>台詞・名言</h3>
+      <ul id="char-quotes" class="list-quotes"></ul>
+    </section>
+
+      <!-- 関係 -->
+      <section class="panel">
+        <h3>関係</h3>
+        <ul id="char-relations" class="list-relations"></ul>
+      </section>
+
+      <!-- ショートストーリー -->
+      <section class="panel">
+        <h3>小話</h3>
+        <div id="char-shortstories" class="shortstories"></div>
+      </section>
+
+    </aside>
+  </main>
+
+  <!-- JS: キャラデータ読み込み -->
+  <script>
+    (() => {
+      const qs = new URLSearchParams(location.search);
+      const id = qs.get('id');
+      const IDsafe = id ? id.trim() : '';
+
+      function setText(id, text) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.textContent = text ?? '';
+      }
+
+      function clearChildren(el) {
+        while (el.firstChild) el.removeChild(el.firstChild);
+      }
+
+      function hideSectionIfEmpty(elementId) {
+        const el = document.getElementById(elementId);
+        if (!el) return;
+        let isEmpty = (el.tagName === 'UL' || el.tagName === 'DIV') ? el.children.length === 0 : !el.textContent.trim();
+        const section = el.closest('section');
+        if (section) section.style.display = isEmpty ? 'none' : '';
+      }
+
+      fetch('characters.json')
+        .then(r => r.ok ? r.json() : Promise.reject('characters.json not found'))
+        .then(list => {
+          if (!IDsafe) {
+            document.getElementById('page-title').textContent = 'キャラIDが指定されていません';
+            setText('char-name', 'IDがないため表示できません');
+            return;
+          }
+
+          const c = list.find(x => x.id === IDsafe);
+          if (!c) {
+            document.getElementById('page-title').textContent = 'キャラが見つかりません';
+            setText('char-name', '該当するキャラが存在しません');
+            return;
+          }
+
+          // 基本情報
+          setText('char-name', c.name || '');
+          setText('char-title', c.title || '');
+          setText('char-world', c.world || '');
+          setText('char-affiliation', c.affiliation || '');
+          setText('char-birthday', c.birthday || '');
+          setText('char-age', c.age || '');
+          setText('char-attribute', c.attribute || '');
+          setText('char-race', c.race || '');
+          setText('char-gender', c.gender || '');
+          setText('char-zodiacsign', c.zodiacsign || '');
+          setText('char-hometown', c.hometown || '');
+          setText('char-height', c.height || '');
+
+          // 立ち絵
+          const img = document.getElementById('char-image');
+          img.src = c.appearance || 'placeholder.png';
+          img.alt = c.name || 'character image';
+
+          // タグ
+          const tagWrap = document.getElementById('char-tags');
+          clearChildren(tagWrap);
+          (c.tags || []).forEach(t => {
+            const b = document.createElement('div');
+            b.className = 'tag';
+            b.textContent = t;
+            tagWrap.appendChild(b);
+          });
+
+          // 詳細
+          setText('char-personality', c.personality || '');
+          setText('char-thinking', c.thinking || '');
+          setText('char-firstperson', c.firstperson || '');
+          setText('char-secondperson', c.secondperson || '');
+          setText('char-likes', c.likes || '');
+          setText('char-dislikes', c.dislikes || '');
+          setText('char-hobbies', c.hobbies || '');
+          setText('char-weapon', c.weapon || '');
+          setText('char-finisher', c.finisher || '');
+          
+          // ショートストーリー
+          const storyWrap = document.getElementById('char-shortstories');
+          clearChildren(storyWrap);
+          (c.shortstories || []).forEach(st => {
+              const p = document.createElement('p');
+              p.textContent = st;
+              storyWrap.appendChild(p);
+          });
+
+          // スキル
+          const skills = document.getElementById('char-skills');
+          clearChildren(skills);
+          (c.skills || []).forEach(s => {
+            const li = document.createElement('li');
+            if(typeof s === 'string'){
+            li.textContent = s;
+            } else {
+              // オブジェクト構造の場合
+              li.innerHTML = `
+              <strong>${s.name}</strong>
+              ${s.type ? `<span class="skill-type">［${s.type}］</span>` : ""}
+              ${s.description ? `<p class="skill-desc">${s.description}</p>` : ""}`;
+ 
+            }
+            skills.appendChild(li);
+          });
+          
+          // アビリティ
+          const abilities = document.getElementById('char-abilities');
+          clearChildren(abilities);
+          (c.abilities || []).forEach(a => {
+            const li = document.createElement('li');
+            if (typeof a === 'string') {
+            li.textContent = a;
+            } else {
+              // オブジェクト構造の場合
+              li.innerHTML = `
+              <strong>${a.name}</strong>
+              ${a.type ? `<span class="ability-type">［${a.type}］</span>` : ""}
+              ${a.description ? `<p class="ability-desc">${a.description}</p>` : ""}`;
+ 
+            }
+            abilities.appendChild(li);
+          });
+          
+          // 台詞・名言
+          const qlist = document.getElementById('char-quotes');
+          clearChildren(qlist);
+          (c.quotes || []).forEach(q => {
+            const li = document.createElement('li');
+            li.className = 'quote';
+            li.textContent = q;
+            qlist.appendChild(li);
+          });
+
+          // 空セクション非表示
+          const sectionIds = [
+          ];
+          sectionIds.forEach(hideSectionIfEmpty);
+
+        })
+        .catch(err => {
+          console.error(err);
+          document.getElementById('page-title').textContent = '読み込みエラー';
+          setText('char-name', 'データの読み込みに失敗しました');
+        });
+
+      
+    })();
+  </script>
+</body>
+</html>

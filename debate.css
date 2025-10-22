@@ -9,7 +9,6 @@ body{
   --color-shadow: rgba(157, 125, 247, 0.15);
   --font-title: "Cinzel Decorative", serif;
   --font-body: "Noto Serif JP", serif;
-  --max-width: 1200px;
   --radius: 12px;
   --gap: 18px;
 
@@ -68,7 +67,7 @@ nav a:hover {
   width: 100%;
   max-width: var(--max-width);
   display: grid;
-  grid-template-columns: 320px 1fr; /* 左:立ち絵, 右:カード */
+  grid-template-columns: 600px 1fr; /* 左:立ち絵, 右:カード */
   gap: var(--gap);
   align-items: start;
 }
@@ -85,7 +84,10 @@ nav a:hover {
   box-shadow: 0 8px 20px rgba(2,6,23,0.6);
   padding: 0;
   position: relative;
-  aspect-ratio: 9 / 20;
+  position: sticky;
+  top: 20px; /* 上からの距離。ヘッダーの高さに合わせて調整 */
+  z-index: 10; /* 他の要素より前面に出す */
+
 }
 
 .portrait-wrap img {

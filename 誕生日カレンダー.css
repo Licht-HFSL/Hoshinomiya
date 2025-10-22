@@ -140,6 +140,18 @@ h1 {
   margin: 5px;
 }
 
+.character-detail {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+}
+
+.character-name {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
 footer {
   margin: 40px 0 20px;
   font-size: 0.9rem;

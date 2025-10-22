@@ -110,12 +110,24 @@ function renderCalendar(year, month) {
       const birthdayDetails = document.getElementById('birthdayDetails');
       birthdayDetails.innerHTML = ''; // まずクリア
       group.forEach(c => {
-        if (c.birthdayicon ) {
-          const detailImg = document.createElement('img');
-          detailImg.src = c.birthdayicon || c.icon;
-          detailImg.alt = c.name;
-          detailImg.title = c.name;
-          birthdayDetails.appendChild(detailImg);
+        if (c.birthdayicon) {
+      const container = document.createElement('div');
+      container.classList.add('character-detail');
+
+      const detailImg = document.createElement('img');
+      detailImg.src = c.birthdayicon || c.icon;
+      detailImg.alt = c.name;
+      detailImg.title = c.name;
+      detailImg.classList.add('birthday-icon');
+
+      const nameText = document.createElement('p');
+      nameText.textContent = c.name;
+      nameText.classList.add('character-name');
+
+      container.appendChild(detailImg);
+      container.appendChild(nameText);
+      birthdayDetails.appendChild(container);
+
         }
       });
 

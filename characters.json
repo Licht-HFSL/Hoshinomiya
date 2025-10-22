@@ -1,4 +1,113 @@
 [
+
+{
+  "id": "hyogu",
+  "name": "氷狗",
+  "appearance": "立ち絵/氷狗.png",
+  "image": "icon/氷狗.jpg",
+  "world": "妖行脚百鬼夜行物語",
+  "affiliation": "神格",
+  "race": "悪鬼",
+  "attribute": "氷属性",
+  "gender": "無",
+  "age": "？",
+  "birthday": "4/1",
+  "zodiacsign": "",
+  "birthdayicon": "顔アイコン/氷狗.png",
+  "hometown": "",
+  "height": "234㎝",
+  "personality": "",
+  "thinking": "",
+  "firstperson": "僕",
+  "secondperson": "お前",
+  "weapon": "",
+  "finisher": "",
+  "skills": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "abilities": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "likes": [],
+  "dislikes": [],
+  "hobbies": [],
+  "quotes": [],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
+  "detailUrl": "makai.html?id=Licht"
+},
+{
+  "id": "hashihime",
+  "name": "橋姫",
+  "appearance": "立ち絵/橋姫.png",
+  "image": "icon/橋姫.jpg",
+  "world": "妖行脚百鬼夜行物語",
+  "affiliation": "椿組",
+  "race": "鬼",
+  "attribute": "水属性",
+  "gender": "女性",
+  "age": "？",
+  "birthday": "6/7",
+  "zodiacsign": "双子座",
+  "birthdayicon": "顔アイコン/橋姫.png",
+  "hometown": "山城国",
+  "height": "167㎝",
+  "personality": "",
+  "thinking": "",
+  "firstperson": "私",
+  "secondperson": "貴方",
+  "weapon": "太刀",
+  "finisher": "",
+  "skills": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "abilities": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "likes": [],
+  "dislikes": [],
+  "hobbies": [],
+  "quotes": [],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
+  "detailUrl": "makai.html?id=Licht"
+},
 {
   "id": "Licht",
   "name": "Licht",
@@ -9,11 +118,11 @@
   "race": "神様",
   "attribute": "無属性",
   "gender": "女性",
-  "age": "ー",
-  "birthday": "4月25日",
+  "age": "？",
+  "birthday": "4/25",
   "zodiacsign": "牡牛座",
-  "birthdayicon": "顔アイコン/.png",
-  "hometown": "ー",
+  "birthdayicon": "顔アイコン/Licht.png",
+  "hometown": "？",
   "height": "151㎝",
   "personality": "",
   "thinking": "",

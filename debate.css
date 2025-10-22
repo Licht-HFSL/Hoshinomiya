@@ -9,6 +9,7 @@ body{
   --color-shadow: rgba(157, 125, 247, 0.15);
   --font-title: "Cinzel Decorative", serif;
   --font-body: "Noto Serif JP", serif;
+  --max-width: 100%;
   --radius: 12px;
   --gap: 18px;
 
@@ -232,4 +233,30 @@ nav a:hover {
   inset: 0;
   background: radial-gradient(circle at 50% 100%, rgba(157,125,247,0.1), transparent 70%);
   pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* 1カラムに変更 */
+    gap: var(--gap);
+    padding: 0 1rem;
+  }
+
+  .portrait-wrap {
+    position: relative; /* stickyを解除 */
+    top: 0;
+    max-width: 100%;
+  }
+
+  .panel {
+    padding: 1.5rem 1rem;
+  }
+
+  .panel.story {
+    padding: 1.5rem 1rem;
+  }
+
+  .meta-grid {
+    grid-template-columns: 1fr; /* 1列に変更 */
+  }
 }

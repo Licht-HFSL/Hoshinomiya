@@ -1,5 +1,62 @@
 [
-
+{
+  "id": "andrea",
+  "name": "アンドレア",
+  "appearance": "立ち絵/アンドレア.png",
+  "image": "icon/アンドレア.jpg",
+  "world": "World WAR a VisiON",
+  "affiliation": "イタリア軍",
+  "race": "人間",
+  "attribute": "火属性",
+  "gender": "男性",
+  "age": "32歳",
+  "birthday": "11/8",
+  "zodiacsign": "蠍座",
+  "birthdayicon": "顔アイコン/アンドレア.png",
+  "hometown": "ローマ",
+  "height": "187㎝",
+  "personality": "冷静、寡黙",
+  "thinking": "慎重派、正義感が強い",
+  "firstperson": "俺",
+  "secondperson": "お前",
+  "weapon": "銃",
+  "finisher": "",
+  "skills": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "abilities": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "likes": [
+    "コーヒー"
+  ],
+  "dislikes": [],
+  "hobbies": [
+    ""
+  ],
+  "quotes": [],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
+  "detailUrl": "WWaV.html?id=andrea"
+},
 {
   "id": "hyogu",
   "name": "氷狗",
@@ -14,10 +71,10 @@
   "birthday": "4/1",
   "zodiacsign": "",
   "birthdayicon": "顔アイコン/氷狗.png",
-  "hometown": "",
+  "hometown": "氷ノ山",
   "height": "234㎝",
-  "personality": "",
-  "thinking": "",
+  "personality": "無関心、冷淡",
+  "thinking": "利己的",
   "firstperson": "僕",
   "secondperson": "お前",
   "weapon": "",
@@ -70,8 +127,8 @@
   "birthdayicon": "顔アイコン/橋姫.png",
   "hometown": "山城国",
   "height": "167㎝",
-  "personality": "",
-  "thinking": "",
+  "personality": "温厚、献身的",
+  "thinking": "マイペース",
   "firstperson": "私",
   "secondperson": "貴方",
   "weapon": "太刀",
@@ -124,8 +181,8 @@
   "birthdayicon": "顔アイコン/Licht.png",
   "hometown": "？",
   "height": "151㎝",
-  "personality": "",
-  "thinking": "",
+  "personality": "気まぐれ、創造的",
+  "thinking": "楽観的",
   "firstperson": "私",
   "secondperson": "君",
   "weapon": "槍",

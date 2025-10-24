@@ -1,11 +1,3 @@
-/* ===============================================
-   🌍 World WAR a VisiON 設定ページ スタイルシート
-   制作者向けメモ付きバージョン
-   -----------------------------------------------
-   テーマ: WWI×魔術×戦記×幻想
-   コンセプト: 荘厳・軍事的・少し幻想的な世界観
-   =============================================== */
-
 /* ------------- 色・フォント変数定義 ------------- */
 /* ここを変えると全体のトーンを統一的に調整できます */
 :root {
@@ -13,7 +5,7 @@
   --panel: #101218;          /* セクション背景 */
   --accent: #e63946;         /* 赤：戦争・血の象徴 */
   --accent2: #b8b8ff;        /* 青：魔力・霊的な光 */
-  --text: #e8ecf0;           /* メインテキストカラー */
+  --text: #a2a8b3;           /* メインテキストカラー */
   --muted: #a2a8b3;          /* 補助テキストや説明文用 */
   --radius: 8px;             /* 角の丸み。デザイン統一の要 */
   --max-width: 960px;        /* コンテンツ幅（中央揃え） */
@@ -65,7 +57,7 @@ h1 {
 h2 {
   padding-left: 0.5em;
   font-size: 1.3rem;
-  margin: 2em 0 0.8em;
+  margin: 1em 0 0.8em;
   color: var(--accent2);
 }
 
@@ -113,8 +105,9 @@ section {
   max-width: var(--max-width);
   background: var(--panel);
   border-radius: var(--radius);
+  margin: 1.5em;
   padding: 1.5em 2em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
   box-shadow: inset 0 0 10px rgba(255,255,255,0.02),
               0 6px 20px rgba(0,0,0,0.4);
 }
@@ -164,6 +157,104 @@ a {
 a:hover {
   color: var(--accent);
 }
+
+/* ------------------ カード一覧（3列固定グリッド） ------------------ */
+.card-list {
+  display: grid;                        /* Grid表示に変更 */
+  grid-template-columns: repeat(3, 1fr); /* 3列固定 */
+  gap: 1rem;                             /* 列・行間の余白 */
+}
+
+/* カード：背景画像 + タイトル重ね */
+.card {
+  position: relative;
+  background-color: #222;
+  background-size: cover;          
+  background-position: center;
+  border: 1px solid #555;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  height: 150px;                   /* 高さ統一 */
+  display: flex;
+  align-items: flex-end;            /* タイトルを下に寄せる */
+  justify-content: center;
+  color: #fff;
+  padding: 0.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* タイトル背景で可読性UP */
+.card-title {
+  z-index: 2;
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+
+}
+
+/* ------------------ モーダル ------------------ */
+.modal {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.85);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  pointer-events:none;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  z-index: 999;  /* モーダルを最前面に */
+}
+
+.modal.active {
+  opacity:1;
+  pointer-events:auto;
+}
+
+.modal-content {
+  background: rgba(20,20,20,0.95);
+  border:1px solid #555;
+  padding:2rem;
+  max-width:1000px;
+  width:90%;
+  border-radius:4px;
+  position:relative;
+  box-shadow:0 0 40px rgba(255,255,255,0.1);
+  animation: modalIn 0.3s ease forwards;
+}
+
+@keyframes modalIn {
+  from { transform: scale(0.9); opacity:0; }
+  to   { transform: scale(1); opacity:1; }
+}
+
+.close-modal {
+  position:absolute;
+  top:0.5rem;
+  right:0.5rem;
+  background:none;
+  border:none;
+  color:#eee;
+  font-size:1.5rem;
+  cursor:pointer;
+}
+
+.modal-content h3 {
+  margin-bottom:1rem;
+  font-size:1.5rem;
+}
+
 
 /* ------------- フッター（任意で追加） ------------- */
 footer {

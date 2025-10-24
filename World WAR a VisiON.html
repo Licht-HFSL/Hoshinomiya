@@ -43,21 +43,53 @@
     </dl>
   </section>
 
-  <!-- 主要国家・組織 -->
-  <section>
-    <h2>列強諸国</h2>
-    <ul>
-      <li>大日本帝国</li>
+    <!-- 国一覧セクション：カード全体に画像 -->
+    <section id="countries" class="section countries">
+      <h2>国一覧</h2>
+      <div class="card-list">
+        <!-- 国カード：背景画像付き -->
+        <div class="card" data-modal="modal-1" style="background-image: url('img/.png');">
+          <span class="card-title">大日本帝国</span>
+        </div>
+        <div class="card" data-modal="modal-2" style="background-image: url('empire-B.png');">
+          <span class="card-title">ドイツ第三帝国</span>
+        </div>
+        <div class="card" data-modal="modal-3" style="background-image: url('federation-C.png');">
+          <span class="card-title">イタリア共和国</span>
+        </div>
+      </div>
+    </section>
+
+      <!-- ---------------- モーダル ---------------- -->
+  <div class="modal" id="modal-1">
+    <div class="modal-content">
+      <button class="close-modal">&times;</button>
+      <h3>大日本帝国</h3>
       <dd>魔力泉：キョウト、トウキョウに存在。大規模</dd>
       <dd>軍国主義・主力軍は陸海軍</dd>
-      <li>ドイツ第三帝国</li>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-2">
+    <div class="modal-content">
+      <button class="close-modal">&times;</button>
+      <h3>ドイツ第三帝国</h3>
       <dd>魔力泉：ベルリン、ミュンヘン、ケルン、キールに存在。中規模</dd>
       <dd>全体主義・主力軍は陸空軍</dd>
-      <li>イタリア共和国</li>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-3">
+    <div class="modal-content">
+      <button class="close-modal">&times;</button>
+      <h3>イタリア共和国</h3>
       <dd>魔力泉：ローマ、メッシーナ、ナポリ、ヴェネツィア、フィレンツェ、ミラノに存在。中・小規模</dd>
       <dd>ファシスト・主力軍は陸海軍</dd>
-    </ul>
-  </section>
+    </div>
+  </div>
+
+  </div>
+
 
 
   <!-- 補足イメージ -->
@@ -144,6 +176,37 @@ function draw() {
 
 draw();
 </script>
+
+  <!-- ---------------- JS（モーダル開閉） ---------------- -->
+  <script>
+    // すべてのカード要素を取得
+    const cards = document.querySelectorAll('.card');
+    const modals = document.querySelectorAll('.modal');
+    const closeButtons = document.querySelectorAll('.close-modal');
+
+    // カードクリックでモーダルを開く
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const modalId = card.dataset.modal;
+        document.getElementById(modalId).classList.add('active');
+      });
+    });
+
+    // モーダル閉じるボタンクリックで閉じる
+    closeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.closest('.modal').classList.remove('active');
+      });
+    });
+
+    // モーダル背景クリックで閉じる
+    modals.forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if(e.target === modal) modal.classList.remove('active');
+      });
+    });
+  </script>
+
 
 <style>
 #calmFire {

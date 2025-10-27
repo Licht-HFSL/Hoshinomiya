@@ -26,6 +26,11 @@ nav a:hover {
 #intro {
   text-align: center;
   padding: 3rem 1rem;
+  img{
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+  }
 }
 
 /* 世界観への扉 */

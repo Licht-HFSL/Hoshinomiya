@@ -147,22 +147,55 @@ nav a:hover {
 }
 
 
-/* スマホ向け（幅600px以下） */
 @media screen and (max-width: 600px) {
   body {
-    font-size: 14px; /* 文字を少し小さく */
+    font-size: 14px;
   }
-  .container {
-    flex-direction: column; /* 横並びを縦並びに変更 */
+
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    font-size: 13px;
+  }
+
+  header nav a {
+    display: inline-block;
+    padding: 4px 6px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 2px;
+  }
+
+  /* 世界観への扉を2列表示 */
+  #world-doors {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2列表示 */
     gap: 10px;
+    padding: 10px;
+  }
+
+  .door {
+    width: 100%;          /* 固定幅解除 */
+    height: auto;         /* 高さは内容に合わせる */
+  }
+
+  .door img {
+    width: 100%;
+    height: auto;
+  }
+
+  .door-title {
+    font-size: 0.95em;
+    padding: 0.4rem;
+  }
+
+  /* ボタン幅を広げる */
+  .calendar-button,
+  .characters-button {
+    width: 90%;
+    padding: 10px 0;
+    font-size: 0.95em;
   }
 }
-
-/* タブレット向け（幅900px以下） */
-@media screen and (max-width: 900px) {
-  .menu {
-    font-size: 16px;
-  }
-}
-
-

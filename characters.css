@@ -5,7 +5,9 @@ body {
   background: radial-gradient(circle at 20% 30%, #1b0033, #000011 80%);
   background-attachment: fixed;
   color: #f2d58a;
+  text-align: center;
 }
+
 
 
 header, footer {
@@ -114,20 +116,41 @@ nav a:hover {
 
 
 
-/* スマホ向け（幅600px以下） */
+/* ---------- スマホ（幅600px以下）対応 ---------- */
 @media screen and (max-width: 600px) {
   body {
-    font-size: 14px; /* 文字を少し小さく */
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
   }
-  .container {
-    flex-direction: column; /* 横並びを縦並びに変更 */
-    gap: 10px;
-  }
-}
 
-/* タブレット向け（幅900px以下） */
-@media screen and (max-width: 900px) {
-  .menu {
-    font-size: 16px;
+  /* 🔹 カード2列表示 */
+  #characterList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2列 */
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .character-card {
+    width: 100% !important;   /* ← 固定幅解除 */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 8px;
+  }
+
+  .character-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .character-card h3 {
+    margin: 8px 0 4px;
+    font-size: 0.95em;
+  }
+
+  footer {
+    font-size: 13px;
+    padding: 10px;
   }
 }

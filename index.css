@@ -177,13 +177,20 @@ nav a:hover {
   }
 
   .door {
-    width: 100%;          /* 固定幅解除 */
-    height: auto;         /* 高さは内容に合わせる */
+    width: 100%;               /* 横幅は親に合わせる */
+    height: 300px;             /* 高さを固定 */
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
   }
 
   .door img {
     width: 100%;
-    height: auto;
+    height: 100%;              /* 親の高さに合わせる */
+    object-fit: cover;         /* 枠いっぱいに収める（縦横比維持＋切り抜き） */
+    display: block;
+    filter: brightness(0.7);
+    transition: filter 0.3s, transform 0.3s;
   }
 
   .door-title {

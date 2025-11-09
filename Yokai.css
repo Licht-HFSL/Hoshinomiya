@@ -77,14 +77,13 @@ nav a:hover {
 .portrait-wrap {
   width: 100%;
   max-width: 600px;      /* コンテナ幅に合わせる */
-  max-height: 100%;     /* 高さをもう少し大きく */
+  height: calc(100vh - 60px); /* 画面高さから少し余裕を引く */
   background: var(--glass);
   border-radius: var(--radius);
   overflow: hidden;
   display: block;
   box-shadow: 0 8px 20px rgba(2,6,23,0.6);
   padding: 0;
-  position: relative;
   position: sticky;
   top: 20px; /* 上からの距離。ヘッダーの高さに合わせて調整 */
   z-index: 10; /* 他の要素より前面に出す */

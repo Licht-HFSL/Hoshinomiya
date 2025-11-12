@@ -78,7 +78,7 @@
       </div>
       <div>
       <h3>必殺技</h3>
-      <p id="char-finisher">—</p>
+      <div id="char-finisher">—</div>
       </div>
       <div>
       <h3>スキル</h3>
@@ -219,6 +219,15 @@
               storyWrap.appendChild(p);
           });
 
+          const finisherWrap = document.getElementById('char-finisher');
+          if (c.finisher) {
+            finisherWrap.innerHTML = `
+            <strong>${c.finisher.name}</strong>
+            ${c.finisher.description ? `<p>${c.finisher.description}</p>` : ''}`;
+          } else {
+            finisherWrap.textContent = '';
+          }
+
           // スキル
           const skills = document.getElementById('char-skills');
           clearChildren(skills);
@@ -276,6 +285,13 @@
           document.getElementById('page-title').textContent = '読み込みエラー';
           setText('char-name', 'データの読み込みに失敗しました');
         });
+
+  // 右クリック禁止
+  document.querySelectorAll('.portrait-wrap img').forEach(el => {
+    el.addEventListener('contextmenu', event => {
+      event.preventDefault(); // 右クリックメニューを表示させない
+    });
+  });
 
       
     })();

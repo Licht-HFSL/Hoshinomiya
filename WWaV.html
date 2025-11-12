@@ -15,6 +15,7 @@
     <!-- メモ: CSSで縦長全身対応 -->
     <aside class="portrait-wrap">
       <img id="char-image" src="" alt="キャラクター立ち絵" />
+      <div class="overlay"></div>
     </aside>
 
     <!-- 右: 情報カード -->
@@ -71,7 +72,7 @@
       </div>
       <div>
       <h3>必殺技</h3>
-      <p id="char-finisher">—</p>
+      <div id="char-finisher">—</div>
       </div>
       <div>
       <h3>スキル</h3>
@@ -212,6 +213,16 @@
               storyWrap.appendChild(p);
           });
 
+          const finisherWrap = document.getElementById('char-finisher');
+          if (c.finisher) {
+            finisherWrap.innerHTML = `
+            <strong>${c.finisher.name}</strong>
+            ${c.finisher.description ? `<p>${c.finisher.description}</p>` : ''}`;
+          } else {
+            finisherWrap.textContent = '';
+          }
+
+
           // スキル
           const skills = document.getElementById('char-skills');
           clearChildren(skills);
@@ -272,6 +283,15 @@
 
       
     })();
+
+
+  // 右クリック禁止
+  document.querySelectorAll('.portrait-wrap img').forEach(el => {
+    el.addEventListener('contextmenu', event => {
+      event.preventDefault(); // 右クリックメニューを表示させない
+    });
+  });
+
   </script>
 </body>
 </html>

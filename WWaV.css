@@ -29,6 +29,18 @@ body{
   text-align: center;
 
 }
+/* 横スクロールだけ防ぐ */
+html, body {
+  overflow-x: hidden;
+}
+
+/* 念のため全要素のボックスサイズを安全化 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 
 header, footer {
   text-align: center;

@@ -29,6 +29,18 @@ body{
   text-align: center;
 
 }
+/* 横スクロールだけ防ぐ */
+html, body {
+  overflow-x: hidden;
+}
+
+/* 念のため全要素のボックスサイズを安全化 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 
 header, footer {
   text-align: center;
@@ -239,12 +251,16 @@ nav a:hover {
     grid-template-columns: 1fr; /* 1カラムに変更 */
     gap: var(--gap);
     padding: 0 1rem;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   .portrait-wrap {
     position: relative; /* stickyを解除 */
     top: 0;
     max-width: 100%;
+    width: 100%;
   }
 
   .panel {

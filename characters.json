@@ -1,4 +1,118 @@
 [
+  {
+  "id": "nuekou",
+  "name": "鵺",
+  "appearance": "立ち絵/鵺.png",
+  "image": "icon/鵺.jpg",
+  "world": "妖行脚百鬼夜行物語",
+  "affiliation": "椿組",
+  "race": "妖怪",
+  "attribute": "雷",
+  "gender": "女性",
+  "age": "",
+  "birthday": "6/24",
+  "zodiacsign": "",
+  "birthdayicon": "顔アイコン/鵺.png",
+  "hometown": "",
+  "height": "162cm",
+  "personality": "",
+  "thinking": "",
+  "firstperson": "",
+  "secondperson": "",
+  "weapon": "太刀",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
+  "skills": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "abilities": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "likes": [],
+  "dislikes": [],
+  "hobbies": [],
+  "quotes": [],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
+  "detailUrl": "Yokai.html?id=nuekou"
+},
+{
+  "id": "shian",
+  "name": "紫杏",
+  "appearance": "立ち絵/紫杏.png",
+  "image": "icon/紫杏.jpg",
+  "world": "Лаплавень",
+  "affiliation": "星光の子",
+  "race": "人間",
+  "attribute": "火",
+  "gender": "女性",
+  "age": "24",
+  "birthday": "4/27",
+  "zodiacsign": "牡牛座",
+  "birthdayicon": "顔アイコン/紫杏.png",
+  "hometown": "ソヴィエト",
+  "height": "151cm",
+  "personality": "",
+  "thinking": "",
+  "firstperson": "",
+  "secondperson": "",
+  "weapon": "拳銃とナイフ",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
+  "skills": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "abilities": [
+      {
+    "name": "白銀の炎",
+    "type": "強化",
+    "description": "魔力使用時に常時発動。一定時間内に魔力消費がなれば恩恵は無くなる。炎魔法の火力が10%アップ"
+  }
+  ],
+  "likes": ["温かいスープ"],
+  "dislikes": [],
+  "hobbies": [],
+  "quotes": [],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
+  "detailUrl": "makai.html?id=shian"
+},
 {
   "id": "andrea",
   "name": "アンドレア",
@@ -20,7 +134,10 @@
   "firstperson": "俺",
   "secondperson": "お前",
   "weapon": "銃",
-  "finisher": "",
+  "finisher": {
+    "name": "Linea del Sole",
+    "description": "閃光の速さで敵を貫く必殺技。"
+  },
   "skills": [
       {
     "name": "",
@@ -78,7 +195,10 @@
   "firstperson": "僕",
   "secondperson": "お前",
   "weapon": "",
-  "finisher": "",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
   "skills": [
       {
     "name": "",
@@ -132,7 +252,10 @@
   "firstperson": "私",
   "secondperson": "貴方",
   "weapon": "太刀",
-  "finisher": "",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
   "skills": [
       {
     "name": "",
@@ -186,7 +309,10 @@
   "firstperson": "私",
   "secondperson": "君",
   "weapon": "槍",
-  "finisher": "",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
   "skills": [
       {
     "name": "",

@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- ← これを追加 -->
   <title>妖行脚百鬼夜行物語</title>
   <link rel="stylesheet" href="妖行脚百鬼夜行物語.css"> <!-- CSSを外部ファイルで読み込み -->
 
@@ -30,29 +31,72 @@
     </p>
   </section>
 
-  <!-- 設定用語 -->
   <section>
-    <h2>重要設定・用語</h2>
-    <dl>
-      <dt>妖界</dt>
-      <dd>妖だけが生活している世界。人間界の人妖が行き来することはできない。それは逆も然り。</dd>
-      <dt>悪鬼</dt>
-      <dd>負の感情で視界が染まったモノ。破壊衝動で動く獣で理性がないものがほとんど。理性があるように見えるものもいるがこれは見せかけで話が通じるように思わせたいだけなのだ。</dd>
-      <dt></dt>
-      <dd></dd>
-    </dl>
-  </section>
+  <h2>重要設定・用語</h2>
 
-  <!-- 主要国家・組織 -->
-  <section>
-    <h2>主要組織</h2>
-    <ul>
-      <li>桜組：</li>
-      <li>椿組：</li>
-      <li>雅衆：</li>
-      <li>宵衆：</li>
+  <!-- ▼人間界 -->
+  <details>
+    <summary>人間界</summary>
+    <p>人と妖が生活している世界。妖界の妖が行き来することはできない。</p>
+    <ul class="term-list">
+      <li><span class="term-link" data-modal="Sakuragumi">桜組</span></li>
+      <li><span class="term-link" data-modal="Tubakigumi">椿組</span></li>
     </ul>
-  </section>
+  </details>
+
+  <!-- ▼妖界 -->
+  <details>
+    <summary>妖界</summary>
+    <p>妖だけが生活している世界。人間界の人妖が行き来することはできない。</p>
+    <ul class="term-list">
+      <li><span class="term-link" data-modal="Youou">妖王</span></li>
+    </ul>
+  </details>
+
+  <!-- ▼共通 -->
+  <details>
+    <summary>共通</summary>
+    <ul class="term-list">
+      <li><span class="term-link" data-modal="akki">悪鬼</span></li>
+    </ul>
+  </details>
+</section>
+
+<!-- ===== モーダル内容 ===== -->
+<div class="modal" id="Sakuragumi">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>桜組</h3>
+    <p>椿組に追随する形で創設された対妖組織。</p>
+  </div>
+</div>
+<div class="modal" id="Tubakigumi">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>椿組</h3>
+    <p>鵺が創設した対妖組織。構成員はみな妖怪である。</p>
+  </div>
+</div>
+<div class="modal" id="Youou">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>妖王</h3>
+    <p>代々妖界を統治している龍王族。</p>
+    <p>当代妖王が龍神と交わることで次の龍王を作る。</p>
+    <p>龍神と交わらなかった場合龍王族から龍族に下がってしまう。</p>
+  </div>
+</div>
+
+
+<div class="modal" id="akki">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>悪鬼</h3>
+    <p>負の感情で視界が染まったモノ。破壊衝動で動く獣で理性がないものがほとんど。</p>
+    <p>理性があるように見えるものもいるがこれは見せかけで話が通じるように思わせたいだけなのだ。</p>
+    <p>反転目真赤の目の特徴をもつ</p>
+  </div>
+</div>
 
 
   <!-- 補足イメージ -->
@@ -61,6 +105,27 @@
     <img src="images/world_map_A.jpg" alt="作品A 世界地図">
     <p>地理や都市の位置関係を示す地図やイラスト。</p>
   </section>
+
+  <script>
+  document.querySelectorAll('.term-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const modal = document.getElementById(link.dataset.modal);
+      modal.style.display = 'block';
+    });
+  });
+
+  document.querySelectorAll('.close').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.closest('.modal').style.display = 'none';
+    });
+  });
+
+  window.addEventListener('click', e => {
+    if (e.target.classList.contains('modal')) {
+      e.target.style.display = 'none';
+    }
+  });
+</script>
 
 
   <!-- フッター -->

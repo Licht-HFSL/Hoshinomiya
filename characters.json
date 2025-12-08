@@ -15,8 +15,8 @@
   "birthdayicon": "顔アイコン/鵺.png",
   "hometown": "",
   "height": "162cm",
-  "personality": "",
-  "thinking": "",
+  "personality": [],
+  "thinking": [""],
   "firstperson": "",
   "secondperson": "",
   "weapon": "太刀",
@@ -72,8 +72,12 @@
   "birthdayicon": "顔アイコン/紫杏.png",
   "hometown": "ソヴィエト",
   "height": "151cm",
-  "personality": "",
-  "thinking": "",
+  "personality": [
+    "World WAR a VisiONから魔界へやってきた戦士の一人。",
+    "36年に起こった戦争により一度生死をさ迷っており、生き延びた。",
+    "同年に彼女が所属していた軍では行方不明による死亡報告書が発行されている。"
+  ],
+  "thinking": [""],
   "firstperson": "",
   "secondperson": "",
   "weapon": "拳銃とナイフ",
@@ -96,7 +100,7 @@
   }
   ],
   "likes": ["温かいスープ"],
-  "dislikes": [],
+  "dislikes": ["寒い場所"],
   "hobbies": [],
   "quotes": [],
   "relationships": [
@@ -129,8 +133,10 @@
   "birthdayicon": "顔アイコン/アンドレア.png",
   "hometown": "ローマ",
   "height": "187㎝",
-  "personality": "冷静、寡黙",
-  "thinking": "慎重派、正義感が強い",
+  "personality": [
+    "階級：中将"
+  ],
+  "thinking": [""],
   "firstperson": "俺",
   "secondperson": "お前",
   "weapon": "銃",
@@ -190,8 +196,10 @@
   "birthdayicon": "顔アイコン/氷狗.png",
   "hometown": "氷ノ山",
   "height": "234㎝",
-  "personality": "無関心、冷淡",
-  "thinking": "利己的",
+  "personality": [
+    "無関心、冷淡"
+  ],
+  "thinking": [""],
   "firstperson": "僕",
   "secondperson": "お前",
   "weapon": "",
@@ -247,8 +255,10 @@
   "birthdayicon": "顔アイコン/橋姫.png",
   "hometown": "山城国",
   "height": "167㎝",
-  "personality": "温厚、献身的",
-  "thinking": "マイペース",
+  "personality": [
+    "温厚、献身的"
+  ],
+  "thinking": [""],
   "firstperson": "私",
   "secondperson": "貴方",
   "weapon": "太刀",
@@ -304,8 +314,10 @@
   "birthdayicon": "顔アイコン/Licht.png",
   "hometown": "？",
   "height": "151㎝",
-  "personality": "気まぐれ、創造的",
-  "thinking": "楽観的",
+  "personality": [
+    "気まぐれ、創造的"
+  ],
+  "thinking": [""],
   "firstperson": "私",
   "secondperson": "君",
   "weapon": "槍",

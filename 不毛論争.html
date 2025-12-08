@@ -25,9 +25,11 @@
   <!-- 世界概要 -->
   <section>
     <h2>世界の概要</h2>
-    <p>
-      準備中<br>
-          </p>
+        <p>
+          数十年にわたる戦争によって大地は不毛化した。<br>
+          国家は正式な停戦を交わさないまま、代表者を海底の議堂へ送った。<br>
+          そこでは決着のない議論が続く。</p>
+
   </section>
 
   <!-- 設定用語 -->
@@ -41,11 +43,500 @@
          </dl>
   </section>
 
+    <section>
+    <h2>主義思想一覧(準備中)</h2>
+      <!-- キャラクター選択リスト -->
+      <ul class="ideology-list">
+        <!-- 民主主義系 -->
+        <li data-char="democracy">民主主義</li>
+        <li data-char="republic">共和主義</li>
+        
+        <!-- 自由主義系 -->
+        <li data-char="liberal">自由主義</li>
+        <li data-char="libertarianism">リバタリアニズム</li>
+        
+        <!-- 左翼系 -->
+        <li data-char="socialism">社会主義</li>
+        <li data-char="communism">共産主義</li>
+        <li data-char="marxism">マルクス主義</li>
+        <li data-char="onestate">一国社会主義</li>
+        <li data-char="worldrevolution">世界革命論</li>
+        <li data-char="anarchism">アナキズム</li>
+        
+        <!-- 右翼系 -->
+        <li data-char="fascism">ファシズム</li>
+        <li data-char="nazi">ナチズム</li>
+        <li data-char="nazism">国家社会主義</li>
+        <li data-char="militarism">軍国主義</li>
+        <li data-char="nationalism">国家主義</li>
+        
+        <!-- 権威主義系 -->
+        <li data-char="authoritarianism">権威主義</li>
+        <li data-char="dictatorship">独裁主義</li>
+        <li data-char="absolutism">絶対主義</li>
+        <li data-char="total">全体主義</li>
+        
+        <!-- 経済思想 -->
+        <li data-char="capitalism">資本主義</li>
+        <li data-char="collectivism">集産主義</li>
+        
+        <!-- 保守/進歩 -->
+        <li data-char="conservatism">保守主義</li>
+        
+        <!-- 平和/軍事 -->
+        <li data-char="pacifism">平和主義</li>
+        
+        <!-- 非政治的イデオロギー・思想 -->
+        <li data-char="enlightenment">啓蒙主義</li>
+        <li data-char="romanticism">ロマン主義</li>
+        <li data-char="idealism">理想主義</li>
+        <li data-char="utilitarianism">功利主義</li>
+        <li data-char="humanism">人道主義</li>
+        <li data-char="individualism">個人主義</li>
+        <li data-char="existentialism">実存主義</li>
+        <li data-char="gnosticism">グノーシス主義</li>
+      </ul>
+
+  </section>
+
+  <!-- ウィンドウコンテナ（section外で位置計算を正確にするため） -->
+  <div id="window-container">
+  </div>
+
   <!-- フッター -->
   <footer>
     © 2025 Licht_HFSL
   </footer>
 
+  <script>
+// キャラクター情報
+const characters = {
+  // 民主主義
+  "democracy": {
+    "name": "民主主義代表",
+    "nationality": "民主連合",
+    "dob": "1989年6月15日",
+    "occupation": "政治家",
+    "photo": "icon/democracy.jpg",
+    "bio": "国民主権を掲げる。"
+  },
+  // 自由主義
+  "liberal": {
+    "name": "アレクサンダー・ライト",
+    "nationality": "自由国家連合",
+    "dob": "1982年4月15日",
+    "occupation": "外交官 / 理論家",
+    "photo": "icon/UP済/アンドレア.jpg",
+    "bio": "国内外で外交活動を展開。政治理論の著作も多数。"
+  },
+  // 共和主義
+  "republic": {
+    "name": "共和主義代表",
+    "nationality": "共和制国家",
+    "dob": "1985年3月20日",
+    "occupation": "国務卿",
+    "photo": "icon/republic.jpg",
+    "bio": "王制廃止を主張。"
+  },
+  // 資本主義
+  "capitalism": {
+    "name": "資本主義代表",
+    "nationality": "商業同盟",
+    "dob": "1980年1月10日",
+    "occupation": "企業家",
+    "photo": "icon/capitalism.jpg",
+    "bio": "市場経済を推進。"
+  },
+  // 社会主義
+  "socialism": {
+    "name": "社会主義代表",
+    "nationality": "労働者同盟",
+    "dob": "1975年7月22日",
+    "occupation": "労働指導者",
+    "photo": "icon/socialism.jpg",
+    "bio": "財産の共有を掲げる。"
+  },
+  // 国家社会主義
+  "nazism": {
+    "name": "国家社会主義代表",
+    "nationality": "国家社会連盟",
+    "dob": "1972年9月11日",
+    "occupation": "指導者",
+    "photo": "icon/nazism.jpg",
+    "bio": "国家と民族を最優先。"
+  },
+  // 共産主義
+  "communism": {
+    "name": "共産主義代表",
+    "nationality": "共産圏",
+    "dob": "1970年5月3日",
+    "occupation": "理論家",
+    "photo": "icon/communism.jpg",
+    "bio": "階級制度の廃止を掲げる。"
+  },
+  // マルクス主義
+  "marxism": {
+    "name": "マルクス主義代表",
+    "nationality": "マルクス同盟",
+    "dob": "1968年2月14日",
+    "occupation": "哲学者",
+    "photo": "icon/marxism.jpg",
+    "bio": "歴史的唯物論を主張。"
+  },
+  // アナキズム
+  "anarchism": {
+    "name": "アナキズム代表",
+    "nationality": "無政府連盟",
+    "dob": "1987年10月5日",
+    "occupation": "活動家",
+    "photo": "icon/anarchism.jpg",
+    "bio": "国家権力の廃止を求める。"
+  },
+  // リバタリアニズム
+  "libertarianism": {
+    "name": "リバタリアニズム代表",
+    "nationality": "自由連邦",
+    "dob": "1983年11月28日",
+    "occupation": "経済学者",
+    "photo": "icon/libertarianism.jpg",
+    "bio": "個人の自由と最小国家。"
+  },
+  // ファシズム
+  "fascism": {
+    "name": "ファシズム代表",
+    "nationality": "ファシスト国",
+    "dob": "1976年8月19日",
+    "occupation": "統治者",
+    "photo": "icon/fascism.jpg",
+    "bio": "独裁的指導と国家統制。"
+  },
+  // ナチズム
+  "nazi": {
+    "name": "ナチズム代表",
+    "nationality": "ナチ帝国",
+    "dob": "1974年4月20日",
+    "occupation": "指導官",
+    "photo": "icon/nazi.jpg",
+    "bio": "民族優越主義。"
+  },
+  // 集産主義
+  "collectivism": {
+    "name": "集産主義代表",
+    "nationality": "集団主義共和国",
+    "dob": "1979年12月7日",
+    "occupation": "委員",
+    "photo": "icon/collectivism.jpg",
+    "bio": "集団の利益を優先。"
+  },
+  // 平和主義
+  "pacifism": {
+    "name": "平和主義代表",
+    "nationality": "平和連邦",
+    "dob": "1990年3月15日",
+    "occupation": "活動家",
+    "photo": "icon/pacifism.jpg",
+    "bio": "暴力と戦争の拒否。"
+  },
+  // 軍国主義
+  "militarism": {
+    "name": "軍国主義代表",
+    "nationality": "軍事帝国",
+    "dob": "1973年6月9日",
+    "occupation": "将軍",
+    "photo": "icon/militarism.jpg",
+    "bio": "軍事力による国家強化。"
+  },
+  // 保守主義
+  "conservatism": {
+    "name": "保守主義代表",
+    "nationality": "伝統王国",
+    "dob": "1971年9月25日",
+    "occupation": "貴族",
+    "photo": "icon/conservatism.jpg",
+    "bio": "伝統と現状維持を重視。"
+  },
+  // 権威主義
+  "authoritarianism": {
+    "name": "権威主義代表",
+    "nationality": "強権国家",
+    "dob": "1977年1月12日",
+    "occupation": "統治官",
+    "photo": "icon/authoritarianism.jpg",
+    "bio": "中央集権的統制。"
+  },
+  // 絶対主義
+  "absolutism": {
+    "name": "絶対主義代表",
+    "nationality": "絶対王制国",
+    "dob": "1969年7月8日",
+    "occupation": "国王",
+    "photo": "icon/absolutism.jpg",
+    "bio": "君主の絶対的権力。"
+  },
+  // 独裁主義
+  "dictatorship": {
+    "name": "独裁主義代表",
+    "nationality": "独裁領土",
+    "dob": "1975年11月30日",
+    "occupation": "独裁者",
+    "photo": "icon/dictatorship.jpg",
+    "bio": "一人の支配者による統治。"
+  },
+  // 全体主義
+  "total": {
+    "name": "フリードリヒ・カール",
+    "nationality": "統制帝国",
+    "dob": "1978年11月3日",
+    "occupation": "軍人 / 統治官",
+    "photo": "icon/total.jpg",
+    "bio": "国家統一の過程で台頭。秩序と統制を重視する強権派。"
+  },
+  // 一国社会主義
+  "onestate": {
+    "name": "一国社会主義代表",
+    "nationality": "ソビエト圏",
+    "dob": "1974年2月23日",
+    "occupation": "共産主義指導者",
+    "photo": "icon/onestate.jpg",
+    "bio": "一国内での社会主義建設。"
+  },
+  // 世界革命論
+  "worldrevolution": {
+    "name": "世界革命論代表",
+    "nationality": "国際共産同盟",
+    "dob": "1972年10月16日",
+    "occupation": "革命活動家",
+    "photo": "icon/worldrevolution.jpg",
+    "bio": "全世界での革命を掲げる。"
+  },
+  // 功利主義
+  "utilitarianism": {
+    "name": "功利主義代表",
+    "nationality": "最大幸福国",
+    "dob": "1986年4月8日",
+    "occupation": "哲学者",
+    "photo": "icon/utilitarianism.jpg",
+    "bio": "最大多数の最大幸福。"
+  },
+  // 国家主義
+  "nationalism": {
+    "name": "国家主義代表",
+    "nationality": "民族国家",
+    "dob": "1980年8月14日",
+    "occupation": "愛国指導者",
+    "photo": "icon/nationalism.jpg",
+    "bio": "民族と国家の統一。"
+  },
+  // ロマン主義
+  "romanticism": {
+    "name": "ロマン主義代表",
+    "nationality": "感情王国",
+    "dob": "1988年5月19日",
+    "occupation": "芸術家",
+    "photo": "icon/romanticism.jpg",
+    "bio": "感情と想像力を重視。"
+  },
+  // 啓蒙主義
+  "enlightenment": {
+    "name": "啓蒙主義代表",
+    "nationality": "理性共和国",
+    "dob": "1981年3月27日",
+    "occupation": "知識人",
+    "photo": "icon/enlightenment.jpg",
+    "bio": "理性と知識による進歩。"
+  },
+  // 人道主義
+  "humanism": {
+    "name": "人道主義代表",
+    "nationality": "人文同盟",
+    "dob": "1989年9月11日",
+    "occupation": "人権活動家",
+    "photo": "icon/humanism.jpg",
+    "bio": "人間の尊厳を最優先。"
+  },
+  // 個人主義
+  "individualism": {
+    "name": "個人主義代表",
+    "nationality": "独立自治区",
+    "dob": "1984年7月4日",
+    "occupation": "独立思想家",
+    "photo": "icon/individualism.jpg",
+    "bio": "個人の権利と自由。"
+  },
+  // 実存主義
+  "existentialism": {
+    "name": "実存主義代表",
+    "nationality": "実存共和国",
+    "dob": "1982年12月21日",
+    "occupation": "哲学者",
+    "photo": "icon/existentialism.jpg",
+    "bio": "個人の実存と自由意志。"
+  },
+  // 理想主義
+  "idealism": {
+    "name": "理想主義代表",
+    "nationality": "理想国家",
+    "dob": "1985年6月30日",
+    "occupation": "思想家",
+    "photo": "icon/idealism.jpg",
+    "bio": "理想と精神を追求。"
+  },
+  // グノーシス主義
+  "gnosticism": {
+    "name": "グノーシス主義代表",
+    "nationality": "秘儀圏",
+    "dob": "1979年1月17日",
+    "occupation": "神秘思想家",
+    "photo": "icon/gnosticism.jpg",
+    "bio": "秘密の知識と救済。"
+  }
+};
+
+// 動的にウィンドウを生成
+function createWindows() {
+  const container = document.getElementById('window-container');
+  if (!container) return;
+  
+  Object.keys(characters).forEach(charKey => {
+    const label = Array.from(document.querySelectorAll('.ideology-list li[data-char]'))
+      .find(li => li.getAttribute('data-char') === charKey)?.textContent || charKey;
+    
+    // 左ウィンドウ
+    const leftWin = document.createElement('div');
+    leftWin.className = 'win';
+    leftWin.setAttribute('data-char', charKey);
+    leftWin.setAttribute('data-pos', 'left');
+    leftWin.innerHTML = `
+      <div class="title-bar">${label} - 理念</div>
+      <div class="content">準備中</div>
+    `;
+    container.appendChild(leftWin);
+    
+    // 中央ウィンドウ
+    const centerWin = document.createElement('div');
+    centerWin.className = 'win';
+    centerWin.setAttribute('data-char', charKey);
+    centerWin.setAttribute('data-pos', 'center');
+    centerWin.innerHTML = `
+      <div class="title-bar">${label} - プロフィール</div>
+      <div class="content resume"></div>
+    `;
+    container.appendChild(centerWin);
+    
+    // 右ウィンドウ
+    const rightWin = document.createElement('div');
+    rightWin.className = 'win';
+    rightWin.setAttribute('data-char', charKey);
+    rightWin.setAttribute('data-pos', 'right');
+    rightWin.innerHTML = `
+      <div class="title-bar">${label} - 歴史</div>
+      <div class="content">準備中</div>
+    `;
+    container.appendChild(rightWin);
+  });
+}
+
+// ページ読み込み後にウィンドウを生成
+document.addEventListener('DOMContentLoaded', createWindows);
+
+// ユーティリティ: 全ウィンドウを閉じる
+function closeAll() {
+  document.querySelectorAll('.win').forEach(w => { w.style.display = 'none'; });
+}
+
+// 指定キャラクターのウィンドウ表示
+function showCharacter(charKey) {
+  const data = characters[charKey];
+  if (!data) return;
+
+  const centerWin = document.querySelector('.win[data-pos="center"]');
+  if (!centerWin) return;
+
+  centerWin.setAttribute('data-char', charKey);
+  const content = centerWin.querySelector('.content');
+  content.innerHTML = `
+    <div class="resume-top">
+      <div class="photo"><img src="${data.photo}" alt="${data.name}" onerror="this.style.display='none'"></div>
+      <div class="top-info">
+        <div class="name">${data.name}</div>
+        <table class="top-table">
+          <tr><th>国籍</th><td>${data.nationality}</td></tr>
+          <tr><th>生年月日</th><td>${data.dob}</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="resume-bottom">
+      <table class="bottom-table">
+        <tr><th>職業</th><td>${data.occupation}</td></tr>
+        <tr><th>経歴</th><td>${data.bio}</td></tr>
+      </table>
+    </div>
+  `;
+
+  const padding = 40;
+  const leftWidth = 260;
+  const rightWidth = 260;
+  const centerWidth = 520;
+  const winHeight = 180;
+  const centerHeight = 360;
+
+  // 左右ウィンドウを中央寄りに寄せる（画面幅の割合で位置を決定しつつ端に寄りすぎないよう調整）
+  const leftPos = Math.max(padding, Math.round(window.innerWidth * 0.12));
+  const centerPos = Math.max((window.innerWidth - centerWidth) / 2, padding);
+  const rightPos = Math.min(Math.round(window.innerWidth * 0.88) - rightWidth, window.innerWidth - rightWidth - padding);
+  const positions = { left: leftPos, center: centerPos, right: rightPos };
+
+  // 左・右ウィンドウ
+  ['left','right'].forEach(pos => {
+    const win = document.querySelector(`.win[data-char="${charKey}"][data-pos="${pos}"]`);
+    if (!win) return;
+    win.style.display = 'block';
+    win.style.top = padding + 'px';
+    win.style.left = positions[pos] + 'px';
+    win.style.width = leftWidth + 'px';
+    win.style.height = winHeight + 'px';
+    win.style.zIndex = 1000;
+  });
+
+  // 中央
+  centerWin.style.display = 'block';
+  centerWin.style.top = padding + 'px';
+  centerWin.style.left = positions.center + 'px';
+  centerWin.style.width = centerWidth + 'px';
+  centerWin.style.height = centerHeight + 'px';
+  centerWin.style.zIndex = 1000;
+}
+
+// リスト項目のクリックとキーボード操作を登録
+document.querySelectorAll('.ideology-list li[data-char]').forEach(item => {
+  // アクセシビリティ属性
+  item.setAttribute('role', 'button');
+  item.setAttribute('tabindex', '0');
+
+  item.addEventListener('click', e => {
+    e.stopPropagation();
+    showCharacter(item.getAttribute('data-char'));
+  });
+
+  item.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      showCharacter(item.getAttribute('data-char'));
+    }
+  });
+});
+
+// クリックで閉じる（空クリック）
+document.body.addEventListener('click', () => closeAll());
+
+// ウィンドウ内のクリックは伝播止める
+document.querySelectorAll('.win').forEach(win => win.addEventListener('click', e => e.stopPropagation()));
+
+// キーボード: Esc で閉じる
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeAll();
+});
+  </script>
 
 </body>
 </html>

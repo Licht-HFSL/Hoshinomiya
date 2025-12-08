@@ -41,11 +41,11 @@
       <!-- 性格・目的 -->
       <section class="panel two-col">
         <div>
-          <h3>性格</h3>
+          <h3>設定</h3>
           <p id="char-personality">—</p>
         </div>
         <div>
-          <h3>考え方</h3>
+          <h3>性格</h3>
           <p id="char-thinking">—</p>
         </div>
       </section>
@@ -135,6 +135,24 @@
         el.textContent = text ?? '';
       }
 
+      // Escape HTML to avoid injecting raw markup
+      function escapeHTML(s){
+        return String(s).replace(/[&<>"']/g, c => ({
+          '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'
+        })[c]);
+      }
+
+      // Sets content: arrays become <br>-separated, others use textContent
+      function setContent(id, value){
+        const el = document.getElementById(id);
+        if(!el) return;
+        if(Array.isArray(value)){
+          el.innerHTML = value.map(v => escapeHTML(v)).join('<br>');
+        } else {
+          el.textContent = value ?? '';
+        }
+      }
+
       function clearChildren(el) {
         while (el.firstChild) el.removeChild(el.firstChild);
       }
@@ -193,8 +211,8 @@
           });
 
           // 詳細
-          setText('char-personality', c.personality || '');
-          setText('char-thinking', c.thinking || '');
+          setContent('char-personality', c.personality || '');
+          setContent('char-thinking', c.thinking || '');
           setText('char-firstperson', c.firstperson || '');
           setText('char-secondperson', c.secondperson || '');
           setText('char-likes', c.likes || '');

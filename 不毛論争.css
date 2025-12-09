@@ -123,3 +123,165 @@ footer {
     font-size: 16px;
   }
 }
+
+/* ===== キャラクター選択リスト ===== */
+.ideology-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 16px;
+  list-style: none;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.ideology-list li {
+  cursor: pointer;
+  padding: 12px 14px;
+  border: 1px solid #e7d9bb;
+  border-radius: 4px;
+  color: #e7d9bb;
+  font-size: 14px;
+  transition: all 0.2s;
+  background: rgba(255,255,255,0.02);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ideology-list li:hover {
+  background: rgba(231,217,187,0.1);
+}
+
+/* ===== ウィンドウ ===== */
+.win {
+  position: fixed;
+  display: none;
+  background: rgba(36,27,2,0.9);
+  border: 2px solid #e7d9bb;
+  border-radius: 6px;
+  box-shadow: 0 0 12px rgba(231,217,187,0.4), 0 0 30px rgba(231,217,187,0.2) inset;
+  color: #f2d58a;
+  font-family: 'Sawarabi Mincho', 'Noto Serif JP', serif;
+  padding: 12px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+}
+
+/* タイトルバー */
+.win .title-bar {
+  font-weight: 600;
+  font-size: 16px;
+  color: #e7d9bb;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(231,217,187,0.4);
+  padding-bottom: 4px;
+}
+
+/* 内容 */
+.win .content {
+  font-size: 15px;
+  line-height: 1.4;
+  color: #f2d58a;
+}
+
+/* ネオン点滅 */
+@keyframes historicalGlow {
+  0%, 100% { box-shadow: 0 0 12px rgba(231,217,187,0.4), 0 0 30px rgba(231,217,187,0.2) inset; }
+  50% { box-shadow: 0 0 16px rgba(231,217,187,0.5), 0 0 40px rgba(231,217,187,0.3) inset; }
+}
+.win {
+  animation: historicalGlow 1.8s infinite alternate;
+}
+
+/* プロフィール（履歴書）用スタイル */
+.win[data-pos="center"] .content.resume {
+  background: transparent;
+  color: inherit;
+  padding: 10px 6px;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+}
+
+/* 上段：写真と基本情報 */
+.win[data-pos="center"] .content.resume .resume-top {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.win[data-pos="center"] .content.resume .photo {
+  flex: 0 0 140px;
+  display: flex;
+  align-items: flex-start;
+}
+.win[data-pos="center"] .content.resume .photo img {
+  width: 140px;
+  aspect-ratio: 3 / 4;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid rgba(231,217,187,0.1);
+  display: block;
+}
+
+/* 写真の横に表示する基本情報 */
+.win[data-pos="center"] .content.resume .top-info {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.win[data-pos="center"] .content.resume .name {
+  font-size: 22px;
+  font-weight: 800;
+  color: #f2d58a;
+}
+
+.win[data-pos="center"] .content.resume .top-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+}
+.win[data-pos="center"] .content.resume .top-table th {
+  text-align: left;
+  vertical-align: top;
+  padding: 4px 8px 4px 0;
+  width: 80px;
+  color: inherit;
+  font-weight: 700;
+}
+.win[data-pos="center"] .content.resume .top-table td {
+  padding: 4px 0;
+  color: rgba(242,213,138,0.9);
+}
+
+/* 下段：職業・経歴 */
+.win[data-pos="center"] .content.resume .resume-bottom {
+  border-top: 1px solid rgba(231,217,187,0.2);
+  padding-top: 8px;
+}
+
+.win[data-pos="center"] .content.resume .bottom-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+}
+.win[data-pos="center"] .content.resume .bottom-table th {
+  text-align: left;
+  vertical-align: top;
+  padding: 4px 8px 4px 0;
+  width: 80px;
+  color: inherit;
+  font-weight: 700;
+}
+.win[data-pos="center"] .content.resume .bottom-table td {
+  padding: 4px 0;
+  color: rgba(242,213,138,0.9);
+}

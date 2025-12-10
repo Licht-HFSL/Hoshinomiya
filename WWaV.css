@@ -14,7 +14,7 @@ body{
   --gap: 18px;
 
   font-family: var(--font-body);
-  background: linear-gradient(to bottom, #0a0a0c, #6c272d, #752100 ); /* 背景色: ここを変える */
+  background: linear-gradient(to bottom, #0a0a0c, #6c272d, #0a0a0c ); /* 背景色: ここを変える */
   color: var(--color-text);
   background-repeat: no-repeat;
   background-size: cover;
@@ -258,4 +258,12 @@ nav a:hover {
   .meta-grid {
     grid-template-columns: 1fr; /* 1列に変更 */
   }
+}
+/* 箇条書きの先頭記号を消す */
+ul.list-plain,
+ul.list-quotes,
+ul.list-relations {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
 }

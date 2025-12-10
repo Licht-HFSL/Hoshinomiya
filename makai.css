@@ -74,7 +74,7 @@ nav a:hover {
 /* 左の立ち絵 */
 .portrait-wrap {
   width: 100%;
-  max-width: 600px;      /* コンテナ幅に合わせる */
+  max-width: 100%;      /* コンテナ幅に合わせる */
   height: calc(100vh - 60px); /* 画面高さから少し余裕を引く */
   background: var(--glass);
   border-radius: var(--radius);
@@ -233,6 +233,7 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
+
   .container {
     grid-template-columns: 1fr; /* 1カラムに変更 */
     gap: var(--gap);
@@ -256,4 +257,12 @@ nav a:hover {
   .meta-grid {
     grid-template-columns: 1fr; /* 1列に変更 */
   }
+}
+/* 箇条書きの先頭記号を消す */
+ul.list-plain,
+ul.list-quotes,
+ul.list-relations {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
 }

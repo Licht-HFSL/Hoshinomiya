@@ -1,4 +1,3 @@
-
 body{
   --color-bg-dark: #080010;
   --color-bg-mid: #140028;
@@ -262,4 +261,13 @@ nav a:hover {
   .meta-grid {
     grid-template-columns: 1fr; /* 1列に変更 */
   }
+}
+
+/* 箇条書きの先頭記号を消す */
+ul.list-plain,
+ul.list-quotes,
+ul.list-relations {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
 }

@@ -1,3 +1,12 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 body{
   --color-bg-dark: #1a1a1a;
@@ -27,6 +36,9 @@ body{
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 
 }
 
@@ -239,16 +251,21 @@ nav a:hover {
     grid-template-columns: 1fr; /* 1カラムに変更 */
     gap: var(--gap);
     padding: 0 1rem;
+    width: 100%;
   }
 
   .portrait-wrap {
     position: relative; /* stickyを解除 */
     top: 0;
     max-width: 100%;
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
   }
 
   .panel {
     padding: 1.5rem 1rem;
+    margin: 0 auto 28px auto;
   }
 
   .panel.story {

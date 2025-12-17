@@ -287,6 +287,45 @@
             qlist.appendChild(li);
           });
 
+          // 関係
+          const relations = document.getElementById('char-relations');
+          clearChildren(relations);
+          (c.relationships || []).forEach(r => {
+            if (r.id && r.name) {
+              const li = document.createElement('li');
+              li.innerHTML = `<strong>${r.name}</strong> (${r.type || '関係'})${r.note ? `<p class="relation-note">${r.note}</p>` : ''}`;
+              relations.appendChild(li);
+            }
+          });
+
+          // スポイラー（隠し）機能の適用
+          const hiddenSections = c.hidden || {};
+          const elementsToHide = {
+            'char-race': document.getElementById('char-race'),
+            'char-weapon': document.getElementById('char-weapon'),
+            'char-finisher': document.getElementById('char-finisher'),
+            'char-skills': document.getElementById('char-skills'),
+            'char-abilities': document.getElementById('char-abilities'),
+            'char-hobbies': document.getElementById('char-hobbies'),
+            'char-quotes': document.getElementById('char-quotes'),
+            'char-relations': document.getElementById('char-relations'),
+            'char-shortstories': document.getElementById('char-shortstories')
+          };
+
+          Object.entries(hiddenSections).forEach(([sectionId, shouldHide]) => {
+            const elem = elementsToHide[sectionId];
+            if (elem && shouldHide) {
+              elem.classList.add('spoiler', 'hidden');
+              elem.addEventListener('click', function(e) {
+                if (this.classList.contains('hidden')) {
+                  e.stopPropagation();
+                  this.classList.remove('hidden');
+                  this.classList.add('revealed');
+                }
+              });
+            }
+          });
+
           // 空セクション非表示
           const sectionIds = [
           ];

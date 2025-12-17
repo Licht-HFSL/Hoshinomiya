@@ -285,3 +285,41 @@ ul.list-relations {
   padding-left: 0;
   margin-left: 0;
 }
+
+/* ===============================
+   🔒 スポイラー（隠し機能）
+   =============================== */
+.spoiler {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: fit-content;
+}
+
+.spoiler.hidden,
+.spoiler.hidden * {
+  color: transparent;
+}
+
+.spoiler.hidden {
+  background: rgba(63, 63, 63, 0.5);
+  pointer-events: auto;
+  padding: 2px 4px;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+.spoiler.hidden:hover {
+  background: rgba(160, 160, 160, 0.6);
+}
+
+.spoiler.revealed,
+.spoiler.revealed * {
+  color: inherit;
+}
+
+.spoiler.revealed {
+  background: none;
+  padding: 0;
+  display: inline-block;
+}

@@ -1,25 +1,25 @@
 [
   {
-  "id": "Luca",
-  "name": "ルカ",
-  "appearance": "立ち絵/ルカ.png",
-  "image": "icon/ルカ.jpg",
-  "world": "Лаплавень",
-  "affiliation": "星光の子",
-  "race": "神様",
-  "attribute": "光属性",
+  "id": "rosa",
+  "name": "ローザ",
+  "appearance": "立ち絵/.png",
+  "image": "icon/.jpg",
+  "world": "聖灰のVampire",
+  "affiliation": "",
+  "race": "吸血鬼",
+  "attribute": "",
   "gender": "女性",
-  "age": "",
-  "birthday": "4/22",
-  "zodiacsign": "牡牛座",
-  "birthdayicon": "顔アイコン/ルカ.png",
-  "hometown": "聖灰のVampire",
+  "age": "14歳",
+  "birthday": "",
+  "zodiacsign": "",
+  "birthdayicon": "顔アイコン/.png",
+  "hometown": "",
   "height": "152cm",
-  "personality": "設定",
-  "thinking": "性格",
+  "personality": ["生まれて間もない頃聖教会のネーベルに拾われ生きてきた。", "自分が吸血鬼であることを知らない。しかし自分と周りが明らかに違うことに疑問を抱いている。"],
+  "thinking": [""],
   "firstperson": "私",
   "secondperson": "貴方",
-  "weapon": "",
+  "weapon": "斧",
   "finisher": {
     "name": "",
     "description": ""
@@ -54,6 +54,177 @@
     "",
     ""
   ],
+  "detailUrl": ".html?id="
+},
+{
+  "id": "vesmolte",
+  "name": "ヴェスモルテ",
+  "appearance": "立ち絵/ヴェスモルテ.png",
+  "image": "icon/ヴェスモルテ.jpg",
+  "world": "聖灰のVampire",
+  "affiliation": "始祖",
+  "race": "吸血鬼",
+  "attribute": "闇属性",
+  "gender": "女性",
+  "age": "257歳",
+  "birthday": "",
+  "zodiacsign": "",
+  "birthdayicon": "顔アイコン/ヴェスモルテ.png",
+  "hometown": "",
+  "height": "",
+  "personality": ["二人で一人の吸血鬼。","本体が棺桶","人間を見下していて殺した人間を埋葬し吸血鬼にする。","始祖としての自覚が強く、自分達を慕う吸血鬼達を大切に思っている。"],
+  "thinking": ["傲慢で冷酷"],
+  "firstperson": "アタシ",
+  "secondperson": "アンタ",
+  "weapon": "",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
+  "skills": [
+      {
+    "name": "吸血",
+    "type": "攻撃＆回復",
+    "description": "相手の体のどこかに牙を立て、血を吸う。相手にダメージを与えるが自身にはHP回復の効果がある。これは食事だ。"
+  }
+  ],
+  "abilities": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "likes": [],
+  "dislikes": [],
+  "hobbies": [],
+  "quotes": [],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
+  "detailUrl": "vamp.html?id=vesmolte"
+},
+{
+  "id": "shiia",
+  "name": "刺鴉",
+  "appearance": "立ち絵/刺鴉.png",
+  "image": "icon/刺鴉.jpg",
+  "world": "Лаплавень",
+  "affiliation": "星光の子",
+  "race": "神様",
+  "attribute": "氷属性",
+  "gender": "女性",
+  "age": "？",
+  "birthday": "4/26",
+  "zodiacsign": "牡牛座",
+  "birthdayicon": "顔アイコン/刺鴉.png",
+  "hometown": "？",
+  "height": "163cm",
+  "personality": ["秩序の側面、創造の抑制、","魔界での序列は2位"],
+  "thinking": ["冷静"],
+  "firstperson": "私",
+  "secondperson": "あんた",
+  "weapon": "鎌",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
+  "skills": [
+      {
+    "name": "秩序",
+    "type": "妨害",
+    "description": "相手のアビリティを一定時間封じる"
+  }
+  ],
+  "abilities": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "likes": [],
+  "dislikes": [],
+  "hobbies": [],
+  "quotes": [],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
+  "detailUrl": "makai.html?id=shiia"
+},
+  {
+  "id": "Luca",
+  "name": "ルカ",
+  "appearance": "立ち絵/ルカ.png",
+  "image": "icon/ルカ.jpg",
+  "world": "Лаплавень",
+  "affiliation": "星光の子",
+  "race": "神様",
+  "attribute": "光属性",
+  "gender": "女性",
+  "age": "19歳",
+  "birthday": "4/22",
+  "zodiacsign": "牡牛座",
+  "birthdayicon": "顔アイコン/ルカ.png",
+  "hometown": "聖灰のVampire",
+  "height": "152cm",
+  "personality": ["可憐で嫋やかな少女。","無鉄砲な一面もある"],
+  "thinking": ["優しく思いやりに溢れている","嫌なことは嫌とハッキリ言う、芯の強さも持っている"],
+  "firstperson": "私",
+  "secondperson": "貴方",
+  "weapon": "なし",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
+  "skills": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "abilities": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "likes": [],
+  "dislikes": [],
+  "hobbies": ["ガーデニング"],
+  "quotes": ["「アンディのそばにいると安心するわ」"],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
   "detailUrl": "makai.html?id=Luca"
 },
   {
@@ -73,7 +244,7 @@
   "hometown": "",
   "height": "187+7cm",
   "personality": ["元々人間だったが始祖によって吸血鬼にさせられてしまった聖教会の初代総主教。","人を無差別に襲うことはしないが攻撃されたら攻撃し返しそのまま殺してしまう。","だいたい殺してしまうのは聖教会の神父シスター達で、彼らが持つ聖遺物を蒐集している。返すつもりはあるらしい。"],
-  "thinking": ["冷徹、寡黙、無感情"],
+  "thinking": ["冷徹、寡黙、感情の起伏が無い"],
   "firstperson": "俺",
   "secondperson": "お前",
   "weapon": "魔法",

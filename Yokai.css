@@ -23,7 +23,7 @@ body{
   --gap: 18px;
 
   font-family: var(--font-body);
-  background: linear-gradient(to bottom, #DA4147, #E7A747, #445136 ); /* 背景色: ここを変える */
+  background: linear-gradient(to bottom, #742729, #ad7622, #445136 ); /* 背景色: ここを変える */
   color: var(--color-text);
   background-repeat: no-repeat;
   background-size: cover;
@@ -259,7 +259,7 @@ nav a:hover {
     top: 0;
     max-width: 100%;
     width: 100%;
-    height: auto;
+    height: 100%;
     max-height: 50vh;
   }
 

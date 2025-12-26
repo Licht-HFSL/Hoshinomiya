@@ -1,6 +1,181 @@
 [
-  {
-  "id": "rosa",
+{  "id": "ibaraki",
+  "name": "茨木童子",
+  "appearance": "立ち絵/茨木童子.png",
+  "image": "icon/茨木童子.jpg",
+  "world": "妖行脚百鬼夜行物語",
+  "affiliation": "椿組",
+  "race": "鬼",
+  "attribute": "火属性",
+  "gender": "男性",
+  "age": "",
+  "birthday": "8/11",
+  "zodiacsign": "獅子座",
+  "birthdayicon": "顔アイコン/茨木童子.png",
+  "hometown": "摂津国",
+  "height": "192cm",
+  "personality": ["元人間で幼い頃に捨てられていたところを養父母に引き取られ育てられた。","養父母の仕事を手伝っていた時に怪我をした客の血を指で拭って舐めてしまいそれを続けていくうちに鬼になってしまった。","それから家出をして帰っていない。"],
+  "thinking": ["自分の意見はあまり持たず人の言うことに従いがち。", "だけど自分より上の存在であると認識している人物からの命令のみ。", "努力家でもありかつて大江山では𝐍𝐨.𝟐まで登りつめた。", "山を降りて椿組で活動するようになってからは少しずつ言いたいことが言えるようになってきた。"],
+  "firstperson": "俺",
+  "secondperson": "あんた",
+  "weapon": "",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
+  "skills": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "abilities": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "likes": ["辛いもの、日本酒、日向ぼっこ"],
+  "dislikes": [],
+  "hobbies": [],
+  "quotes": [],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
+
+  "hidden":{
+    "char-": true
+  },
+  "detailUrl": "Yokai.html?id=ibaraki"
+},
+{  "id": "shuten",
+  "name": "酒呑童子",
+  "appearance": "立ち絵/酒呑童子.png",
+  "image": "icon/酒呑童子.jpg",
+  "world": "妖行脚百鬼夜行物語",
+  "affiliation": "椿組",
+  "race": "鬼",
+  "attribute": "火属性",
+  "gender": "男性",
+  "age": "",
+  "birthday": "8/9",
+  "zodiacsign": "獅子座",
+  "birthdayicon": "顔アイコン/酒呑童子.png",
+  "hometown": "丹後国",
+  "height": "198cm",
+  "personality": ["鬼として生まれ鬼王として君臨していた。","酒呑童子の父親は八岐大蛇という話を風のうわさで聞いたようだが全く気にならない様子。","血筋に関しては本当に無頓着で、かつて孕ませた娘の子も出会ったことがないし会う気もない。"],
+  "thinking": ["いろいろなことに対して無頓着。倫理観もない。気に入ったらすごく肩入れする。","生活はだらしなくいつも茨木童子や熊童子に世話されていた。","仲間思いで義理堅い。"],
+  "firstperson": "俺",
+  "secondperson": "お前",
+  "weapon": "金棒",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
+  "skills": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "abilities": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "likes": [],
+  "dislikes": [],
+  "hobbies": [],
+  "quotes": [],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
+
+  "hidden":{
+    "char-": true
+  },
+  "detailUrl": "Yokai.html?id=shuten"
+},
+{  "id": "calon",
+  "name": "カロン",
+  "appearance": "立ち絵/.png",
+  "image": "icon/.jpg",
+  "world": "Lisnoir",
+  "affiliation": "黒百合",
+  "race": "吸血鬼",
+  "attribute": "火属性",
+  "gender": "女性",
+  "age": "",
+  "birthday": "10/25",
+  "zodiacsign": "蠍座",
+  "birthdayicon": "顔アイコン/.png",
+  "hometown": "",
+  "height": "162cm",
+  "personality": "設定",
+  "thinking": "性格",
+  "firstperson": "アタシ",
+  "secondperson": "アンタ",
+  "weapon": "",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
+  "skills": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "abilities": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "likes": [],
+  "dislikes": [],
+  "hobbies": [],
+  "quotes": [],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
+  "detailUrl": "Lis.html?id=calon"
+},
+{  "id": "rosa",
   "name": "ローザ",
   "appearance": "立ち絵/.png",
   "image": "icon/.jpg",
@@ -56,8 +231,7 @@
   ],
   "detailUrl": "vamp.html?id=rosa"
 },
-{
-  "id": "vesmolte",
+{  "id": "vesmolte",
   "name": "ヴェスモルテ",
   "appearance": "立ち絵/ヴェスモルテ.png",
   "image": "icon/ヴェスモルテ.jpg",
@@ -113,8 +287,7 @@
   ],
   "detailUrl": "vamp.html?id=vesmolte"
 },
-{
-  "id": "shiia",
+{  "id": "shiia",
   "name": "刺鴉",
   "appearance": "立ち絵/刺鴉.png",
   "image": "icon/刺鴉.jpg",
@@ -170,8 +343,7 @@
   ],
   "detailUrl": "makai.html?id=shiia"
 },
-  {
-  "id": "Luca",
+{  "id": "Luca",
   "name": "ルカ",
   "appearance": "立ち絵/ルカ.png",
   "image": "icon/ルカ.jpg",
@@ -227,8 +399,7 @@
   ],
   "detailUrl": "makai.html?id=Luca"
 },
-  {
-  "id": "adnera",
+{  "id": "adnera",
   "name": "アドネラ",
   "appearance": "立ち絵/アドネラ.png",
   "image": "icon/アドネラ.jpg",
@@ -295,9 +466,7 @@
   }
 
 },
-
-{
-  "id": "nuekou",
+{  "id": "nuekou",
   "name": "鵺",
   "appearance": "立ち絵/鵺.png",
   "image": "icon/鵺.jpg",
@@ -353,8 +522,7 @@
   ],
   "detailUrl": "Yokai.html?id=nuekou"
 },
-{
-  "id": "shian",
+{  "id": "shian",
   "name": "紫杏",
   "appearance": "立ち絵/紫杏.png",
   "image": "icon/紫杏.jpg",
@@ -414,8 +582,7 @@
   ],
   "detailUrl": "makai.html?id=shian"
 },
-{
-  "id": "andrea",
+{  "id": "andrea",
   "name": "アンドレア",
   "appearance": "立ち絵/アンドレア.png",
   "image": "icon/星海アンドレア.jpg",
@@ -477,8 +644,7 @@
   ],
   "detailUrl": "WWaV.html?id=andrea"
 },
-{
-  "id": "hyogu",
+{  "id": "hyogu",
   "name": "氷狗",
   "appearance": "立ち絵/氷狗.png",
   "image": "icon/氷狗.jpg",
@@ -491,12 +657,15 @@
   "birthday": "4/1",
   "zodiacsign": "",
   "birthdayicon": "顔アイコン/氷狗.png",
-  "hometown": "氷ノ山",
+  "hometown": "播磨国",
   "height": "234㎝",
   "personality": [
-    "無関心、冷淡"
+    "悪鬼なので目を隠す為に目を閉じている。",
+    "ニコニコしてるのは本心ではないと思う。一人でいる時は目を開けているかもしれない。",
+    "犬神なので呪術も扱える。呪術を使う際は一瞬だけ目を開ける。",
+    "ちなみに酒は弱い。すぐ酔いが回ってしまい犬の姿になってしまうことも。"
   ],
-  "thinking": [""],
+  "thinking": ["無関心、冷淡"],
   "firstperson": "僕",
   "secondperson": "お前",
   "weapon": "",
@@ -536,8 +705,7 @@
   ],
   "detailUrl": "Yokai.html?id=hyogu"
 },
-{
-  "id": "hashihime",
+{  "id": "hashihime",
   "name": "橋姫",
   "appearance": "立ち絵/橋姫.png",
   "image": "icon/橋姫.jpg",
@@ -595,8 +763,7 @@
   ],
   "detailUrl": "Yokai.html?id=hashihime"
 },
-{
-  "id": "Licht",
+{  "id": "Licht",
   "name": "Licht",
   "appearance": "立ち絵/Licht.png",
   "image": "icon/Licht.jpg",

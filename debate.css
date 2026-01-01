@@ -259,8 +259,16 @@ nav a:hover {
     top: 0;
     max-width: 100%;
     width: 100%;
+    /* モバイルでは高さ固定を解除してアスペクト比を保つ */
     height: auto;
-    max-height: 50vh;
+    max-height: none;
+  }
+
+  .portrait-wrap img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
   }
 
   .panel {

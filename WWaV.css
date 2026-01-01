@@ -259,8 +259,17 @@ nav a:hover {
     top: 0;
     max-width: 100%;
     width: 100%;
+    /* モバイルでも高さの固定を外して画像のアスペクトを保持する */
     height: auto;
-    max-height: 50vh;
+    max-height: none;
+  }
+
+  /* モバイルでは画像自体の高さを自動にして全身が表示されるようにする */
+  .portrait-wrap img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
   }
 
   .panel {

@@ -1,4 +1,124 @@
 [
+{  "id": "filzen",
+  "name": "フィルゼン",
+  "appearance": "立ち絵/フィルゼン.png",
+  "image": "icon/フィルゼン.jpg",
+  "world": "聖灰のVampire",
+  "affiliation": "始祖",
+  "race": "吸血鬼",
+  "attribute": "闇属性",
+  "gender": "男性",
+  "age": "",
+  "birthday": "",
+  "zodiacsign": "星座",
+  "birthdayicon": "顔アイコン/フィルゼン.png",
+  "hometown": "出身",
+  "height": "179cm",
+  "personality": "設定",
+  "thinking": "性格",
+  "firstperson": "俺",
+  "secondperson": "お前",
+  "weapon": "糸",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
+  "skills": [
+      {
+    "name": "吸血",
+    "type": "攻撃＆回復",
+    "description": "相手の体のどこかに牙を立て、血を吸う。相手にダメージを与えるが自身にはHP回復の効果がある。これは食事だ。"
+  }
+  ],
+  "abilities": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "likes": [],
+  "dislikes": [],
+  "hobbies": [],
+  "quotes": [],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
+
+  "hidden":{
+    "char-": true
+  },
+  "detailUrl": "vamp.html?id=filzen"
+},
+{  "id": "dorothy",
+  "name": "ドロシー",
+  "appearance": "立ち絵/ドロシー.png",
+  "image": "icon/ドロシー.jpg",
+  "world": "聖灰のVampire",
+  "affiliation": "眷属",
+  "race": "吸血鬼",
+  "attribute": "闇属性",
+  "gender": "女性",
+  "age": "",
+  "birthday": "",
+  "zodiacsign": "星座",
+  "birthdayicon": "顔アイコン/ドロシー.png",
+  "hometown": "出身",
+  "height": "162cm",
+  "personality": "設定",
+  "thinking": "性格",
+  "firstperson": "私",
+  "secondperson": "貴方",
+  "weapon": "",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
+  "skills": [
+      {
+    "name": "吸血",
+    "type": "攻撃＆回復",
+    "description": "相手の体のどこかに牙を立て、血を吸う。相手にダメージを与えるが自身にはHP回復の効果がある。これは食事だ。"
+  }
+  ],
+  "abilities": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "likes": [],
+  "dislikes": [],
+  "hobbies": [],
+  "quotes": [],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
+
+  "hidden":{
+    "char-": true
+  },
+  "detailUrl": "vamp.html?id=dorothy"
+},
 {  "id": "ibaraki",
   "name": "茨木童子",
   "appearance": "立ち絵/茨木童子.png",
@@ -584,7 +704,7 @@
 },
 {  "id": "andrea",
   "name": "アンドレア",
-  "appearance": "立ち絵/アンドレア.png",
+  "appearance": "立ち絵/うｐ済/アンドレア.png",
   "image": "icon/星海アンドレア.jpg",
   "world": "World WAR a VisiON",
   "affiliation": "イタリア軍",

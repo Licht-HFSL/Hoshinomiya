@@ -1,4 +1,4 @@
-[
+﻿[
 {  "id": "Genjou",
   "name": "玄象",
   "appearance": "立ち絵/玄象.png",
@@ -29,7 +29,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Genjou"
+  "detailUrl": "Yokai.html?id=Genjou"
 },
 {  "id": "Senbondaki",
   "name": "千本打鬼",
@@ -61,7 +61,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Senbondaki"
+  "detailUrl": "Yokai.html?id=Senbondaki"
 },
 {  "id": "FueOni",
   "name": "笛鬼",
@@ -93,7 +93,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=FueOni"
+  "detailUrl": "Yokai.html?id=FueOni"
 },
 {  "id": "Yuryu",
   "name": "悠龍",
@@ -125,7 +125,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Yuryu"
+  "detailUrl": "Yokai.html?id=Yuryu"
 },
 {  "id": "Ryuro",
   "name": "龍楼",
@@ -157,7 +157,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Ryuro"
+  "detailUrl": "Yokai.html?id=Ryuro"
 },
 {  "id": "NezumiJodoNushi",
   "name": "鼠浄土の主",
@@ -189,7 +189,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=NezumiJodoNushi"
+  "detailUrl": "Yokai.html?id=NezumiJodoNushi"
 },
 {  "id": "Muma",
   "name": "夢魔",
@@ -221,7 +221,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Muma"
+  "detailUrl": "Yokai.html?id=Muma"
 },
 {  "id": "Eiryu",
   "name": "瑛龍",
@@ -253,7 +253,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Eiryu"
+  "detailUrl": "Yokai.html?id=Eiryu"
 },
 {  "id": "Joga",
   "name": "嫦娥",
@@ -285,7 +285,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Joga"
+  "detailUrl": "Yokai.html?id=Joga"
 },
 {  "id": "Rinko",
   "name": "燐光",
@@ -317,7 +317,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Rinko"
+  "detailUrl": "Yokai.html?id=Rinko"
 },
 {  "id": "KochiyaSomei",
   "name": "東風谷蒼明",
@@ -349,7 +349,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=KochiyaSomei"
+  "detailUrl": "Yokai.html?id=KochiyaSomei"
 },
 {  "id": "MomotsubaBotan",
   "name": "百々鐔牡丹",
@@ -381,7 +381,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=MomotsubaBotan"
+  "detailUrl": "Yokai.html?id=MomotsubaBotan"
 },
 {  "id": "YukiOnna",
   "name": "雪女",
@@ -413,7 +413,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=YukiOnna"
+  "detailUrl": "Yokai.html?id=YukiOnna"
 },
 {  "id": "ToriyamaSekien",
   "name": "鳥山石燕",
@@ -445,7 +445,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=ToriyamaSekien"
+  "detailUrl": "Yokai.html?id=ToriyamaSekien"
 },
 {  "id": "Hekiryu",
   "name": "碧龍",
@@ -477,7 +477,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Hekiryu"
+  "detailUrl": "Yokai.html?id=Hekiryu"
 },
 {  "id": "Maen",
   "name": "魔縁",
@@ -509,7 +509,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Maen"
+  "detailUrl": "Yokai.html?id=Maen"
 },
 {  "id": "Nobusuma",
   "name": "野衾",
@@ -541,7 +541,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Nobusuma"
+  "detailUrl": "Yokai.html?id=Nobusuma"
 },
 {  "id": "Baku",
   "name": "獏",
@@ -573,7 +573,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Baku"
+  "detailUrl": "Yokai.html?id=Baku"
 },
 {  "id": "Hakuzouzu",
   "name": "白蔵主",
@@ -605,7 +605,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Hakuzouzu"
+  "detailUrl": "Yokai.html?id=Hakuzouzu"
 },
 {  "id": "Hakutaku",
   "name": "白澤",
@@ -637,7 +637,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Hakutaku"
+  "detailUrl": "Yokai.html?id=Hakutaku"
 },
 {  "id": "Hinnagami",
   "name": "人形神",
@@ -669,7 +669,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Hinnagami"
+  "detailUrl": "Yokai.html?id=Hinnagami"
 },
 {  "id": "FugurumaYouhi",
   "name": "文車妖妃",
@@ -701,7 +701,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=FugurumaYouhi"
+  "detailUrl": "Yokai.html?id=FugurumaYouhi"
 },
 {  "id": "FutakuchiOnna",
   "name": "二口女",
@@ -733,7 +733,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=FutakuchiOnna"
+  "detailUrl": "Yokai.html?id=FutakuchiOnna"
 },
 {  "id": "Funayurei",
   "name": "船幽霊",
@@ -765,7 +765,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Funayurei"
+  "detailUrl": "Yokai.html?id=Funayurei"
 },
 {  "id": "FuruTsubakiNoSei",
   "name": "古椿の精",
@@ -797,7 +797,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=FuruTsubakiNoSei"
+  "detailUrl": "Yokai.html?id=FuruTsubakiNoSei"
 },
 {  "id": "Maneki",
   "name": "招鬼",
@@ -829,7 +829,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Maneki"
+  "detailUrl": "Yokai.html?id=Maneki"
 },
 {  "id": "Kochou",
   "name": "胡蝶",
@@ -861,7 +861,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Kochou"
+  "detailUrl": "Yokai.html?id=Kochou"
 },
 {  "id": "Gotokuneko",
   "name": "五徳猫",
@@ -893,7 +893,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Gotokuneko"
+  "detailUrl": "Yokai.html?id=Gotokuneko"
 },
 {  "id": "Satori",
   "name": "覚",
@@ -925,7 +925,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Satori"
+  "detailUrl": "Yokai.html?id=Satori"
 },
 {  "id": "Shien",
   "name": "紫煙",
@@ -957,7 +957,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Shien"
+  "detailUrl": "Yokai.html?id=Shien"
 },
 {  "id": "Jorogumo",
   "name": "絡新婦",
@@ -989,7 +989,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Jorogumo"
+  "detailUrl": "Yokai.html?id=Jorogumo"
 },
 {  "id": "ChochinObake",
   "name": "提灯お化け",
@@ -1021,7 +1021,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=ChochinObake"
+  "detailUrl": "Yokai.html?id=ChochinObake"
 },
 {  "id": "ChirizukaKaioh",
   "name": "塵塚怪王",
@@ -1053,7 +1053,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=ChirizukaKaioh"
+  "detailUrl": "Yokai.html?id=ChirizukaKaioh"
 },
 {  "id": "NureOnna",
   "name": "濡れ女",
@@ -1085,7 +1085,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=NureOnna"
+  "detailUrl": "Yokai.html?id=NureOnna"
 },
 {  "id": "NekoMusume",
   "name": "猫娘",
@@ -1117,7 +1117,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=NekoMusume"
+  "detailUrl": "Yokai.html?id=NekoMusume"
 },
 {  "id": "Nogama",
   "name": "野鎌",
@@ -1149,7 +1149,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Nogama"
+  "detailUrl": "Yokai.html?id=Nogama"
 },
 {  "id": "Isohime",
   "name": "磯姫",
@@ -1181,7 +1181,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Isohime"
+  "detailUrl": "Yokai.html?id=Isohime"
 },
 {  "id": "Ubume",
   "name": "姑獲鳥",
@@ -1213,7 +1213,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Ubume"
+  "detailUrl": "Yokai.html?id=Ubume"
 },
 {  "id": "Gashadokuro",
   "name": "餓者髑髏",
@@ -1245,7 +1245,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Gashadokuro"
+  "detailUrl": "Yokai.html?id=Gashadokuro"
 },
 {  "id": "Aobozu",
   "name": "青坊主",
@@ -1277,7 +1277,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Aobozu"
+  "detailUrl": "Yokai.html?id=Aobozu"
 },
 {  "id": "Karukan",
   "name": "狩姦",
@@ -1309,7 +1309,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Karukan"
+  "detailUrl": "Yokai.html?id=Karukan"
 },
 {  "id": "Kankandara",
   "name": "姦々蛇螺",
@@ -1341,7 +1341,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Kankandara"
+  "detailUrl": "Yokai.html?id=Kankandara"
 },
 {  "id": "KyubiGitsune",
   "name": "九尾狐",
@@ -1373,7 +1373,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=KyubiGitsune"
+  "detailUrl": "Yokai.html?id=KyubiGitsune"
 },
 {  "id": "KubitsuriTanuki",
   "name": "首吊狸",
@@ -1405,7 +1405,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=KubitsuriTanuki"
+  "detailUrl": "Yokai.html?id=KubitsuriTanuki"
 },
 {  "id": "Kumome",
   "name": "蜘蛛女",
@@ -1437,7 +1437,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Kumome"
+  "detailUrl": "Yokai.html?id=Kumome"
 },
 {  "id": "Kuroten",
   "name": "黒鼬",
@@ -1469,7 +1469,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Kuroten"
+  "detailUrl": "Yokai.html?id=Kuroten"
 },
 {  "id": "Inasuzume",
   "name": "稲雀",
@@ -1501,7 +1501,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Inasuzume"
+  "detailUrl": "Yokai.html?id=Inasuzume"
 },
 {  "id": "Iwahibari",
   "name": "岩雲雀",
@@ -1533,7 +1533,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Iwahibari"
+  "detailUrl": "Yokai.html?id=Iwahibari"
 },
 {  "id": "Shomakyo",
   "name": "照魔鏡",
@@ -1565,7 +1565,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Shomakyo"
+  "detailUrl": "Yokai.html?id=Shomakyo"
 },
 {  "id": "SuzumeHime",
   "name": "雀姫",
@@ -1597,7 +1597,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=SuzumeHime"
+  "detailUrl": "Yokai.html?id=SuzumeHime"
 },
 {  "id": "Tsuchigumo",
   "name": "土蜘蛛",
@@ -1629,7 +1629,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Tsuchigumo"
+  "detailUrl": "Yokai.html?id=Tsuchigumo"
 },
 {  "id": "Tesso",
   "name": "鉄鼠",
@@ -1661,7 +1661,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Tesso"
+  "detailUrl": "Yokai.html?id=Tesso"
 },
 {  "id": "Nekomata",
   "name": "猫又",
@@ -1693,7 +1693,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Nekomata"
+  "detailUrl": "Yokai.html?id=Nekomata"
 },
 {  "id": "FuruUtsuho",
   "name": "古空穂",
@@ -1725,7 +1725,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=FuruUtsuho"
+  "detailUrl": "Yokai.html?id=FuruUtsuho"
 },
 {  "id": "Youko",
   "name": "妖狐",
@@ -1757,7 +1757,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Youko"
+  "detailUrl": "Yokai.html?id=Youko"
 },
 {  "id": "Ikkakujyu",
   "name": "一角獣",
@@ -1789,7 +1789,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Ikkakujyu"
+  "detailUrl": "Yokai.html?id=Ikkakujyu"
 },
 {  "id": "Kanadama",
   "name": "金霊",
@@ -1821,7 +1821,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Kanadama"
+  "detailUrl": "Yokai.html?id=Kanadama"
 },
 {  "id": "Suija",
   "name": "水蛇",
@@ -1853,7 +1853,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Suija"
+  "detailUrl": "Yokai.html?id=Suija"
 },
 {  "id": "Tsuchihebi",
   "name": "土蛇",
@@ -1885,7 +1885,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Tsuchihebi"
+  "detailUrl": "Yokai.html?id=Tsuchihebi"
 },
 {  "id": "Hyouja",
   "name": "氷蛇",
@@ -1917,7 +1917,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Hyouja"
+  "detailUrl": "Yokai.html?id=Hyouja"
 },
 {  "id": "Fuuja",
   "name": "風蛇",
@@ -1949,7 +1949,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Fuuja"
+  "detailUrl": "Yokai.html?id=Fuuja"
 },
 {  "id": "Uwabami",
   "name": "蟒蛇",
@@ -1981,7 +1981,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Uwabami"
+  "detailUrl": "Yokai.html?id=Uwabami"
 },
 {  "id": "Raija",
   "name": "雷蛇",
@@ -2013,7 +2013,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Raija"
+  "detailUrl": "Yokai.html?id=Raija"
 },
 {  "id": "Kasha",
   "name": "火車",
@@ -2045,7 +2045,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Kasha"
+  "detailUrl": "Yokai.html?id=Kasha"
 },
 {  "id": "Itsumade",
   "name": "以津真天",
@@ -2077,7 +2077,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Itsumade"
+  "detailUrl": "Yokai.html?id=Itsumade"
 },
 {  "id": "Narigama",
   "name": "鳴釜",
@@ -2109,7 +2109,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Narigama"
+  "detailUrl": "Yokai.html?id=Narigama"
 },
 {  "id": "Houkigami",
   "name": "ほうき神",
@@ -2141,7 +2141,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Houkigami"
+  "detailUrl": "Yokai.html?id=Houkigami"
 },
 {  "id": "Ungaikyo",
   "name": "雲外鏡",
@@ -2173,7 +2173,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Ungaikyo"
+  "detailUrl": "Yokai.html?id=Ungaikyo"
 },
 {  "id": "Aoandon",
   "name": "青行燈",
@@ -2205,7 +2205,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Aoandon"
+  "detailUrl": "Yokai.html?id=Aoandon"
 },
 {  "id": "Enenra",
   "name": "煙々羅",
@@ -2237,7 +2237,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Enenra"
+  "detailUrl": "Yokai.html?id=Enenra"
 },
 {  "id": "Onigumo",
   "name": "鬼蜘蛛",
@@ -2269,7 +2269,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Onigumo"
+  "detailUrl": "Yokai.html?id=Onigumo"
 },
 {  "id": "Onmoraki",
   "name": "陰摩羅鬼",
@@ -2301,7 +2301,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Onmoraki"
+  "detailUrl": "Yokai.html?id=Onmoraki"
 },
 {  "id": "Noduchi",
   "name": "野槌",
@@ -2333,7 +2333,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Noduchi"
+  "detailUrl": "Yokai.html?id=Noduchi"
 },
 {  "id": "Kaja",
   "name": "火蛇",
@@ -2365,7 +2365,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Kaja"
+  "detailUrl": "Yokai.html?id=Kaja"
 },
 {  "id": "Ganja",
   "name": "岩蛇",
@@ -2397,7 +2397,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Ganja"
+  "detailUrl": "Yokai.html?id=Ganja"
 },
 {  "id": "SakurayashikiYume",
   "name": "桜屋敷結珻",
@@ -2429,7 +2429,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=SakurayashikiYume"
+  "detailUrl": "Yokai.html?id=SakurayashikiYume"
 },
 {  "id": "SakumaHaruki",
   "name": "佐久間晴樹",
@@ -2461,7 +2461,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=SakumaHaruki"
+  "detailUrl": "Yokai.html?id=SakumaHaruki"
 },
 {  "id": "YakuraOuka",
   "name": "矢倉桜華",
@@ -2493,7 +2493,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=YakuraOuka"
+  "detailUrl": "Yokai.html?id=YakuraOuka"
 },
 {  "id": "Arahitogami",
   "name": "現人神",
@@ -2525,7 +2525,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Arahitogami"
+  "detailUrl": "Yokai.html?id=Arahitogami"
 },
 {  "id": "Karasutengu",
   "name": "鴉天狗",
@@ -2557,7 +2557,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Karasutengu"
+  "detailUrl": "Yokai.html?id=Karasutengu"
 },
 {  "id": "Kagura",
   "name": "神楽",
@@ -2589,7 +2589,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Kagura"
+  "detailUrl": "Yokai.html?id=Kagura"
 },
 {  "id": "Kidou",
   "name": "鬼童",
@@ -2621,7 +2621,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Kidou"
+  "detailUrl": "Yokai.html?id=Kidou"
 },
 {  "id": "Kyoukotsu",
   "name": "狂骨",
@@ -2653,7 +2653,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Kyoukotsu"
+  "detailUrl": "Yokai.html?id=Kyoukotsu"
 },
 {  "id": "KarakasaObake",
   "name": "唐傘お化け",
@@ -2685,7 +2685,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=KarakasaObake"
+  "detailUrl": "Yokai.html?id=KarakasaObake"
 },
 {  "id": "Seiran",
   "name": "清蘭",
@@ -2717,7 +2717,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Seiran"
+  "detailUrl": "Yokai.html?id=Seiran"
 },
 {  "id": "KaguyaHime",
   "name": "かぐや姫",
@@ -2749,7 +2749,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=KaguyaHime"
+  "detailUrl": "Yokai.html?id=KaguyaHime"
 },
 {  "id": "Gokki",
   "name": "獄鬼",
@@ -2781,7 +2781,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Gokki"
+  "detailUrl": "Yokai.html?id=Gokki"
 },
 {  "id": "Datsueba",
   "name": "奪衣婆",
@@ -2813,7 +2813,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Datsueba"
+  "detailUrl": "Yokai.html?id=Datsueba"
 },
 {  "id": "Suzaku",
   "name": "朱雀",
@@ -2845,7 +2845,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Suzaku"
+  "detailUrl": "Yokai.html?id=Suzaku"
 },
 {  "id": "Ooe",
   "name": "大江",
@@ -2877,7 +2877,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Ooe"
+  "detailUrl": "Yokai.html?id=Ooe"
 },
 {  "id": "HisakaAkari",
   "name": "火坂紅梨",
@@ -2909,7 +2909,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=HisakaAkari"
+  "detailUrl": "Yokai.html?id=HisakaAkari"
 },
 {  "id": "AtsukiMiya",
   "name": "阿槻宮",
@@ -2941,7 +2941,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=AtsukiMiya"
+  "detailUrl": "Yokai.html?id=AtsukiMiya"
 },
 {  "id": "AigiriShiro",
   "name": "哀霧士郎",
@@ -2973,7 +2973,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=AigiriShiro"
+  "detailUrl": "Yokai.html?id=AigiriShiro"
 },
 {  "id": "KijinSaori",
   "name": "鬼神沙織",
@@ -3005,7 +3005,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=KijinSaori"
+  "detailUrl": "Yokai.html?id=KijinSaori"
 },
 {  "id": "Amanojaku",
   "name": "天邪鬼",
@@ -3037,7 +3037,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Amanojaku"
+  "detailUrl": "Yokai.html?id=Amanojaku"
 },
 {  "id": "MizumiyaIchijo",
   "name": "水宮一条",
@@ -3069,7 +3069,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=MizumiyaIchijo"
+  "detailUrl": "Yokai.html?id=MizumiyaIchijo"
 },
 {  "id": "Yagyo",
   "name": "夜行",
@@ -3101,7 +3101,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Yagyo"
+  "detailUrl": "Yokai.html?id=Yagyo"
 },
 {  "id": "Gakoze",
   "name": "元興寺",
@@ -3133,7 +3133,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Gakoze"
+  "detailUrl": "Yokai.html?id=Gakoze"
 },
 {  "id": "Goki",
   "name": "後鬼",
@@ -3165,7 +3165,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Goki"
+  "detailUrl": "Yokai.html?id=Goki"
 },
 {  "id": "Takiyashahime",
   "name": "瀧夜叉姫",
@@ -3197,7 +3197,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Takiyashahime"
+  "detailUrl": "Yokai.html?id=Takiyashahime"
 },
 {  "id": "Dodomeki",
   "name": "百々目鬼",
@@ -3229,7 +3229,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Dodomeki"
+  "detailUrl": "Yokai.html?id=Dodomeki"
 },
 {  "id": "Hannya",
   "name": "般若",
@@ -3261,7 +3261,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Hannya"
+  "detailUrl": "Yokai.html?id=Hannya"
 },
 {  "id": "HitenYasha",
   "name": "飛天夜叉",
@@ -3293,7 +3293,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=HitenYasha"
+  "detailUrl": "Yokai.html?id=HitenYasha"
 },
 {  "id": "Hinaki",
   "name": "妃菜鬼",
@@ -3325,7 +3325,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Hinaki"
+  "detailUrl": "Yokai.html?id=Hinaki"
 },
 {  "id": "Kurozuka",
   "name": "黒塚",
@@ -3357,7 +3357,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Kurozuka"
+  "detailUrl": "Yokai.html?id=Kurozuka"
 },
 {  "id": "Ootakemaru",
   "name": "大嶽丸",
@@ -3389,7 +3389,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Ootakemaru"
+  "detailUrl": "Yokai.html?id=Ootakemaru"
 },
 {  "id": "SuzukaGozen",
   "name": "鈴鹿御前",
@@ -3421,7 +3421,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=SuzukaGozen"
+  "detailUrl": "Yokai.html?id=SuzukaGozen"
 },
 {  "id": "Ura",
   "name": "温羅",
@@ -3453,7 +3453,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Ura"
+  "detailUrl": "Yokai.html?id=Ura"
 },
 {  "id": "Kibyu",
   "name": "鬼姫生",
@@ -3485,7 +3485,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Kibyu"
+  "detailUrl": "Yokai.html?id=Kibyu"
 },
 {  "id": "KijoMomiji",
   "name": "鬼女紅葉",
@@ -3517,7 +3517,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=KijoMomiji"
+  "detailUrl": "Yokai.html?id=KijoMomiji"
 },
 {  "id": "Kiyohime",
   "name": "清姫",
@@ -3549,7 +3549,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Kiyohime"
+  "detailUrl": "Yokai.html?id=Kiyohime"
 },
 {  "id": "Baramondoji",
   "name": "婆羅門童子",
@@ -3581,7 +3581,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Baramondoji"
+  "detailUrl": "Yokai.html?id=Baramondoji"
 },
 {  "id": "Torakumadoji",
   "name": "虎熊童子",
@@ -3613,7 +3613,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Torakumadoji"
+  "detailUrl": "Yokai.html?id=Torakumadoji"
 },
 {  "id": "Misato",
   "name": "美里",
@@ -3645,7 +3645,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Misato"
+  "detailUrl": "Yokai.html?id=Misato"
 },
 {  "id": "Ishikumadoji",
   "name": "石熊童子",
@@ -3677,7 +3677,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Ishikumadoji"
+  "detailUrl": "Yokai.html?id=Ishikumadoji"
 },
 {  "id": "Karakumadoji",
   "name": "唐熊童子",
@@ -3709,7 +3709,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Karakumadoji"
+  "detailUrl": "Yokai.html?id=Karakumadoji"
 },
 {  "id": "Arashidoji",
   "name": "嵐童子",
@@ -3741,7 +3741,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Arashidoji"
+  "detailUrl": "Yokai.html?id=Arashidoji"
 },
 {  "id": "Satono",
   "name": "里乃",
@@ -3773,7 +3773,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Satono"
+  "detailUrl": "Yokai.html?id=Satono"
 },
 {  "id": "Kurokumadoji",
   "name": "黒雲童子",
@@ -3805,7 +3805,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Kurokumadoji"
+  "detailUrl": "Yokai.html?id=Kurokumadoji"
 },
 {  "id": "Kumadoji",
   "name": "熊童子",
@@ -3837,7 +3837,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Kumadoji"
+  "detailUrl": "Yokai.html?id=Kumadoji"
 },
 {  "id": "Yanakitadoji",
   "name": "柳北童子",
@@ -3869,7 +3869,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Yanakitadoji"
+  "detailUrl": "Yokai.html?id=Yanakitadoji"
 },
 {  "id": "Jugyokuki",
   "name": "珠玉鬼",
@@ -3901,7 +3901,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Jugyokuki"
+  "detailUrl": "Yokai.html?id=Jugyokuki"
 },
 {  "id": "Shobiki",
   "name": "鍾美鬼",
@@ -3933,7 +3933,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Shobiki"
+  "detailUrl": "Yokai.html?id=Shobiki"
 },
 {  "id": "Bishoki",
   "name": "美粧鬼",
@@ -3965,7 +3965,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Bishoki"
+  "detailUrl": "Yokai.html?id=Bishoki"
 },
 {  "id": "Youbiki",
   "name": "妖美鬼",
@@ -3997,7 +3997,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Youbiki"
+  "detailUrl": "Yokai.html?id=Youbiki"
 },
 {  "id": "Reirouki",
   "name": "玲瓏鬼",
@@ -4029,7 +4029,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Reirouki"
+  "detailUrl": "Yokai.html?id=Reirouki"
 },
 {  "id": "Gaki",
   "name": "餓鬼",
@@ -4061,7 +4061,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Gaki"
+  "detailUrl": "Yokai.html?id=Gaki"
 },
 {  "id": "Kanakumadoji",
   "name": "金熊童子",
@@ -4093,7 +4093,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Kanakumadoji"
+  "detailUrl": "Yokai.html?id=Kanakumadoji"
 },
 {  "id": "Kuroiwadoji",
   "name": "黒岩童子",
@@ -4125,7 +4125,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Kuroiwadoji"
+  "detailUrl": "Yokai.html?id=Kuroiwadoji"
 },
 {  "id": "Shonetsudoji",
   "name": "焦熱童子",
@@ -4157,7 +4157,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Shonetsudoji"
+  "detailUrl": "Yokai.html?id=Shonetsudoji"
 },
 {  "id": "Hoshikumadoji",
   "name": "星熊童子",
@@ -4189,7 +4189,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Hoshikumadoji"
+  "detailUrl": "Yokai.html?id=Hoshikumadoji"
 },
 {  "id": "Ushioni",
   "name": "牛鬼",
@@ -4221,7 +4221,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Ushioni"
+  "detailUrl": "Yokai.html?id=Ushioni"
 },
 {  "id": "Todaiki",
   "name": "燈台鬼",
@@ -4253,7 +4253,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Todaiki"
+  "detailUrl": "Yokai.html?id=Todaiki"
 },
 {  "id": "UrabeNoSuetake",
   "name": "卜部季武",
@@ -4285,7 +4285,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=UrabeNoSuetake"
+  "detailUrl": "Yokai.html?id=UrabeNoSuetake"
 },
 {  "id": "UsuiSadamitsu",
   "name": "碓井貞光",
@@ -4317,7 +4317,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=UsuiSadamitsu"
+  "detailUrl": "Yokai.html?id=UsuiSadamitsu"
 },
 {  "id": "SakataKintoki",
   "name": "坂田金時",
@@ -4349,7 +4349,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=SakataKintoki"
+  "detailUrl": "Yokai.html?id=SakataKintoki"
 },
 {  "id": "MinamotoNoYoshitsune",
   "name": "源義経",
@@ -4381,7 +4381,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=MinamotoNoYoshitsune"
+  "detailUrl": "Yokai.html?id=MinamotoNoYoshitsune"
 },
 {  "id": "MinamotoNoYorimitsu",
   "name": "源頼光",
@@ -4413,7 +4413,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=MinamotoNoYorimitsu"
+  "detailUrl": "Yokai.html?id=MinamotoNoYorimitsu"
 },
 {  "id": "WatanabeNoTsuna",
   "name": "渡辺綱",
@@ -4445,7 +4445,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=WatanabeNoTsuna"
+  "detailUrl": "Yokai.html?id=WatanabeNoTsuna"
 },
 {  "id": "Adaki",
   "name": "婀娜鬼",
@@ -4477,7 +4477,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Adaki"
+  "detailUrl": "Yokai.html?id=Adaki"
 },
 {  "id": "Kabiki",
   "name": "華美鬼",
@@ -4509,7 +4509,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Kabiki"
+  "detailUrl": "Yokai.html?id=Kabiki"
 },
 {  "id": "Eiko",
   "name": "榮胡",
@@ -4541,7 +4541,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Eiko"
+  "detailUrl": "Yokai.html?id=Eiko"
 },
 {  "id": "Ibaradoji",
   "name": "荊棘童子",
@@ -4573,7 +4573,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Ibaradoji"
+  "detailUrl": "Yokai.html?id=Ibaradoji"
 },
 {  "id": "Tsuchiguma",
   "name": "土熊",
@@ -4605,7 +4605,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Tsuchiguma"
+  "detailUrl": "Yokai.html?id=Tsuchiguma"
 },
 {  "id": "Kariyasha",
   "name": "軽夜叉",
@@ -4637,7 +4637,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Kariyasha"
+  "detailUrl": "Yokai.html?id=Kariyasha"
 },
 {  "id": "Onihitokuchi",
   "name": "鬼一口",
@@ -4669,7 +4669,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Onihitokuchi"
+  "detailUrl": "Yokai.html?id=Onihitokuchi"
 },
 {  "id": "Garaki",
   "name": "餓羅鬼",
@@ -4701,7 +4701,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Garaki"
+  "detailUrl": "Yokai.html?id=Garaki"
 },
 {  "id": "Kotoribako",
   "name": "ことり箱",
@@ -4733,7 +4733,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Kotoribako"
+  "detailUrl": "Yokai.html?id=Kotoribako"
 },
 {  "id": "Gogou",
   "name": "御轟",
@@ -4765,7 +4765,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Gogou"
+  "detailUrl": "Yokai.html?id=Gogou"
 },
 {  "id": "Abou",
   "name": "阿魍",
@@ -4797,7 +4797,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Abou"
+  "detailUrl": "Yokai.html?id=Abou"
 },
 {  "id": "Kiriou",
   "name": "桐枉",
@@ -4829,7 +4829,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Kiriou"
+  "detailUrl": "Yokai.html?id=Kiriou"
 },
 {  "id": "Rasetsu",
   "name": "羅切",
@@ -4861,7 +4861,7 @@
   "relationships": [{ "id": "", "name": "", "type": "", "note": "" }],
   "shortstories": ["",""],
   "hidden": { "char-": true },
-  "detailUrl": "yokai.html?id=Rasetsu"
+  "detailUrl": "Yokai.html?id=Rasetsu"
 },
 {  "id": "Susanoo",
   "name": "素戔嗚命",

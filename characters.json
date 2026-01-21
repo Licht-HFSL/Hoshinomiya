@@ -2598,22 +2598,37 @@
   "world": "妖行脚百鬼夜行物語",
   "affiliation": "鈴鹿山",
   "race": "半人半鬼",
-  "attribute": "火",
+  "attribute": "火属性",
   "gender": "男性",
   "age": "",
   "birthday": "9月22日",
   "zodiacsign": "乙女座",
   "birthdayicon": "顔アイコン/鬼童.png",
-  "hometown": "出身",
+  "hometown": "雲原",
   "height": "身長",
-  "personality": "設定",
+  "personality":  ["気狂いになってしまった母と相手にされない幼少期を過ごした。","自分の父親が鬼であると知ってから父を一発殴るため、母を看取ってから旅に出た。","雲原から京へ、京から西へ進み旋回して今は鈴鹿山に落ち着いた。"],
   "thinking": "性格",
-  "firstperson": "一人称",
-  "secondperson": "二人称",
+  "firstperson": "俺",
+  "secondperson": "あんた",
   "weapon": "",
-  "finisher": { "name": "", "description": "" },
-  "skills": [{ "name": "", "type": "", "description": "" }],
-  "abilities": [{ "name": "", "type": "", "description": "" }],
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
+  "skills": [
+      {
+    "name": "鬼童の絶品弁当",
+    "type": "支援",
+    "description": "戦闘中1人につき1回のみ使用可能。HPMPを全快し、必殺ゲージを100%にする。美味い！！！"
+  }
+  ],
+  "abilities": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
   "likes": [],
   "dislikes": [],
   "hobbies": [],

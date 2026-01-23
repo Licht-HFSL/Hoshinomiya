@@ -19,6 +19,7 @@
       <a href="妖行脚百鬼夜行物語.html">妖行脚百鬼夜行物語</a>
       <a href="不毛論争.html">不毛論争</a>
       <a href="Lisnoir.html">Lisnoir</a>
+      <a href="聖灰のVampire.html">聖灰のVampire</a>
       <!-- 必要に応じて作品を追加 -->
     </nav>
   </header>
@@ -29,19 +30,15 @@
     <input type="text" id="searchBox" placeholder="名前で検索">
     <select id="filterWorld">
       <option value="">作品（すべて）</option>
-    
     </select>
     <select id="filterAffiliation">
       <option value="">所属（すべて）</option>
-
-         </select>
+    </select>
     <select id="filterAttr">
       <option value="">属性（すべて）</option>
-
     </select>
     <select id="filterGender">
       <option value="">性別（すべて）</option>
-
     </select>
   </div>
 
@@ -53,10 +50,41 @@
 
 
    <script>
+
+const WORLDER = [
+  'Лаплавень','World WAR a VisiON','妖行脚百鬼夜行物語','不毛論争','Lisnoir','聖灰のVampire','星海のサルヴァトーレ','鏡楽君主','TRPG'
+];
+
+const AFFILIATION = [
+// Лаплавень
+  '星光の子','神様','日本神話','天使','悪魔','魔物',
+// World WAR a VisiON　不毛論争
+  'アメリカ','イギリス','フランス','ドイツ','イタリア','日本','ソビエト','中華民国','フィンランド','ルーマニア',
+// 妖行脚百鬼夜行物語
+  '桜組','椿組','京','江戸','放浪','大江山','鈴鹿山','伊吹山','神格','悪鬼','雅衆','真宵衆','地獄','七仙鬼','十二天将','大蛇八傑','ろくろ庵','月の宮','玉兎','バンド',
+// Lisnoir
+  '黒百合','白百合',
+// 聖灰のVampire
+  '聖教会','始祖','眷属',
+// 星海のサルヴァトーレ
+  '創概','異界渡り',
+];
+
+const ATTR_ORDER = [
+  '火属性','雷属性','水属性','氷属性','木属性','風属性','土属性','岩属性','無属性','光属性','闇属性','日属性','月属性','星属性'
+];
+
+const GENDER_ORDER = [
+  '男性','女性','無'
+];
+
+let allCharacters = [];
+
     // JSONファイルの読み込み
     async function loadCharacters() {
       const res = await fetch("characters.json"); // JSONファイル名を合わせてね
       const characters = await res.json();
+      allCharacters = characters; // ★保持
       renderCharacters(characters);
       populateFilters(characters);
     }
@@ -103,7 +131,7 @@
 
       function fillSelect(id, values) {
         const select = document.getElementById(id);
-        [...values].sort().forEach(v => {
+        [...values].forEach(v => {
           const opt = document.createElement("option");
           opt.value = v;
           opt.textContent = v;
@@ -111,11 +139,52 @@
         });
       }
 
-      fillSelect("filterWorld", worlds);
-      fillSelect("filterAffiliation", affiliations);
-      fillSelect("filterAttr", attrs);
-      fillSelect("filterGender", genders);
+updateAffiliationByWorld('');
+
+
+      fillSelect("filterWorld", WORLDER);
+      fillSelect("filterAffiliation", AFFILIATION);
+      fillSelect("filterAttr", ATTR_ORDER);
+      fillSelect("filterGender", GENDER_ORDER);
     }
+
+    function updateAffiliationByWorld(world) {
+  const select = document.getElementById("filterAffiliation");
+
+  // 今の選択を退避
+  const current = select.value;
+
+  // 初期化
+  select.innerHTML = '<option value="">所属（すべて）</option>';
+
+  // 対象キャラを絞る
+  const targets = world
+    ? allCharacters.filter(c => c.world === world)
+    : allCharacters;
+
+  // 所属を抽出（重複防止）
+  const set = new Set();
+  targets.forEach(c => {
+    const a = c.affiliation || c.aaffiliation;
+    if (a) set.add(a);
+  });
+
+  // AFFILIATION の順番を維持して追加
+  AFFILIATION.forEach(a => {
+    if (set.has(a)) {
+      const opt = document.createElement("option");
+      opt.value = a;
+      opt.textContent = a;
+      select.appendChild(opt);
+    }
+  });
+
+  // まだ有効なら選択を復元
+  if ([...select.options].some(o => o.value === current)) {
+    select.value = current;
+  }
+}
+
 
     // フィルタ機能
     function filterCharacters() {
@@ -137,9 +206,17 @@
       });
     }
 
-    document.addEventListener("input", e => {
-      if (e.target.closest(".filters")) filterCharacters();
-    });
+document.addEventListener("input", e => {
+  if (!e.target.closest(".filters")) return;
+
+  // ワールドが変わったら所属を更新
+  if (e.target.id === "filterWorld") {
+    updateAffiliationByWorld(e.target.value);
+  }
+
+  filterCharacters();
+});
+
 
     document.addEventListener("DOMContentLoaded", loadCharacters);
   </script>

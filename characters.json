@@ -1,4 +1,300 @@
 ﻿[
+{  "id": "karivuluce",
+  "name": "カリヴルーチェ",
+  "appearance": "立ち絵/カリヴルーチェ.png",
+  "image": "icon/カリヴルーチェ.jpg",
+  "world": "星海のサルヴァトーレ",
+  "affiliation": "創概",
+  "race": "神様",
+  "attribute": "星属性",
+  "gender": "女性",
+  "age": "",
+  "birthday": "",
+  "zodiacsign": "",
+  "birthdayicon": "顔アイコン/カリヴルーチェ.png",
+  "hometown": "",
+  "height": "151cm",
+  "personality": "言語能力がと乏しいため話すことが苦手。常にぼんやりしていて何を考えてるかわからない。",
+  "thinking": "幼子のようである。起こる出来事をそのまま受け入れ、流されるままに行動する。",
+  "firstperson": "わたし",
+  "secondperson": "あなた",
+  "weapon": "無",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
+  "skills": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "abilities": [
+      {
+    "name": "好転の兆し",
+    "type": "支援",
+    "description": "条件を満たすと自動発動する。逆境を好転させる力。味方全体の能力を上昇させる。"
+  }
+  ],
+  "likes": [],
+  "dislikes": [],
+  "hobbies": [],
+  "quotes": [],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
+
+  "hidden":{
+    "char-": true
+  },
+  "detailUrl": "makai.html?id=karivuluce"
+},
+{  "id": "shiia",
+  "name": "刺鴉",
+  "appearance": "立ち絵/刺鴉.png",
+  "image": "icon/刺鴉.jpg",
+  "world": "Лаплавень",
+  "affiliation": "星光の子",
+  "race": "神様",
+  "attribute": "氷属性",
+  "gender": "女性",
+  "age": "？",
+  "birthday": "4/26",
+  "zodiacsign": "牡牛座",
+  "birthdayicon": "顔アイコン/刺鴉.png",
+  "hometown": "？",
+  "height": "163cm",
+  "personality": ["秩序の側面、創造の抑制、","魔界での序列は2位"],
+  "thinking": ["冷静"],
+  "firstperson": "私",
+  "secondperson": "あんた",
+  "weapon": "鎌",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
+  "skills": [
+      {
+    "name": "秩序",
+    "type": "妨害",
+    "description": "相手のアビリティを一定時間封じる"
+  }
+  ],
+  "abilities": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "likes": [],
+  "dislikes": [],
+  "hobbies": [],
+  "quotes": [],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
+  "detailUrl": "makai.html?id=shiia"
+},
+{  "id": "rafael",
+  "name": "ラファエル",
+  "appearance": "立ち絵/ラファエル.png",
+  "image": "icon/ラファエル.jpg",
+  "world": "Лаплавень",
+  "affiliation": "天使",
+  "race": "天使",
+  "attribute": "光属性",
+  "gender": "女性",
+  "age": "",
+  "birthday": "",
+  "zodiacsign": "星座",
+  "birthdayicon": "顔アイコン/ラファエル.png",
+  "hometown": "出身",
+  "height": "身長",
+  "personality": "設定",
+  "thinking": "性格",
+  "firstperson": "私",
+  "secondperson": "貴方",
+  "weapon": "",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
+  "skills": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "abilities": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "likes": [],
+  "dislikes": [],
+  "hobbies": [],
+  "quotes": [],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
+
+  "hidden":{
+    "char-": true
+  },
+  "detailUrl": "makai.html?id=rafael"
+},
+{  "id": "mikael",
+  "name": "ミカエル",
+  "appearance": "立ち絵/ミカエル.png",
+  "image": "icon/ミカエル.jpg",
+  "world": "Лаплавень",
+  "affiliation": "天使",
+  "race": "天使",
+  "attribute": "光属性",
+  "gender": "男性",
+  "age": "",
+  "birthday": "",
+  "zodiacsign": "星座",
+  "birthdayicon": "顔アイコン/ミカエル.png",
+  "hometown": "出身",
+  "height": "身長",
+  "personality": "設定",
+  "thinking": "性格",
+  "firstperson": "私",
+  "secondperson": "貴方",
+  "weapon": "",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
+  "skills": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "abilities": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "likes": [],
+  "dislikes": [],
+  "hobbies": [],
+  "quotes": [],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
+
+  "hidden":{
+    "char-": true
+  },
+  "detailUrl": "makai.html?id=mikael"
+},
+{  "id": "alvas",
+  "name": "アルヴァス",
+  "appearance": "立ち絵/アルヴァス.png",
+  "image": "icon/アルヴァス.jpg",
+  "world": "Лаплавень",
+  "affiliation": "天使",
+  "race": "天使",
+  "attribute": "光属性",
+  "gender": "男性",
+  "age": "",
+  "birthday": "11/8",
+  "zodiacsign": "蠍座",
+  "birthdayicon": "顔アイコン/アルヴァス.png",
+  "hometown": "",
+  "height": "187㎝",
+  "personality": "設定",
+  "thinking": "性格",
+  "firstperson": "俺",
+  "secondperson": "あんた",
+  "weapon": "",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
+  "skills": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "abilities": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "likes": [],
+  "dislikes": [],
+  "hobbies": [],
+  "quotes": [],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
+
+  "hidden":{
+    "char-": true
+  },
+  "detailUrl": "makai.html?id=alvas"
+},
 {  "id": "Genjou",
   "name": "玄象",
   "appearance": "立ち絵/玄象.png",
@@ -10485,62 +10781,6 @@
     ""
   ],
   "detailUrl": "vamp.html?id=vesmolte"
-},
-{  "id": "shiia",
-  "name": "刺鴉",
-  "appearance": "立ち絵/刺鴉.png",
-  "image": "icon/刺鴉.jpg",
-  "world": "Лаплавень",
-  "affiliation": "星光の子",
-  "race": "神様",
-  "attribute": "氷属性",
-  "gender": "女性",
-  "age": "？",
-  "birthday": "4/26",
-  "zodiacsign": "牡牛座",
-  "birthdayicon": "顔アイコン/刺鴉.png",
-  "hometown": "？",
-  "height": "163cm",
-  "personality": ["秩序の側面、創造の抑制、","魔界での序列は2位"],
-  "thinking": ["冷静"],
-  "firstperson": "私",
-  "secondperson": "あんた",
-  "weapon": "鎌",
-  "finisher": {
-    "name": "",
-    "description": ""
-  },
-  "skills": [
-      {
-    "name": "秩序",
-    "type": "妨害",
-    "description": "相手のアビリティを一定時間封じる"
-  }
-  ],
-  "abilities": [
-      {
-    "name": "",
-    "type": "",
-    "description": ""
-  }
-  ],
-  "likes": [],
-  "dislikes": [],
-  "hobbies": [],
-  "quotes": [],
-  "relationships": [
-    {
-      "id": "",
-      "name": "",
-      "type": "",
-      "note": ""
-    }
-  ],
-  "shortstories": [
-    "",
-    ""
-  ],
-  "detailUrl": "makai.html?id=shiia"
 },
 {  "id": "Luca",
   "name": "ルカ",

@@ -1,5 +1,5 @@
 body {
-  font-family: "Yu Gothic", sans-serif;
+  font-family: 'Sawarabi Mincho', 'Noto Serif JP', serif;
   margin: 0;
   padding: 0;
   background: radial-gradient(circle at 20% 30%, #1b0033, #000011 80%);
@@ -69,6 +69,10 @@ nav a:hover {
 .character-card h3 {
   margin: 10px 0 5px;
   font-size: 1.1em;
+  white-space: nowrap;        /* 改行を禁止して1行に収める */
+  overflow: hidden;          /* はみ出しを隠す */
+  text-overflow: ellipsis;   /* 省略記号を表示 */
+  word-break: keep-all;      /* 日本語の適切な切れ目を保つ */
 }
 
 .character-card p {
@@ -147,6 +151,10 @@ nav a:hover {
   .character-card h3 {
     margin: 8px 0 4px;
     font-size: 0.95em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
   }
 
   footer {

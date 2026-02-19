@@ -1,4 +1,64 @@
 ﻿[
+{  "id": "Mephistopheles",
+  "name": "メフィストフェレス",
+  "appearance": "立ち絵/メフィストフェレス.png",
+  "image": "icon/メフィストフェレス.jpg",
+  "world": "",
+  "affiliation": "所属",
+  "race": "悪魔",
+  "attribute": "属性",
+  "gender": "男性",
+  "age": "",
+  "birthday": "",
+  "zodiacsign": "星座",
+  "birthdayicon": "顔アイコン/メフィストフェレス.png",
+  "hometown": "出身",
+  "height": "身長",
+  "personality": "設定",
+  "thinking": "性格",
+  "firstperson": "俺",
+  "secondperson": "貴方",
+  "weapon": "",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
+  "skills": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "abilities": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "likes": [],
+  "dislikes": [],
+  "hobbies": [],
+  "quotes": [],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
+
+  "hidden":{
+    "char-": true
+  },
+  "detailUrl": "makai.html?id=Mephistopheles"
+},
 {  "id": "karivuluce",
   "name": "カリヴルーチェ",
   "appearance": "立ち絵/カリヴルーチェ.png",
@@ -9476,8 +9536,8 @@
 },
 {  "id": "Fine",
   "name": "フィーネ・フィレンツェ",
-  "appearance": "立ち絵/フィーネ・フィレンツェ.png",
-  "image": "icon/フィーネ・フィレンツェ.jpg",
+  "appearance": "立ち絵/フィーネ.png",
+  "image": "icon/フィーネ.jpg",
   "world": "World WAR a VisiON",
   "affiliation": "イタリア",
   "race": "人間",
@@ -9486,7 +9546,7 @@
   "age": "",
   "birthday": "5月17日",
   "zodiacsign": "牡牛座",
-  "birthdayicon": "顔アイコン/フィーネ・フィレンツェ.png",
+  "birthdayicon": "顔アイコン/フィーネ.png",
   "hometown": "出身",
   "height": "身長",
   "personality": "設定",

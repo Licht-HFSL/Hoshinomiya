@@ -1,0 +1,158 @@
+<!-- ===== gallery.html ===== -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>World Gallery</title>
+  <link rel="stylesheet" href="artworks.css" />
+</head>
+<body>
+
+<header class="header">
+      <nav>
+      <a href="index.html">トップ</a>
+      <a href="characters.html">キャラクター図鑑</a>
+      <a href="Лаплавень.html">Лаплавень</a>
+      <a href="World WAR a VisiON.html">World WAR a VisiON</a>
+      <a href="妖行脚百鬼夜行物語.html">妖行脚百鬼夜行物語</a>
+      <a href="不毛論争.html">不毛論争</a>
+      <a href="Lisnoir.html">Lisnoir</a>
+      <a href="聖灰のVampire.html">聖灰のVampire</a>
+      <!-- 必要に応じて作品を追加 -->
+    </nav>
+
+  <h1>Galleria</h1>
+
+  <nav class="world-tabs" id="worldTabs"></nav>
+
+  <div class="controls">
+    <input id="search" type="search" placeholder="タイトル検索…" />
+    <select id="sort">
+      <option value="new">新しい順</option>
+      <option value="old">古い順</option>
+      <option value="title">タイトル順</option>
+    </select>
+  </div>
+</header>
+
+<main>
+  <section id="grid" class="grid"></section>
+</main>
+
+<!-- ⭐ ライトボックス（キャプション＋ストーリー対応） -->
+<div id="lightbox" class="lightbox">
+  <button id="closeBtn" class="close">閉じる</button>
+
+  <figure class="viewer">
+    <img id="lightImg" alt="preview" />
+  <div class="info">
+    <figcaption id="caption"></figcaption>
+    <p id="story"></p>
+  </div>  </figure>
+</div>
+
+<script>
+// ===== 世界一覧 =====
+const worlds = [
+  "Лаплавень",
+  "World WAR a VisiON",
+  "妖行脚百鬼夜行物語",
+  "不毛論争",
+  "Lisnoir",
+  "聖灰のVampire"
+];
+
+// ===== 作品データ（⭐説明・ストーリー追加） =====
+let artworks = [];
+
+fetch('artworks.json')
+  .then(res => res.json())
+  .then(data => {
+    artworks = data;
+    render();   // 読み込み後に描画
+  });
+let currentWorld = worlds[0];
+
+
+// ===== 要素取得 =====
+const grid = document.getElementById('grid');
+const search = document.getElementById('search');
+const sort = document.getElementById('sort');
+const tabs = document.getElementById('worldTabs');
+const lightbox = document.getElementById('lightbox');
+const lightImg = document.getElementById('lightImg');
+const caption = document.getElementById('caption');
+const story = document.getElementById('story');
+const closeBtn = document.getElementById('closeBtn');
+
+// ===== 世界タブ =====
+function renderTabs(){
+  worlds.forEach(w=>{
+    const btn = document.createElement('button');
+    btn.textContent = w;
+    btn.className = 'tab' + (w===currentWorld ? ' active':'');
+    btn.onclick = ()=>{
+      currentWorld = w;
+      document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+      btn.classList.add('active');
+      render();
+    };
+    tabs.appendChild(btn);
+  });
+}
+
+// ===== フィルター =====
+function applyFilters(list){
+  const q = search.value.trim().toLowerCase();
+  let out = list
+    .filter(a => a.world === currentWorld)
+    .filter(a => a.title.toLowerCase().includes(q));
+
+  const s = sort.value;
+  out.sort((a,b)=>{
+    if(s==='new') return b.date.localeCompare(a.date);
+    if(s==='old') return a.date.localeCompare(b.date);
+    if(s==='title') return a.title.localeCompare(b.title, 'ja');
+  });
+  return out;
+}
+
+// ===== カード =====
+function card(a){
+  const el = document.createElement('article');
+  el.className = 'card';
+  el.innerHTML = `
+  <img class="thumb" src="${a.src}" alt="${a.title}" />`;
+
+
+  el.querySelector('img').onclick = ()=>{
+    lightImg.src = a.src;
+
+    caption.textContent =
+      `${a.title} \n${a.caption}`;
+
+    story.textContent = a.story;
+
+    lightbox.classList.add('open');
+  };
+  return el;
+}
+
+// ===== 描画 =====
+function render(){
+  grid.innerHTML = '';
+  applyFilters(artworks).forEach(a=>grid.appendChild(card(a)));
+}
+
+// ===== イベント =====
+search.oninput = render;
+sort.onchange = render;
+closeBtn.onclick = ()=> lightbox.classList.remove('open');
+lightbox.onclick = e=>{ if(e.target===lightbox) lightbox.classList.remove('open'); };
+
+renderTabs();
+render();
+</script>
+</body>
+</html>

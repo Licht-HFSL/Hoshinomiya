@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>キャラクター詳細</title>
+<link rel="stylesheet" href="燦然.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="index.html">トップ</a>
+      <a href="燦然キャラクター.html">燦然キャラクター図鑑</a>
+      <a href="燦然のペリペティア.html">世界概要</a>
+      <!-- 必要に応じて作品を追加 -->
+    </nav>
+  </header>
+
+<main id="characterDetail" class="detail-container">
+  読み込み中...
+</main>
+
+<script>
+// ===== URLの ?id= を取得 =====
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+// ===== JSON読み込み =====
+fetch("sanzen-characters.json")
+  .then(response => {
+    if (!response.ok) throw new Error("JSON読み込み失敗");
+    return response.json();
+  })
+  .then(data => {
+
+    // 指定IDのキャラを取得
+    const char = data.find(c => c.id === id);
+
+    if (!char) {
+      document.getElementById("characterDetail").textContent =
+        "指定されたキャラクターが見つかりません";
+      return;
+    }
+
+    // ===== 表示生成 =====
+    document.getElementById("characterDetail").innerHTML = `
+      <h1 class="char-name">${char.name}</h1>
+
+      <section class="image-row">
+
+        <figure class="standing-block">
+          <img src="${char.appearance}" alt="立ち絵" class="standing">
+        </figure>
+
+        <figure class="sheet-block">
+          <img src="${char.image}" alt="キャラシート" class="sheet">
+        </figure>
+
+      </section>
+    `;
+  })
+  .catch(error => {
+    document.getElementById("characterDetail").textContent =
+      "データの読み込みに失敗しました";
+    console.error(error);
+  });
+  
+</script>
+
+</body>
+</html>

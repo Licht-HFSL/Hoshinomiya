@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- ← これを追加 -->
+  <title>燦然のペリペティアキャラクター図鑑</title>
+ <link rel="stylesheet" href="characters.css"> <!-- CSSを外部ファイルで読み込み -->
+
+</head>
+<body>
+  <h1>燦然のペリペティア</h1>
+
+ <!-- ヘッダー -->
+  <header>
+    <nav>
+      <a href="index.html">トップ</a>
+      <a href="燦然のペリペティア.html">世界概要</a>
+      <!-- 必要に応じて作品を追加 -->
+    </nav>
+  </header>
+
+
+  <!-- 🔍 検索フォーム -->
+  <div class="filters">
+    <input type="text" id="searchBox" placeholder="名前で検索">
+    <select id="filterWorld">
+      <option value="">親（すべて）</option>
+    </select>
+    <select id="filterAffiliation">
+      <option value="">種族（すべて）</option>
+    </select>
+    <select id="filterAttr">
+      <option value="">属性（すべて）</option>
+    </select>
+    <select id="filterGender">
+      <option value="">性別（すべて）</option>
+    </select>
+  </div>
+
+  <!-- キャラ一覧 -->
+  <div class="character-list" id="characterList">
+    <!-- ここにキャラカードを貼り付ける（スプレッドシートから生成したHTML） -->
+
+
+
+
+   <script>
+
+const WORLDER = [
+  'Licht','暁月フィオナ','ぐみまる','衣依谷','mol'
+];
+
+const AFFILIATION = [
+// Лаплавень
+  '星光の子','神様','日本神話','天使','悪魔','魔物',
+// World WAR a VisiON　不毛論争
+  'アメリカ','イギリス','フランス','ドイツ','イタリア','日本','ソビエト','中華民国','フィンランド','ルーマニア',
+// 妖行脚百鬼夜行物語
+  '桜組','椿組','京','江戸','放浪','大江山','鈴鹿山','伊吹山','神格','悪鬼','雅衆','真宵衆','地獄','七仙鬼','十二天将','大蛇八傑','ろくろ庵','月の宮','玉兎','バンド',
+// Lisnoir
+  '黒百合','白百合',
+// 聖灰のVampire
+  '聖教会','始祖','眷属',
+// 星海のサルヴァトーレ
+  '創概','異界渡り',
+// TRPG
+  'CoC','シノビガミ',
+];
+
+const ATTR_ORDER = [
+  '火属性','雷属性','水属性','氷属性','木属性','風属性','土属性','岩属性','無属性','光属性','闇属性','日属性','月属性','星属性'
+];
+
+const GENDER_ORDER = [
+  '男性','女性','無'
+];
+
+let allCharacters = [];
+
+    // JSONファイルの読み込み
+    async function loadCharacters() {
+      const res = await fetch("sanzen-characters.json"); // JSONファイル名を合わせてね
+      const characters = await res.json();
+      allCharacters = characters; // ★保持
+      renderCharacters(characters);
+      populateFilters(characters);
+    }
+
+    // HTMLにキャラを描画
+    function renderCharacters(characters) {
+      const container = document.getElementById("characterList");
+      container.innerHTML = "";
+
+      characters.forEach(c => {
+        const card = document.createElement("div");
+        card.className = "character-card";
+        card.dataset.name = c.name;
+        card.dataset.world = c.world;
+        card.dataset.affiliation = c.affiliation || c.aaffiliation || "";
+        card.dataset.attr = c.attribute;
+        card.dataset.gender = c.gender;
+
+        card.innerHTML = `
+        <a href="${c.detailUrl}">
+          <img src="${c.image}" alt="${c.name}">
+          <h3>${c.name}</h3>
+         </a>
+        `;
+        container.appendChild(card);
+
+        
+      });
+    }
+
+    // フィルタ項目を作成
+    function populateFilters(characters) {
+      const worlds = new Set();
+      const affiliations = new Set();
+      const attrs = new Set();
+      const genders = new Set();
+
+      characters.forEach(c => {
+        if (c.world) worlds.add(c.world);
+        if (c.affiliation || c.aaffiliation) affiliations.add(c.affiliation || c.aaffiliation);
+        if (c.attribute) attrs.add(c.attribute);
+        if (c.gender) genders.add(c.gender);
+      });
+
+      function fillSelect(id, values) {
+        const select = document.getElementById(id);
+        [...values].forEach(v => {
+          const opt = document.createElement("option");
+          opt.value = v;
+          opt.textContent = v;
+          select.appendChild(opt);
+        });
+      }
+
+updateAffiliationByWorld('');
+
+
+      fillSelect("filterWorld", WORLDER);
+      fillSelect("filterAttr", ATTR_ORDER);
+      fillSelect("filterGender", GENDER_ORDER);
+    }
+
+    function updateAffiliationByWorld(world) {
+  const select = document.getElementById("filterAffiliation");
+
+  // 今の選択を退避
+  const current = select.value;
+
+  // 初期化
+  select.innerHTML = '<option value="">所属（すべて）</option>';
+
+  // 対象キャラを絞る
+  const targets = world
+    ? allCharacters.filter(c => c.world === world)
+    : allCharacters;
+
+  // 所属を抽出（重複防止）
+  const set = new Set();
+  targets.forEach(c => {
+    const a = c.affiliation || c.aaffiliation;
+    if (a) set.add(a);
+  });
+
+  // AFFILIATION の順番を維持して追加
+  AFFILIATION.forEach(a => {
+    if (set.has(a)) {
+      const opt = document.createElement("option");
+      opt.value = a;
+      opt.textContent = a;
+      select.appendChild(opt);
+    }
+  });
+
+  // まだ有効なら選択を復元
+  if ([...select.options].some(o => o.value === current)) {
+    select.value = current;
+  }
+}
+
+
+    // フィルタ機能
+    function filterCharacters() {
+      const search = document.getElementById('searchBox').value.toLowerCase();
+      const world = document.getElementById('filterWorld').value;
+      const affiliation = document.getElementById('filterAffiliation').value;
+      const attr = document.getElementById('filterAttr').value;
+      const gender = document.getElementById('filterGender').value;
+
+      document.querySelectorAll('.character-card').forEach(card => {
+        const match =
+          card.dataset.name.toLowerCase().includes(search) &&
+          (!world || card.dataset.world === world) &&
+          (!affiliation || card.dataset.affiliation === affiliation) &&
+          (!attr || card.dataset.attr === attr) &&
+          (!gender || card.dataset.gender === gender);
+
+        card.style.display = match ? 'block' : 'none';
+      });
+    }
+
+document.addEventListener("input", e => {
+  if (!e.target.closest(".filters")) return;
+
+  // ワールドが変わったら所属を更新
+  if (e.target.id === "filterWorld") {
+    updateAffiliationByWorld(e.target.value);
+  }
+
+  filterCharacters();
+});
+
+
+    document.addEventListener("DOMContentLoaded", loadCharacters);
+  </script>
+
+</body>
+</html>
+

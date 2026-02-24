@@ -35,8 +35,8 @@ nav a:hover {
 
 /* 世界観への扉 */
 #world-doors {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, 200px); /* 2列表示 */
   justify-content: center;
   gap: 20px;
   padding: 2rem;

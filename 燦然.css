@@ -1,0 +1,139 @@
+/* ===== 基本 ===== */
+body {
+  margin: 0;
+  background: #111;
+  color: #fff;
+  font-family: "Yu Gothic", sans-serif;
+}
+
+header {
+  background: rgba(6, 9, 49, 0.85); /* 半透明 */
+  backdrop-filter: blur(4px);
+  padding: 15px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* ナビ内リンク。ホバーで光る */
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  transition: 0.2s;
+  font-weight: 600;
+  background: rgba(255,255,255,0.02);
+}
+
+nav a:hover {
+  background: var(--accent);
+  color: #a5c5ff;
+  text-shadow: 0 0 6px rgba(255,255,255,0.6);
+}
+
+
+/* ===== コンテナ ===== */
+.detail-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+/* ===== 名前 ===== */
+.char-name {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+/* ===== 横並びエリア ===== */
+.image-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+/* ===== 立ち絵 ===== */
+.standing-block {
+  max-height: 90vh;
+}
+
+.standing {
+  height: 70vh;
+  width: auto;
+  display: block;
+}
+
+/* ===== A4キャラシート ===== */
+.sheet-block {
+  width: auto; 
+}
+
+.sheet {
+  width: 70vh;
+  height: auto;
+  display: block;
+  background: #222;
+}
+
+.image-row {
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* 1カラムに変更 */
+    gap: var(--gap);
+    padding: 0 1rem;
+    width: 100%;
+  }
+
+  .portrait-wrap {
+    position: relative; /* stickyを解除 */
+    top: 0;
+    max-width: 100%;
+    width: 100%;
+    /* モバイルでは高さ固定を解除してアスペクト比を保つ */
+    height: auto;
+    max-height: none;
+  }
+
+  .portrait-wrap img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  .panel {
+    padding: 1.5rem 1rem;
+    margin: 0 auto 28px auto;
+  }
+
+  .panel.story {
+    padding: 1.5rem 1rem;
+  }
+
+  .meta-grid {
+    grid-template-columns: 1fr; /* 1列に変更 */
+  }
+}
+/* 箇条書きの先頭記号を消す */
+ul.list-plain,
+ul.list-quotes,
+ul.list-relations {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}

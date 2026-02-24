@@ -1,0 +1,129 @@
+body {
+  font-family: 'Sawarabi Mincho', 'Noto Serif JP', serif;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at 20% 30%, #1b0033, #000011 80%);
+  background-attachment: fixed;
+  color: #f2d58a;
+  text-align: center;
+}
+
+
+
+header, footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+#characterList {
+  display: flex;
+  flex-wrap: wrap;      /* 横並びで折り返す */
+  gap: 20px;            /* カード間の余白 */
+  justify-content: center;
+  padding: 20px;
+}
+
+.character-card {
+  width: 200px;         /* カードの幅 */
+  background-color: #e9e1cd;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  color: #000;
+  padding: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* カード内リンクのスタイル */
+.character-card a {
+  color: inherit;         /* 親要素の文字色に合わせる */
+  text-decoration: none;  /* 下線を消す */
+  display: block;         /* カード全体をクリック可能に */
+}
+
+.character-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+.character-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.character-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1em;
+  white-space: nowrap;        /* 改行を禁止して1行に収める */
+  overflow: hidden;          /* はみ出しを隠す */
+  text-overflow: ellipsis;   /* 省略記号を表示 */
+  word-break: keep-all;      /* 日本語の適切な切れ目を保つ */
+}
+
+.character-card p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+
+
+
+
+
+/* ---------- スマホ（幅600px以下）対応 ---------- */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* 🔹 カード2列表示 */
+  #characterList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2列 */
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .character-card {
+    width: 100% !important;   /* ← 固定幅解除 */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 8px;
+  }
+
+  .character-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .character-card h3 {
+    margin: 8px 0 4px;
+    font-size: 0.95em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+  }
+
+  footer {
+    font-size: 13px;
+    padding: 10px;
+  }
+}

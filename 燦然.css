@@ -1,9 +1,9 @@
 /* ===== 基本 ===== */
 body {
   margin: 0;
-  background: #111;
+  background: linear-gradient(to bottom, #0c0c3a, #0b2f72, #020015 ); /* 背景色: ここを変える */
   color: #fff;
-  font-family: "Yu Gothic", sans-serif;
+  font-family: 'Sawarabi Mincho', 'Noto Serif JP', serif;
 }
 
 header {
@@ -91,49 +91,60 @@ nav a:hover {
   align-items: center;
 }
 
+/* ===== モバイル（768px以下）===== */
 @media (max-width: 768px) {
+
+  /* 全体レイアウトを1カラムに固定 */
   .container {
-    grid-template-columns: 1fr; /* 1カラムに変更 */
-    gap: var(--gap);
-    padding: 0 1rem;
+    display: block;          /* grid解除で確実に縦並び */
     width: 100%;
+    max-width: 100%;
+    padding: 0 12px;
+    margin: 0 auto;
   }
 
+  /* 立ち絵エリア */
   .portrait-wrap {
-    position: relative; /* stickyを解除 */
-    top: 0;
-    max-width: 100%;
+    position: static;        /* sticky完全解除 */
     width: 100%;
-    /* モバイルでは高さ固定を解除してアスペクト比を保つ */
-    height: auto;
-    max-height: none;
+    margin-bottom: 20px;
   }
 
   .portrait-wrap img {
     width: 100%;
     height: auto;
-    object-fit: contain;
     display: block;
   }
 
+  /* 各パネル */
   .panel {
-    padding: 1.5rem 1rem;
-    margin: 0 auto 28px auto;
+    padding: 16px;
+    margin-bottom: 20px;
   }
 
   .panel.story {
-    padding: 1.5rem 1rem;
+    padding: 16px;
   }
 
+  /* メタ情報グリッド → 1列 */
   .meta-grid {
-    grid-template-columns: 1fr; /* 1列に変更 */
+    display: block;          /* grid解除 */
   }
-}
-/* 箇条書きの先頭記号を消す */
-ul.list-plain,
-ul.list-quotes,
-ul.list-relations {
-  list-style: none;
-  padding-left: 0;
-  margin-left: 0;
+
+  .meta-grid > * {
+    margin-bottom: 12px;
+  }
+    .image-row {
+    display: block !important;
+  }
+
+  .image-row figure {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .image-row img {
+    width: 100%;
+    height: auto;
+  }
 }

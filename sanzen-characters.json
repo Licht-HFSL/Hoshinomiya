@@ -1,16 +1,10 @@
 [
-{  "id": "",
-  "name": "",
-  "appearance": "立ち絵/.png",
-  "image": "icon/.jpg",
-  "icon": "顔アイコン/.png",
-  "detailUrl": "燦然.html?id="
-},
-{  "id": "",
-  "name": "",
-  "appearance": "立ち絵/.png",
-  "image": "icon/.jpg",
-  "icon": "顔アイコン/.png",
-  "detailUrl": "燦然.html?id="
+{  "id": "hyudoluz",
+  "name": "ヒュドルス",
+  "world": "Licht",
+  "appearance": "立ち絵/ヒュドルス.png",
+  "image": "CS/ヒュドルスCS.jpg",
+  "icon": "icon/ヒュドルス.jpg",
+  "detailUrl": "燦然.html?id=hyudoluz"
 }
 ]

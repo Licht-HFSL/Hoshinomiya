@@ -26,7 +26,7 @@
     <select id="filterWorld">
       <option value="">親（すべて）</option>
     </select>
-    <select id="filterAffiliation">
+    <select id="filterRace">
       <option value="">種族（すべて）</option>
     </select>
     <select id="filterAttr">
@@ -47,23 +47,23 @@
    <script>
 
 const WORLDER = [
-  'Licht','暁月フィオナ','ぐみまる','衣依谷','mol'
+  'Licht','暁月フィオナ','ぐみまる','衣依谷','mol','ドンストップ赤部子','米粒','ゆうひ'
 ];
 
-const AFFILIATION = [
-// Лаплавень
-  '星光の子','神様','日本神話','天使','悪魔','魔物',
-// World WAR a VisiON　不毛論争
+const RACES = [
+// 人型
+  '人間','神様','日本神話','天使','悪魔','魔物',
+// 妖精
   'アメリカ','イギリス','フランス','ドイツ','イタリア','日本','ソビエト','中華民国','フィンランド','ルーマニア',
-// 妖行脚百鬼夜行物語
+// 獣人
   '桜組','椿組','京','江戸','放浪','大江山','鈴鹿山','伊吹山','神格','悪鬼','雅衆','真宵衆','地獄','七仙鬼','十二天将','大蛇八傑','ろくろ庵','月の宮','玉兎','バンド',
-// Lisnoir
+// 爬虫類
   '黒百合','白百合',
-// 聖灰のVampire
+// 魚人
   '聖教会','始祖','眷属',
-// 星海のサルヴァトーレ
+// 亜人
   '創概','異界渡り',
-// TRPG
+// 亜人
   'CoC','シノビガミ',
 ];
 
@@ -96,7 +96,7 @@ let allCharacters = [];
         card.className = "character-card";
         card.dataset.name = c.name;
         card.dataset.world = c.world;
-        card.dataset.affiliation = c.affiliation || c.aaffiliation || "";
+        card.dataset.race = c.race || c.affiliation || c.aaffiliation || "";
         card.dataset.attr = c.attribute;
         card.dataset.gender = c.gender;
 
@@ -115,13 +115,13 @@ let allCharacters = [];
     // フィルタ項目を作成
     function populateFilters(characters) {
       const worlds = new Set();
-      const affiliations = new Set();
+      const races = new Set();
       const attrs = new Set();
       const genders = new Set();
 
       characters.forEach(c => {
         if (c.world) worlds.add(c.world);
-        if (c.affiliation || c.aaffiliation) affiliations.add(c.affiliation || c.aaffiliation);
+        if (c.race || c.affiliation || c.aaffiliation) races.add(c.race || c.affiliation || c.aaffiliation);
         if (c.attribute) attrs.add(c.attribute);
         if (c.gender) genders.add(c.gender);
       });
@@ -136,16 +136,15 @@ let allCharacters = [];
         });
       }
 
-updateAffiliationByWorld('');
+        updateRaceByWorld('');
 
-
-      fillSelect("filterWorld", WORLDER);
+          fillSelect("filterWorld", WORLDER);
       fillSelect("filterAttr", ATTR_ORDER);
       fillSelect("filterGender", GENDER_ORDER);
     }
 
-    function updateAffiliationByWorld(world) {
-  const select = document.getElementById("filterAffiliation");
+    function updateRaceByWorld(world) {
+  const select = document.getElementById("filterRace");
 
   // 今の選択を退避
   const current = select.value;
@@ -158,21 +157,31 @@ updateAffiliationByWorld('');
     ? allCharacters.filter(c => c.world === world)
     : allCharacters;
 
-  // 所属を抽出（重複防止）
+  // 種族を抽出（重複防止）
   const set = new Set();
   targets.forEach(c => {
-    const a = c.affiliation || c.aaffiliation;
-    if (a) set.add(a);
+    const r = c.race || c.affiliation || c.aaffiliation;
+    if (r) set.add(r);
   });
 
-  // AFFILIATION の順番を維持して追加
-  AFFILIATION.forEach(a => {
-    if (set.has(a)) {
+  // RACES の順番を維持して追加
+  // RACES の順番で存在するものを追加し、セットから削除
+  RACES.forEach(r => {
+    if (set.has(r)) {
       const opt = document.createElement("option");
-      opt.value = a;
-      opt.textContent = a;
+      opt.value = r;
+      opt.textContent = r;
       select.appendChild(opt);
+      set.delete(r);
     }
+  });
+
+  // RACES にない残りの種族をアルファベット/五十音順で追加
+  Array.from(set).sort().forEach(r => {
+    const opt = document.createElement("option");
+    opt.value = r;
+    opt.textContent = r;
+    select.appendChild(opt);
   });
 
   // まだ有効なら選択を復元
@@ -186,7 +195,7 @@ updateAffiliationByWorld('');
     function filterCharacters() {
       const search = document.getElementById('searchBox').value.toLowerCase();
       const world = document.getElementById('filterWorld').value;
-      const affiliation = document.getElementById('filterAffiliation').value;
+      const race = document.getElementById('filterRace').value;
       const attr = document.getElementById('filterAttr').value;
       const gender = document.getElementById('filterGender').value;
 
@@ -194,7 +203,7 @@ updateAffiliationByWorld('');
         const match =
           card.dataset.name.toLowerCase().includes(search) &&
           (!world || card.dataset.world === world) &&
-          (!affiliation || card.dataset.affiliation === affiliation) &&
+          (!race || card.dataset.race === race) &&
           (!attr || card.dataset.attr === attr) &&
           (!gender || card.dataset.gender === gender);
 
@@ -205,9 +214,9 @@ updateAffiliationByWorld('');
 document.addEventListener("input", e => {
   if (!e.target.closest(".filters")) return;
 
-  // ワールドが変わったら所属を更新
+  // ワールドが変わったら種族を更新
   if (e.target.id === "filterWorld") {
-    updateAffiliationByWorld(e.target.value);
+    updateRaceByWorld(e.target.value);
   }
 
   filterCharacters();

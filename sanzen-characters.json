@@ -1,6 +1,9 @@
 [
 {  "id": "hyudoluz",
   "name": "ヒュドルス",
+  "gender": "男性",
+  "race": "竜人",
+  "attribute": "水属性",
   "world": "Licht",
   "appearance": "立ち絵/ヒュドルス.png",
   "image": "CS/ヒュドルスCS.jpg",

@@ -1,4 +1,15 @@
 [
+{  "id": "fantorea",
+  "name": "ファントレア",
+  "gender": "男性",
+  "affiliation": "アラクネ",
+  "attribute": "火属性",
+  "world": "暁月フィオナ",
+  "appearance": "立ち絵/ファントレア.png",
+  "image": "CS/ファントレア.jpg",
+  "icon": "icon/ファントレア.jpg",
+  "detailUrl": "燦然.html?id=fantorea"
+},
 {  "id": "hyudoluz",
   "name": "ヒュドルス",
   "gender": "男性",

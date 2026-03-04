@@ -1,4 +1,15 @@
 [
+{  "id": "saharu",
+  "name": "サハル",
+  "gender": "男性",
+  "affiliation": "グリズリー",
+  "attribute": "日属性",
+  "world": "aj🐟",
+  "appearance": "立ち絵/サハル.png",
+  "image": "CS/サハルCS.jpg",
+  "icon": "icon/サハル.jpg",
+  "detailUrl": "燦然.html?id=saharu"
+},
 {  "id": "fantorea",
   "name": "ファントレア",
   "gender": "男性",

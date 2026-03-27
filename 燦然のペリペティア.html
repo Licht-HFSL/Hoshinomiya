@@ -149,6 +149,32 @@
        ※こちらにキャラを作成することはできません</p>
 
         </details>
+  <details>
+    <summary>組織について</summary>
+  <div class="board">
+
+    <div class="node" data-modal="modal-1" style="top: 50%; left: 50%;">
+      <img src="img\冒険者ギルド.png" >
+    </div>
+
+    <div class="node" data-modal="modal-2" style="top: 50%; left: 70%;">
+      <img src="img\製作ギルド.png" >
+    </div>
+
+    <div class="node" data-modal="modal-3" style="top: 50%; left: 30%;">
+      <img src="img\教会.png" >
+    </div>
+
+    <div class="node" data-modal="modal-4" style="top: 50%; left: 10%;">
+      <img src="img\劇団.png" >
+    </div>
+
+    <div class="node" data-modal="modal-5" style="top: 50%; left: 90%;">
+      <img src="img\暗冥会.png" >
+    </div>
+
+  </div>
+  </details>
 
   <details>
     <summary>Q&A</summary>
@@ -171,6 +197,61 @@
 
   </details>
 
+</section>
+
+<!-- モーダル：セクション外に配置 -->
+<div class="modal" id="modal-1">
+  <div class="modal-content">
+    <button class="close-modal">&times;</button>
+    <h2>冒険者ギルド</h2>
+    <dd>平地の国ーペディニテプラーに本拠点を置くギルド。</br>
+      各国にそれぞれ支部がいくつか存在する。</br>
+      基本的にはお使いだったり討伐だったりダンジョン攻略だったり。</br>
+      この世界に存在するダンジョンは入る度に地形が変わる所謂不思議のダンジョンと呼ばれる。</br>
+      最奥の地形だけは変わらないので一度誰かが攻略すれば攻略済みダンジョンとなるが毎回地形が変わるので新鮮さに事欠かない。</dd>
+  </div>
+</div>
+
+<div class="modal" id="modal-2">
+  <div class="modal-content">
+    <button class="close-modal">&times;</button>
+    <h2>製作ギルド</h2>
+    <dd>山岳の国ーヴロモンロスーに本拠点を置くギルド。ペディニテプラに支部が存在する。</br>
+    道具製作、武器製作、防具製作、魔石加工、魔装具製作…など製作加工し販売する者が所属する。</br>
+    ライセンス発行をしており、このライセンスがない者(店)が作る全ての製作品は不正品(闇アイテム)となる。</dd>
+  </div>
+</div>
+
+<div class="modal" id="modal-3">
+  <div class="modal-content">
+    <button class="close-modal">&times;</button>
+    <h2>教会</h2>
+      <dd>
+        平地の国ーペディニテプラーの一角に建つ荘厳な教会。神に祈りを捧げる場所。</br>
+        孤児院も併設しており賑やかな様子が伺えるが故人への祈りも忘れない。</br>
+        静謐な雰囲気の墓地も抱えている。</dd>
+  </div>
+</div>
+
+<div class="modal" id="modal-4">
+  <div class="modal-content">
+    <button class="close-modal">&times;</button>
+    <h2>劇団</h2>
+    <dd>各国を移動し演劇を行う集団。一人の演劇に魅せられた男によって集められた。</br>
+      悲哀の恋劇や喜劇、大衆演劇や歌劇などなんでも演じている。それだけの役者が在籍しているようだ。</dd>
+  </div>
+</div>
+
+<div class="modal" id="modal-5">
+  <div class="modal-content">
+    <button class="close-modal">&times;</button>
+    <h2>暗冥会</h2>
+    <dd>本拠地不明の悪い組織。目的も不明。</br>
+      所属するそれぞれが自分のやりたい事をする悪者で、利益優先したり、衝動を満たしたり。</br>
+      組織である以上上層部が存在するはずだが未だにその全容を掴めない。誰が所属しているかも不明。</br>
+      冒険者ギルド、鍛冶ギルド、各国軍とは仲が悪い。</dd>
+  </div>
+</div>
 
 </section>
 
@@ -214,7 +295,11 @@
         <!--　♦オニヤンマ<br>　-->
         <!--　♦アンデッドガール<br>　-->
         <!--　♦鬼のお嫁さん<br>　-->
+        <!--　♦鬼のお嫁さん２<br>　-->
         <!--　♦Licht<br>　-->
+        <!--　♦アンデッドガール<br>　-->
+        <!--　♦初恋泥棒劇団団長<br>　-->
+        <!--　♦アンドレア<br>　-->
 
     </p>
   </details>
@@ -229,6 +314,8 @@
         ♦レアヴェルナ<br>
         ♦レヴィオス<br>
         ♦フロレヴィア<br>
+        ♦トヴァン<br>
+        ♦ガルレア<br>
     </p>
 
   </details>
@@ -255,7 +342,8 @@
         ♦ライラ・ストワール<br>
         ♦マリナ<br>
         ♦マリス<br>
-        
+        ♦ネレイア<br>
+        ♦ノワール<br>
     </p>
   </details>
 
@@ -339,6 +427,36 @@
   <footer>
     © 2026 Licht_HFSL
   </footer>
+
+    <!-- ---------------- JS（モーダル開閉） ---------------- -->
+  <script>
+    // すべてのカード要素を取得
+    const nodes = document.querySelectorAll('.node');
+    const modals = document.querySelectorAll('.modal');
+    const closeButtons = document.querySelectorAll('.close-modal');
+
+    // カードクリックでモーダルを開く
+    nodes.forEach(node => {
+      node.addEventListener('click', () => {
+        const modalId = node.dataset.modal;
+        document.getElementById(modalId).classList.add('active');
+      });
+    });
+
+    // モーダル閉じるボタンクリックで閉じる
+    closeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.closest('.modal').classList.remove('active');
+      });
+    });
+
+    // モーダル背景クリックで閉じる
+    modals.forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if(e.target === modal) modal.classList.remove('active');
+      });
+    });
+  </script>
 
 
 </body>

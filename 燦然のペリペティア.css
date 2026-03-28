@@ -273,11 +273,22 @@ footer {
 /* スマホ向け（幅600px以下） */
 @media screen and (max-width: 600px) {
   body {
-    font-size: 14px; /* 文字を少し小さく */
+    font-size: 14px;
   }
   .container {
-    flex-direction: column; /* 横並びを縦並びに変更 */
+    flex-direction: column;
     gap: 10px;
+  }
+  
+  /* 組織セクション用 - スマートフォン対応 */
+  .board {
+    height: 250px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .node img {
+    width: 100px;
   }
 }
 

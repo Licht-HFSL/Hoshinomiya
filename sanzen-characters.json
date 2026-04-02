@@ -6,7 +6,7 @@
   "attribute": "風属性",
   "world": "衣依谷",
   "appearance": "立ち絵/ノワール.png",
-  "image": "CS/ノワール.png",
+  "image": "CS/ノワールCS.png",
   "icon": "icon/ノワール.jpg",
   "detailUrl": "燦然.html?id=noir"
 },
@@ -17,7 +17,7 @@
   "attribute": "水属性",
   "world": "衣依谷",
   "appearance": "立ち絵/ネレイア.png",
-  "image": "CS/ネレイア.png",
+  "image": "CS/ネレイアCS.png",
   "icon": "icon/ネレイア.jpg",
   "detailUrl": "燦然.html?id=nereia"
 },
@@ -28,7 +28,7 @@
   "attribute": "風属性",
   "world": "暁月フィオナ",
   "appearance": "立ち絵/トヴァン.png",
-  "image": "CS/トヴァン.png",
+  "image": "CS/トヴァンCS.png",
   "icon": "icon/トヴァン.jpg",
   "detailUrl": "燦然.html?id=tovan"
 },

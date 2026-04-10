@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>不毛論争</title>
   <link rel="stylesheet" href="不毛論争.css"> <!-- CSSを外部ファイルで読み込み -->
 
@@ -101,6 +102,15 @@
 
   </section>
 
+<!-- モーダル -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="close">&times;</span>
+    <div id="char-content"></div>
+  </div>
+</div>
+
+
   <!-- ウィンドウコンテナ（section外で位置計算を正確にするため） -->
   <div id="window-container">
   </div>
@@ -117,7 +127,7 @@ const characters = {
   "democracy": {
     "name": "クラティア",
     "nationality": "ギリシャ",
-    "dob": "1989年6月15日",
+    "dob": "4月15日",
     "occupation": "政治家",
     "photo": "icon/democracy.jpg",
     "bio": "国民主権を掲げる。"
@@ -171,7 +181,7 @@ const characters = {
   "communism": {
     "name": "ヴェロニカ・カーチャ",
     "nationality": "ソヴィエト連邦",
-    "dob": "1970年5月3日",
+    "dob": "7月28日",
     "occupation": "理論家",
     "photo": "icon/communism.jpg",
     "bio": "階級制度の廃止を掲げる。"
@@ -243,7 +253,7 @@ const characters = {
   "militarism": {
     "name": "市ヶ谷優月",
     "nationality": "大日本帝国",
-    "dob": "1973年6月9日",
+    "dob": "8月15日",
     "occupation": "将軍",
     "photo": "icon/militarism.jpg",
     "bio": "軍事力による国家強化。"
@@ -261,7 +271,7 @@ const characters = {
   "authoritarianism": {
     "name": "ヴェルア・リード",
     "nationality": "ルーマニア王国",
-    "dob": "1977年1月12日",
+    "dob": "5月18日",
     "occupation": "統治官",
     "photo": "icon/authoritarianism.jpg",
     "bio": "中央集権的統制。"
@@ -394,151 +404,39 @@ const characters = {
   }
 };
 
-// 動的にウィンドウを生成
-function createWindows() {
-  const container = document.getElementById('window-container');
-  if (!container) return;
-  
-  Object.keys(characters).forEach(charKey => {
-    const label = Array.from(document.querySelectorAll('.ideology-list li[data-char]'))
-      .find(li => li.getAttribute('data-char') === charKey)?.textContent || charKey;
-    
-    // 左ウィンドウ
-    const leftWin = document.createElement('div');
-    leftWin.className = 'win';
-    leftWin.setAttribute('data-char', charKey);
-    leftWin.setAttribute('data-pos', 'left');
-    leftWin.innerHTML = `
-      <div class="title-bar">${label} - 理念</div>
-      <div class="content">準備中</div>
-    `;
-    container.appendChild(leftWin);
-    
-    // 中央ウィンドウ
-    const centerWin = document.createElement('div');
-    centerWin.className = 'win';
-    centerWin.setAttribute('data-char', charKey);
-    centerWin.setAttribute('data-pos', 'center');
-    centerWin.innerHTML = `
-      <div class="title-bar">${label} - プロフィール</div>
-      <div class="content resume"></div>
-    `;
-    container.appendChild(centerWin);
-    
-    // 右ウィンドウ
-    const rightWin = document.createElement('div');
-    rightWin.className = 'win';
-    rightWin.setAttribute('data-char', charKey);
-    rightWin.setAttribute('data-pos', 'right');
-    rightWin.innerHTML = `
-      <div class="title-bar">${label} - 歴史</div>
-      <div class="content">準備中</div>
-    `;
-    container.appendChild(rightWin);
-  });
-}
+const modal = document.getElementById("modal");
+const content = document.getElementById("char-content");
 
-// ページ読み込み後にウィンドウを生成
-document.addEventListener('DOMContentLoaded', createWindows);
+document.querySelectorAll(".ideology-list li").forEach(item => {
+  item.addEventListener("click", () => {
+    const data = characters[item.dataset.char];
+    if (!data) return;
 
-// ユーティリティ: 全ウィンドウを閉じる
-function closeAll() {
-  document.querySelectorAll('.win').forEach(w => { w.style.display = 'none'; });
-}
-
-// 指定キャラクターのウィンドウ表示
-function showCharacter(charKey) {
-  const data = characters[charKey];
-  if (!data) return;
-
-  const centerWin = document.querySelector('.win[data-pos="center"]');
-  if (!centerWin) return;
-
-  centerWin.setAttribute('data-char', charKey);
-  const content = centerWin.querySelector('.content');
-  content.innerHTML = `
-    <div class="resume-top">
-      <div class="photo"><img src="${data.photo}" alt="${data.name}" onerror="this.style.display='none'"></div>
-      <div class="top-info">
-        <div class="name">${data.name}</div>
-        <table class="top-table">
-          <tr><th>国籍</th><td>${data.nationality}</td></tr>
-          <tr><th>生年月日</th><td>${data.dob}</td></tr>
-        </table>
+    content.innerHTML = `
+      <div class="profile">
+        <img src="${data.photo}" class="modal-img">
+        <h2>${data.name}</h2>
+        <p><b>国籍:</b> ${data.nationality}</p>
+        <p><b>生年月日:</b> ${data.dob}</p>
+        <p><b>職業:</b> ${data.occupation}</p>
+        <p>${data.bio}</p>
       </div>
-    </div>
-    <div class="resume-bottom">
-      <table class="bottom-table">
-        <tr><th>職業</th><td>${data.occupation}</td></tr>
-        <tr><th>経歴</th><td>${data.bio}</td></tr>
-      </table>
-    </div>
-  `;
+    `;
 
-  const padding = 40;
-  const leftWidth = 260;
-  const rightWidth = 260;
-  const centerWidth = 520;
-  const winHeight = 180;
-  const centerHeight = 360;
-
-  // 左右ウィンドウを中央寄りに寄せる（画面幅の割合で位置を決定しつつ端に寄りすぎないよう調整）
-  const leftPos = Math.max(padding, Math.round(window.innerWidth * 0.12));
-  const centerPos = Math.max((window.innerWidth - centerWidth) / 2, padding);
-  const rightPos = Math.min(Math.round(window.innerWidth * 0.88) - rightWidth, window.innerWidth - rightWidth - padding);
-  const positions = { left: leftPos, center: centerPos, right: rightPos };
-
-  // 左・右ウィンドウ
-  ['left','right'].forEach(pos => {
-    const win = document.querySelector(`.win[data-char="${charKey}"][data-pos="${pos}"]`);
-    if (!win) return;
-    win.style.display = 'block';
-    win.style.top = padding + 'px';
-    win.style.left = positions[pos] + 'px';
-    win.style.width = leftWidth + 'px';
-    win.style.height = winHeight + 'px';
-    win.style.zIndex = 1000;
-  });
-
-  // 中央
-  centerWin.style.display = 'block';
-  centerWin.style.top = padding + 'px';
-  centerWin.style.left = positions.center + 'px';
-  centerWin.style.width = centerWidth + 'px';
-  centerWin.style.height = centerHeight + 'px';
-  centerWin.style.zIndex = 1000;
-}
-
-// リスト項目のクリックとキーボード操作を登録
-document.querySelectorAll('.ideology-list li[data-char]').forEach(item => {
-  // アクセシビリティ属性
-  item.setAttribute('role', 'button');
-  item.setAttribute('tabindex', '0');
-
-  item.addEventListener('click', e => {
-    e.stopPropagation();
-    showCharacter(item.getAttribute('data-char'));
-  });
-
-  item.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      showCharacter(item.getAttribute('data-char'));
-    }
+    modal.classList.add("active");
   });
 });
 
-// クリックで閉じる（空クリック）
-document.body.addEventListener('click', () => closeAll());
+document.getElementById("close").onclick = () => {
+  modal.classList.remove("active");
+};
 
-// ウィンドウ内のクリックは伝播止める
-document.querySelectorAll('.win').forEach(win => win.addEventListener('click', e => e.stopPropagation()));
+modal.onclick = (e) => {
+  if (e.target === modal) modal.classList.remove("active");
+};
 
-// キーボード: Esc で閉じる
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeAll();
-});
-  </script>
+
+</script>
 
 </body>
 </html>

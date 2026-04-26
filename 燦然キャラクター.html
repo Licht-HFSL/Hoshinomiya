@@ -26,6 +26,9 @@
     <select id="filterWorld">
       <option value="">親（すべて）</option>
     </select>
+    <select id="filterCountry">
+      <option value="">国（すべて）</option>
+    </select>
     <select id="filterRace">
       <option value="">種族（すべて）</option>
     </select>
@@ -47,7 +50,7 @@
    <script>
 
 const WORLDER = [
-  'Licht','暁月フィオナ','ぐみまる','衣依谷','mol','ドンストップ赤部子','米粒','ゆうひ','🍙','aj🐟','白洲尚哉'
+  'Licht','暁月フィオナ','ぐみまる','衣依谷','aj🐟',//'mol',//'ドンストップ赤部子',//'米粒',//'ゆうひ',//'🍙',//'白洲尚哉'
 ];
 
 const RACES = [
@@ -60,6 +63,11 @@ const ATTR_ORDER = [
 const GENDER_ORDER = [
   '男性','女性','無'
 ];
+
+const COUNTRY_ORDER = [
+  'ペディニテプラ','シルヒューレ','マルタラット','ヴロモンロス','放浪'
+];
+
 
 let allCharacters = [];
 
@@ -85,6 +93,8 @@ let allCharacters = [];
         card.dataset.race = c.race || c.affiliation || c.aaffiliation || "";
         card.dataset.attr = c.attribute;
         card.dataset.gender = c.gender;
+        card.dataset.country = c.country;
+
 
         card.innerHTML = `
         <a href="${c.detailUrl}">
@@ -104,12 +114,14 @@ let allCharacters = [];
       const races = new Set();
       const attrs = new Set();
       const genders = new Set();
+      const countrys = new Set();
 
       characters.forEach(c => {
         if (c.world) worlds.add(c.world);
         if (c.race || c.affiliation || c.aaffiliation) races.add(c.race || c.affiliation || c.aaffiliation);
         if (c.attribute) attrs.add(c.attribute);
         if (c.gender) genders.add(c.gender);
+        if (c.country) countrys.add(c.country);
       });
 
       function fillSelect(id, values) {
@@ -124,9 +136,10 @@ let allCharacters = [];
 
         updateRaceByWorld('');
 
-          fillSelect("filterWorld", WORLDER);
+      fillSelect("filterWorld", WORLDER);
       fillSelect("filterAttr", ATTR_ORDER);
       fillSelect("filterGender", GENDER_ORDER);
+      fillSelect("filterCountry", COUNTRY_ORDER);
     }
 
     function updateRaceByWorld(world) {
@@ -184,6 +197,7 @@ let allCharacters = [];
       const race = document.getElementById('filterRace').value;
       const attr = document.getElementById('filterAttr').value;
       const gender = document.getElementById('filterGender').value;
+      const country = document.getElementById('filterCountry').value;
 
       document.querySelectorAll('.character-card').forEach(card => {
         const match =
@@ -191,7 +205,8 @@ let allCharacters = [];
           (!world || card.dataset.world === world) &&
           (!race || card.dataset.race === race) &&
           (!attr || card.dataset.attr === attr) &&
-          (!gender || card.dataset.gender === gender);
+          (!gender || card.dataset.gender === gender) &&
+          (!country || card.dataset.country === country);
 
         card.style.display = match ? 'block' : 'none';
       });

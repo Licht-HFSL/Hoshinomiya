@@ -1,150 +1,292 @@
-/* ===== 基本 ===== */
-body {
-  margin: 0;
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body{
+  --color-bg-dark: #080010;
+  --color-bg-mid: #140028;
+  --color-accent: #f0e4a1;
+  --color-accent-light: #cbbafc;
+  --color-text: #e6e2f8;
+  --color-border: rgba(157, 125, 247, 0.25);
+  --color-shadow: rgba(157, 125, 247, 0.15);
+  --font-title: "Cinzel Decorative", serif;
+  --font-body: "Noto Serif JP", serif;
+  --max-width: 100%;
+  --radius: 12px;
+  --gap: 18px;
+
+  font-family: var(--font-body);
   background: linear-gradient(to bottom, #0c0c3a, #0b2f72, #020015 ); /* 背景色: ここを変える */
-  color: #fff;
-  font-family: 'Sawarabi Mincho', 'Noto Serif JP', serif;
-}
-
-header {
-  background: rgba(6, 9, 49, 0.85); /* 半透明 */
-  backdrop-filter: blur(4px);
-  padding: 15px 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  width: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-nav {
+  color: var(--color-text);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  color: #e6eef6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
 }
 
-/* ナビ内リンク。ホバーで光る */
+header, footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  width: 100%;
+
+}
+.site-header .back{
+  color:var(--muted);
+  text-decoration:none;
+  font-size:0.95rem;
+}
+.site-header h1{
+  margin:0;
+  font-size:1.05rem;
+  color:var(--muted);
+}
+
 nav a {
-  color: var(--muted);
+  margin: 0 10px;
+  color: white;
   text-decoration: none;
-  padding: 6px 12px;
-  border-radius: var(--radius);
-  transition: 0.2s;
-  font-weight: 600;
-  background: rgba(255,255,255,0.02);
 }
 
 nav a:hover {
-  background: var(--accent);
-  color: #a5c5ff;
-  text-shadow: 0 0 6px rgba(255,255,255,0.6);
+  text-decoration: underline;
+}
+/* ===============================
+   🪞 レイアウト構造
+   =============================== */
+/* layout */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  display: grid;
+  grid-template-columns: 600px 1fr; /* 左:立ち絵, 右:カード */
+  gap: var(--gap);
+  align-items: start;
 }
 
+/* 左の立ち絵 */
+.portrait-wrap {
+  width: 100%;
+  max-width: 600px;      /* コンテナ幅に合わせる */
+  height: calc(100vh - 60px); /* 画面高さから少し余裕を引く */
+  background: var(--glass);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: block;
+  box-shadow: 0 8px 20px rgba(2,6,23,0.6);
+  padding: 0;
+  position: sticky;
+  top: 20px; /* 上からの距離。ヘッダーの高さに合わせて調整 */
+  z-index: 10; /* 他の要素より前面に出す */
 
-/* ===== コンテナ ===== */
-.detail-container {
-  max-width: 1400px;
-  margin: auto;
-  padding: 30px 20px;
 }
 
-/* ===== 名前 ===== */
-.char-name {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2rem;
+.portrait-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-/* ===== 横並びエリア ===== */
-.image-row {
+/* ===============================
+   📦 段落ボックス構造
+   =============================== */
+.panel {
+  background: rgba(20, 10, 40, 0.25);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 24px 28px; 
+  max-width: 100%; /* はみ出し防止 */
+  margin: 0 auto 28px;
+  margin-bottom: 28px;
+  box-shadow: 0 0 25px var(--color-shadow);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 50px;
+  flex-direction: column;
+  text-align: center;
 }
 
-/* ===== 立ち絵 ===== */
-.standing-block {
-  max-height: 90vh;
+
+/* ===============================
+   🪶 セクション見出し
+   =============================== */
+.panel h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-family: var(--font-title);
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  position: relative;
+  text-transform: uppercase;
+  text-shadow: 0 0 6px rgba(157,125,247,0.4);
+  padding-bottom: 8px;
 }
 
-.standing {
-  height: 70vh;
-  width: auto;
-  display: block;
+.panel h3 + .two-col strong {
+  color: #f0e4a1; /* お好きな色に変更 */
 }
 
-/* ===== A4キャラシート ===== */
-.sheet-block {
-  width: auto; 
+.panel h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+  box-shadow: 0 0 8px var(--color-accent);
 }
 
-.sheet {
-  width: 70vh;
-  height: auto;
-  display: block;
-  background: #222;
+/* ===============================
+   📊 基礎情報グリッド
+   =============================== */
+.meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+  font-size: 0.95rem;
+}
+.meta-grid strong {
+  color: #f0e4a1; /* お好きな色に変更 */
+}
+.meta-grid h3 {
+  grid-column: 1 / -1;
+  margin-bottom: 10px;
 }
 
-.image-row {
-  align-items: center;
+/* ===============================
+   📖 段落本文
+   =============================== */
+.panel p {
+  margin: 0.5em 0;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  text-align: center;
 }
 
-/* ===== モバイル（768px以下）===== */
+#char-skills li {
+  margin-bottom: 1em;
+  padding: 0.5em 0.8em;
+  border-left: 3px solid var(--accent);
+}
+
+.skill-type {
+  margin-left: 0.4em;
+  font-size: 0.9em;
+  color: var(--text-muted);
+}
+
+.skill-desc {
+  margin: 0.3em 0;
+  font-size: 0.95em;
+  color: var(--text-secondary);
+}
+
+
+#char-abilities li {
+  margin-bottom: 1em;
+  padding: 0.5em 0.8em;
+  border-left: 3px solid var(--accent-light);
+}
+
+.ability-type, .ability-passive {
+  margin-left: 0.4em;
+  font-size: 0.9em;
+  color: var(--text-muted);
+}
+
+.ability-desc {
+  margin: 0.3em 0;
+  font-size: 0.95em;
+  color: var(--text-secondary);
+}
+
+
+/* ===============================
+   🌠 ショートストーリー専用（読書モード）
+   =============================== */
+.panel.story {
+  background: rgba(15, 5, 35, 0.35);
+  border: 1px solid rgba(157,125,247,0.35);
+  box-shadow: 0 0 45px rgba(157,125,247,0.25);
+  font-size: 1rem;
+  line-height: 1.9;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.panel.story::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 100%, rgba(157,125,247,0.1), transparent 70%);
+  pointer-events: none;
+}
+
 @media (max-width: 768px) {
-
-  /* 全体レイアウトを1カラムに固定 */
   .container {
-    display: block;          /* grid解除で確実に縦並び */
+    grid-template-columns: 1fr; /* 1カラムに変更 */
+    gap: var(--gap);
+    padding: 0 1rem;
     width: 100%;
-    max-width: 100%;
-    padding: 0 12px;
-    margin: 0 auto;
   }
 
-  /* 立ち絵エリア */
   .portrait-wrap {
-    position: static;        /* sticky完全解除 */
+    position: relative; /* stickyを解除 */
+    top: 0;
+    max-width: 100%;
     width: 100%;
-    margin-bottom: 20px;
+    /* モバイルでは高さ固定を解除してアスペクト比を保つ */
+    height: auto;
+    max-height: none;
   }
 
   .portrait-wrap img {
     width: 100%;
     height: auto;
+    object-fit: contain;
     display: block;
   }
 
-  /* 各パネル */
   .panel {
-    padding: 16px;
-    margin-bottom: 20px;
+    padding: 1.5rem 1rem;
+    margin: 0 auto 28px auto;
   }
 
   .panel.story {
-    padding: 16px;
+    padding: 1.5rem 1rem;
   }
 
-  /* メタ情報グリッド → 1列 */
   .meta-grid {
-    display: block;          /* grid解除 */
+    grid-template-columns: 1fr; /* 1列に変更 */
   }
-
-  .meta-grid > * {
-    margin-bottom: 12px;
-  }
-    .image-row {
-    display: block !important;
-  }
-
-  .image-row figure {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .image-row img {
-    width: 100%;
-    height: auto;
-  }
+}
+/* 箇条書きの先頭記号を消す */
+ul.list-plain,
+ul.list-quotes,
+ul.list-relations {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
 }

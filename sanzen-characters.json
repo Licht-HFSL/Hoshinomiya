@@ -169,14 +169,62 @@
 },
 {  "id": "hyudoluz",
   "name": "ヒュドルス",
-  "gender": "男性",
-  "race": "竜人",
-  "attribute": "水属性",
-  "country": "放浪",
-  "world": "Licht",
   "appearance": "立ち絵/ヒュドルス.png",
   "image": "CS/ヒュドルスCS.jpg",
+  "world": "Licht",
+  "affiliation": "放浪",
+  "race": "竜人",
+  "attribute": "水属性",
+  "gender": "男性",
+  "age": "",
+  "birthday": "",
+  "zodiacsign": "星座",
   "icon": "icon/ヒュドルス.jpg",
+  "hometown": "出身",
+  "height": "身長",
+  "personality": "設定",
+  "thinking": "性格",
+  "firstperson": "一人称",
+  "secondperson": "二人称",
+  "weapon": "",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
+  "skills": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "abilities": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "likes": [],
+  "dislikes": [],
+  "hobbies": [],
+  "quotes": [],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
+
+  "hidden":{
+    "char-": true
+  },
   "detailUrl": "燦然.html?id=hyudoluz"
 }
 ]

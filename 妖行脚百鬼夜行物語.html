@@ -100,10 +100,90 @@
   </div>
 </div>
 
-<section>
+<!-- =========================
+     人間界
+========================= -->
+
+<section class="relation-section">
+
   <h2>人間界</h2>
-  
+
+  <div class="world-map">
+    <div class="group-box sakura">
+
+      <h3>桜組</h3>
+      <div class="members"
+           id="sakura-members">
+      </div>
+    </div>
+
+    <div class="group-box tsubaki">
+
+      <h3>椿組</h3>
+      <div class="members"
+           id="tsubaki-members">
+      </div>
+    </div>
+
+    <div class="group-box government">
+
+      <h3>政府</h3>
+      <div class="members"
+           id="government-members">
+      </div>
+    </div>
+
+  </div>
+
 </section>
+
+
+
+<!-- =========================
+     妖界
+========================= -->
+
+<section class="relation-section">
+
+  <h2>妖界</h2>
+
+  <div class="world-map">
+
+    <div class="group-box miyabi">
+
+      <h3>雅衆</h3>
+      <div class="members"
+           id="miyabi-members">
+      </div>
+    </div>
+
+
+    <div class="group-box mayoi">
+
+      <h3>真宵衆</h3>
+      <div class="members"
+           id="mayoi-members">
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     キャラモーダル
+========================= -->
+
+<div class="modal" id="characterModal">
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="modalBody"></div>
+  </div>
+
+</div>
 
   <!-- 補足イメージ -->
   <section>
@@ -113,6 +193,143 @@
   </section>
 
   <script>
+
+let allCharacters = [];
+
+
+/* =========================
+   JSON読み込み
+========================= */
+
+fetch("characters.json")
+
+  .then(response => response.json())
+
+  .then(data => {
+
+    allCharacters = data;
+
+    createGroup("桜組", "sakura-members");
+    createGroup("政府", "government-members");
+    createGroup("椿組", "tsubaki-members");
+    createGroup("雅衆", "miyabi-members");
+    createGroup("真宵衆", "mayoi-members");
+
+    setupCharacterModal();
+
+  });
+
+
+
+/* =========================
+   グループ生成
+========================= */
+
+function createGroup(groupName, containerId){
+
+  const container =
+    document.getElementById(containerId);
+
+  const characters =
+    allCharacters.filter(
+      c => c.affiliation === groupName
+    );
+
+  characters.forEach(character => {
+
+    container.innerHTML += `
+
+      <div class="character-icon"
+           data-character="${character.id}">
+
+        <img src="${character.image}"
+             alt="${character.name}">
+
+        <span>${character.name}</span>
+
+      </div>
+    `;
+  });
+}
+
+
+
+/* =========================
+   キャラモーダル
+========================= */
+
+function setupCharacterModal(){
+
+  document
+    .querySelectorAll('.character-icon')
+    .forEach(char => {
+
+      char.addEventListener('click', () => {
+
+        const id =
+          char.dataset.character;
+
+        const character =
+          allCharacters.find(
+            c => c.id === id
+          );
+
+        if(!character) return;
+
+        let relationHTML = "";
+
+        if(character.relationships){
+
+          relationHTML = `
+
+            <h4>関係</h4>
+            <ul>
+              ${character.relationships.map(rel => `
+                <li>
+                  ${rel.type}：
+                  ${rel.name}
+                </li>
+              `).join("")}
+            </ul>
+          `;
+        }
+
+        document
+          .getElementById("modalBody")
+          .innerHTML = `
+
+            <h3>${character.name}</h3>
+
+            <img src="${character.image}">
+
+            <p>
+              所属：
+              ${character.affiliation || "不明"}
+            </p>
+
+            <p>
+              種族：
+              ${character.race || "不明"}
+            </p>
+
+            <p>
+              <a href="${character.detailUrl}">
+              キャラクターページ
+              </a>
+            </p>
+
+            ${relationHTML}
+
+          `;
+
+        document
+          .getElementById("characterModal")
+          .style.display = "block";
+
+      });
+    });
+}
+
   document.querySelectorAll('.term-link').forEach(link => {
     link.addEventListener('click', () => {
       const modal = document.getElementById(link.dataset.modal);

@@ -152,9 +152,9 @@
   ],
   "abilities": [
       {
-    "name": "",
-    "type": "",
-    "description": ""
+    "name": "星光の子",
+    "type": "特性",
+    "description": "世界に対して干渉することができる存在。それぞれ規模や適性は異なる"
   }
   ],
   "likes": [],
@@ -5237,7 +5237,7 @@
 {  "id": "Susanoo",
   "name": "素戔嗚命",
   "appearance": "立ち絵/素戔嗚命.png",
-  "image": "icon/素戔嗚命.jpg",
+  "image": "icon/素戔嗚尊.jpg",
   "world": "Лаплавень",
   "affiliation": "日本神話",
   "race": "神様",
@@ -5451,7 +5451,11 @@
     { "name": "", "type": "", "description": "" }
   ],
   "abilities": [
-    { "name": "", "type": "", "description": "" }
+      {
+    "name": "星光の子",
+    "type": "特性",
+    "description": "世界に対して干渉することができる存在。それぞれ規模や適性は異なる"
+  }
   ],
   "likes": [],
   "dislikes": [],
@@ -5489,7 +5493,11 @@
     { "name": "", "type": "", "description": "" }
   ],
   "abilities": [
-    { "name": "", "type": "", "description": "" }
+      {
+    "name": "星光の子",
+    "type": "特性",
+    "description": "世界に対して干渉することができる存在。それぞれ規模や適性は異なる"
+  }
   ],
   "likes": [],
   "dislikes": [],
@@ -5717,7 +5725,11 @@
     { "name": "", "type": "", "description": "" }
   ],
   "abilities": [
-    { "name": "", "type": "", "description": "" }
+      {
+    "name": "星光の子",
+    "type": "特性",
+    "description": "世界に対して干渉することができる存在。それぞれ規模や適性は異なる"
+  }
   ],
   "likes": [],
   "dislikes": [],
@@ -5756,7 +5768,11 @@
     { "name": "", "type": "", "description": "" }
   ],
   "abilities": [
-    { "name": "", "type": "", "description": "" }
+      {
+    "name": "星光の子",
+    "type": "特性",
+    "description": "世界に対して干渉することができる存在。それぞれ規模や適性は異なる"
+  }
   ],
   "likes": [],
   "dislikes": [],
@@ -5795,7 +5811,11 @@
     { "name": "", "type": "", "description": "" }
   ],
   "abilities": [
-    { "name": "", "type": "", "description": "" }
+      {
+    "name": "星光の子",
+    "type": "特性",
+    "description": "世界に対して干渉することができる存在。それぞれ規模や適性は異なる"
+  }
   ],
   "likes": [],
   "dislikes": [],
@@ -5834,7 +5854,11 @@
     { "name": "", "type": "", "description": "" }
   ],
   "abilities": [
-    { "name": "", "type": "", "description": "" }
+      {
+    "name": "星光の子",
+    "type": "特性",
+    "description": "世界に対して干渉することができる存在。それぞれ規模や適性は異なる"
+  }
   ],
   "likes": [],
   "dislikes": [],
@@ -5873,7 +5897,11 @@
     { "name": "", "type": "", "description": "" }
   ],
   "abilities": [
-    { "name": "", "type": "", "description": "" }
+      {
+    "name": "星光の子",
+    "type": "特性",
+    "description": "世界に対して干渉することができる存在。それぞれ規模や適性は異なる"
+  }
   ],
   "likes": [],
   "dislikes": [],
@@ -6069,7 +6097,13 @@
   "weapon": "",
   "finisher": { "name": "", "description": "" },
   "skills": [ { "name": "", "type": "", "description": "" } ],
-  "abilities": [ { "name": "", "type": "", "description": "" } ],
+  "abilities": [
+      {
+    "name": "星光の子",
+    "type": "特性",
+    "description": "各世界に一人存在する世界の管理者である。"
+  }
+    ],
   "likes": [],
   "dislikes": [],
   "hobbies": [],
@@ -10875,9 +10909,9 @@
   ],
   "abilities": [
       {
-    "name": "",
-    "type": "",
-    "description": ""
+    "name": "星光の子",
+    "type": "特性",
+    "description": "各世界に一人存在する世界の管理者である。"
   }
   ],
   "likes": [],
@@ -11057,7 +11091,17 @@
   }
   ],
   "abilities": [
-      {
+  {
+    "name": "魔界適応者",
+    "type": "特性",
+    "description": "魔界に適応した存在である。虹彩に固有属性のエフェクトが走る。"
+  },
+  {
+    "name": "星光の子",
+    "type": "特性",
+    "description": "各世界に一人存在する世界の管理者である。"
+  },
+  {
     "name": "白銀の炎",
     "type": "強化",
     "description": "魔力使用時に常時発動。一定時間内に魔力消費がなれば恩恵は無くなる。炎魔法の火力が10%アップ"
@@ -11116,9 +11160,9 @@
   ],
   "abilities": [
       {
-    "name": "",
-    "type": "",
-    "description": ""
+    "name": "魔界適応者",
+    "type": "特性",
+    "description": "魔界に適応した存在である。虹彩に固有属性のエフェクトが走る。"
   }
   ],
   "likes": [
@@ -11297,9 +11341,9 @@
   ],
   "abilities": [
       {
-    "name": "",
-    "type": "",
-    "description": ""
+    "name": "星光の子",
+    "type": "特性",
+    "description": "世界に対して干渉することができる存在。それぞれ規模や適性は異なる"
   }
   ],
   "likes": [],

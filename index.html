@@ -6,13 +6,12 @@
     <title>星の宮</title>
   <link rel="stylesheet" href="index.css"> <!-- CSSを外部ファイルで読み込み -->
 </head>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<body>
 
  <!-- ヘッダー -->
-  <header>
+  <header class="hidden">
     <button class="menu-btn" id="menuBtn">≡</button>
+    <button class="header-toggle" id="headerToggleBtn" aria-label="ヘッダーを閉じる">×</button>
     <nav id="nav">
       <a href="characters.html">キャラクター図鑑</a>
       <a href="artworks.html">作品ギャラリー</a>
@@ -27,10 +26,8 @@
       <!-- 必要に応じて作品を追加 -->
     </nav>
   </header>
+  <button id="headerOpenBtn" class="header-open-btn" aria-label="ヘッダーを開く">≡</button>
 
-
-
-<body>
    <!-- タイトル & 詩 -->
   <section id="intro">
     <img src="img/ロゴ.png" alt="ロゴ">
@@ -202,6 +199,18 @@ animate();
 
 document.getElementById("menuBtn").onclick = function() {
   document.getElementById("nav").classList.toggle("open");
+};
+
+document.getElementById("headerToggleBtn").onclick = function() {
+  const header = document.querySelector("header");
+  header.classList.remove("open");
+  header.classList.add("hidden");
+};
+
+document.getElementById("headerOpenBtn").onclick = function() {
+  const header = document.querySelector("header");
+  header.classList.add("open");
+  header.classList.remove("hidden");
 };
 </script>
 

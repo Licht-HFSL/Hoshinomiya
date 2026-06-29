@@ -3,7 +3,7 @@
   "name": "メフィストフェレス",
   "appearance": "立ち絵/メフィストフェレス.png",
   "image": "icon/メフィストフェレス.jpg",
-  "world": "",
+  "world": "Лаплавень",
   "affiliation": "所属",
   "race": "悪魔",
   "attribute": "属性",
@@ -43,9 +43,9 @@
   "quotes": [],
   "relationships": [
     {
-      "id": "",
-      "name": "",
-      "type": "",
+      "id": "alvas",
+      "name": "アルヴァス",
+      "type": "バディ",
       "note": ""
     }
   ],
@@ -147,7 +147,7 @@
       {
     "name": "秩序",
     "type": "妨害",
-    "description": "相手のアビリティを一定時間封じる"
+    "description": "相手の一部アビリティを一定時間封じる"
   }
   ],
   "abilities": [
@@ -304,11 +304,11 @@
   "race": "天使",
   "attribute": "光属性",
   "gender": "男性",
-  "age": "",
+  "age": "32歳",
   "birthday": "11/8",
   "zodiacsign": "蠍座",
   "birthdayicon": "顔アイコン/アルヴァス.png",
-  "hometown": "",
+  "hometown": "蟠ｩ螢翫＠縺滉ｸ也阜",
   "height": "187㎝",
   "personality": "設定",
   "thinking": "性格",
@@ -316,8 +316,8 @@
   "secondperson": "あんた",
   "weapon": "",
   "finisher": {
-    "name": "",
-    "description": ""
+    "name": "Linea del Sole",
+    "description": "閃光の速さで敵を貫く光の魔法"
   },
   "skills": [
       {
@@ -339,9 +339,9 @@
   "quotes": [],
   "relationships": [
     {
-      "id": "",
-      "name": "",
-      "type": "",
+      "id": "Mephistopheles",
+      "name": "メフィストフェレス",
+      "type": "バディ",
       "note": ""
     }
   ],
@@ -5561,7 +5561,7 @@
   "birthday": "",
   "zodiacsign": "",
   "birthdayicon": "顔アイコン/ソフィア.png",
-  "hometown": "出身",
+  "hometown": "蟠ｩ螢翫＠縺滉ｸ也阜",
   "height": "身長",
   "personality": "設定",
   "thinking": "性格",
@@ -10947,7 +10947,11 @@
   "birthdayicon": "顔アイコン/アドネラ.png",
   "hometown": "",
   "height": "187+7cm",
-  "personality": ["元々人間だったが始祖によって吸血鬼にさせられてしまった聖教会の初代総主教。","人を無差別に襲うことはしないが攻撃されたら攻撃し返しそのまま殺してしまう。","だいたい殺してしまうのは聖教会の神父シスター達で、彼らが持つ聖遺物を蒐集している。返すつもりはあるらしい。"],
+  "personality": [
+    "元々人間だったが始祖によって吸血鬼にさせられてしまった聖教会の初代総主教。",
+    "人を無差別に襲うことはしないが攻撃されたら攻撃し返しそのまま殺してしまう。",
+    "だいたい殺してしまうのは聖教会の神父シスター達で、彼らが持つ聖遺物を蒐集している。"
+  ],
   "thinking": ["冷徹、寡黙、感情の起伏が無い"],
   "firstperson": "俺",
   "secondperson": "お前",
@@ -10970,9 +10974,9 @@
   ],
   "abilities": [
   {
-    "name": "",
-    "type": "",
-    "description": ""
+    "name": "魔界適応者",
+    "type": "特性",
+    "description": "魔界に適応した存在である。虹彩に固有属性のエフェクトが走る。"
   }
   ],
   "likes": [],

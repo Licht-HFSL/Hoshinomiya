@@ -1,18 +1,65 @@
 [
-  {
-    "src": "illast/極光.jpg",
-    "title": "キャラA",
-    "caption": "極夜に生まれた戦士。",
-    "date": "2026-02-01",
-    "world": "Лаплавень",
+  { "src": "illast/月踊:麗人.jpg",
+    "title": "月踊:麗人",
+    "caption": "かぐや姫",
+    "date": "2022/10/22",
+    "world": "妖行脚百鬼夜行物語",
+    "story": ""
+  },
+  { "src": "illast/月踊:醜女.jpg",
+    "title": "月踊:醜女",
+    "caption": "嫦娥",
+    "date": "2022/10/22",
+    "world": "妖行脚百鬼夜行物語",
+    "story": ""
+  },
+  { "src": "illast/神降ろし：須佐之男命.jpg",
+    "title": "神降ろし：須佐之男命",
+    "caption": "須佐之男命",
+    "date": "2022/02/22",
+    "world": "妖行脚百鬼夜行物語",
+    "story": ""
+  },
+  { "src": "illast/神降ろし：月詠命.jpg",
+    "title": "神降ろし：月詠命",
+    "caption": "月詠命",
+    "date": "2022/02/22",
+    "world": "妖行脚百鬼夜行物語",
+    "story": ""
+  },
+  { "src": "illast/神降ろし：天照大御神.jpg",
+    "title": "神降ろし：天照大御神",
+    "caption": "天照大御神",
+    "date": "2022/02/03",
+    "world": "妖行脚百鬼夜行物語",
+    "story": ""
+  },
+  { "src": "illast/井戸の底.jpg",
+    "title": "井戸の底",
+    "caption": "狂骨",
+    "date": "2020/04/15",
+    "world": "妖行脚百鬼夜行物語",
     "story": ""
     },
-  {
-    "src": "illast/a2.jpg",
-    "title": "戦闘",
-    "caption": "灰に覆われた戦場。",
-    "date": "2025-12-10",
-    "world": "聖灰のVampire",
+  { "src": "illast/雀の情報屋.jpg",
+    "title": "雀の情報屋",
+    "caption": "雀姫",
+    "date": "2021/05/24",
+    "world": "妖行脚百鬼夜行物語",
+    "story": ""
+  },
+  { "src": "illast/水毒怨嗟.jpg",
+    "title": "水毒怨嗟",
+    "caption": "橋姫",
+    "date": "2021/12/08",
+    "world": "妖行脚百鬼夜行物語",
+    "story": ""
+  },
+  { "src": "illast/逢魔が時.jpg",
+    "title": "逢魔が時",
+    "caption": "百々目鬼",
+    "date": "2022/03/28",
+    "world": "妖行脚百鬼夜行物語",
     "story": ""
   }
 ]

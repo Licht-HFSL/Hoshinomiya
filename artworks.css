@@ -171,7 +171,51 @@ main{ padding:16px; }
 
   body{ font-size:14px; }
 
-  .header{ padding:10px; }
+/* ナビを隠す */
+#nav {
+  display: none;
+  flex-direction: column;
+  background: rgba(0,0,0,0.95);
+
+  position: fixed;   /* ←重要 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+
+  padding: 20px;
+  z-index: 9999;
+}
+
+    /* メニューボタン表示 */
+  .menu-btn {
+    display: block;
+    position: relative;
+    z-index: 1001;
+  }
+
+  /* ナビを隠す */
+  #nav {
+    display: none;
+    flex-direction: column;
+    background: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* 開いたとき */
+  #nav.open {
+    display: flex;
+  }
+
+  #nav a {
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+  }
 
   .world-tabs{
     gap:6px;

@@ -12,13 +12,6 @@
 <header class="header">
       <nav>
       <a href="index.html">トップ</a>
-      <a href="characters.html">キャラクター図鑑</a>
-      <a href="Лаплавень.html">Лаплавень</a>
-      <a href="World WAR a VisiON.html">World WAR a VisiON</a>
-      <a href="妖行脚百鬼夜行物語.html">妖行脚百鬼夜行物語</a>
-      <a href="不毛論争.html">不毛論争</a>
-      <a href="Lisnoir.html">Lisnoir</a>
-      <a href="聖灰のVampire.html">聖灰のVampire</a>
       <!-- 必要に応じて作品を追加 -->
     </nav>
 
@@ -60,7 +53,10 @@ const worlds = [
   "妖行脚百鬼夜行物語",
   "不毛論争",
   "Lisnoir",
-  "聖灰のVampire"
+  "聖灰のVampire",
+  "燦然のペリペティア",
+  "VELCRYST",
+  "他企画等"
 ];
 
 // ===== 作品データ（⭐説明・ストーリー追加） =====
@@ -153,6 +149,14 @@ lightbox.onclick = e=>{ if(e.target===lightbox) lightbox.classList.remove('open'
 
 renderTabs();
 render();
+
+  // 右クリック禁止
+  document.querySelectorAll('.portrait-wrap img').forEach(el => {
+    el.addEventListener('contextmenu', event => {
+      event.preventDefault(); // 右クリックメニューを表示させない
+    });
+  });
+
 </script>
 </body>
 </html>

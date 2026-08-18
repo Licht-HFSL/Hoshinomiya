@@ -8,17 +8,19 @@
 
 </head>
 <body>
-  <h1>燦然のペリペティア</h1>
-
- <!-- ヘッダー -->
-  <header>
-    <nav>
+  <!-- ヘッダー -->
+  <header class="hidden">
+    <button class="menu-btn" id="menuBtn">≡</button>
+    <button class="header-toggle" id="headerToggleBtn" aria-label="ヘッダーを閉じる">×</button>
+    <nav id="nav">
       <a href="index.html">トップ</a>
       <a href="燦然のペリペティア.html">世界概要</a>
       <!-- 必要に応じて作品を追加 -->
     </nav>
   </header>
+  <button id="headerOpenBtn" class="header-open-btn" aria-label="ヘッダーを開く">≡</button>
 
+  <h1>燦然のペリペティア</h1>
 
   <!-- 🔍 検索フォーム -->
   <div class="filters">
@@ -43,14 +45,12 @@
   <!-- キャラ一覧 -->
   <div class="character-list" id="characterList">
     <!-- ここにキャラカードを貼り付ける（スプレッドシートから生成したHTML） -->
-
-
-
+  </div>
 
    <script>
 
 const WORLDER = [
-  'Licht','暁月フィオナ','ぐみまる','衣依谷','aj🐟',//'mol',//'ドンストップ赤部子',//'米粒',//'ゆうひ',//'🍙',//'白洲尚哉'
+  'Licht','暁月フィオナ','ぐみまる','衣依谷','aj🐟','米粒',//'mol',//'ドンストップ赤部子',//'ゆうひ',//'🍙',//'白洲尚哉'
 ];
 
 const RACES = [
@@ -225,6 +225,22 @@ document.addEventListener("input", e => {
 
 
     document.addEventListener("DOMContentLoaded", loadCharacters);
+
+    document.getElementById("menuBtn").onclick = function() {
+      document.getElementById("nav").classList.toggle("open");
+    };
+
+    document.getElementById("headerToggleBtn").onclick = function() {
+      const header = document.querySelector("header");
+      header.classList.remove("open");
+      header.classList.add("hidden");
+    };
+
+    document.getElementById("headerOpenBtn").onclick = function() {
+      const header = document.querySelector("header");
+      header.classList.add("open");
+      header.classList.remove("hidden");
+    };
   </script>
 
 </body>

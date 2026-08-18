@@ -17,6 +17,10 @@ body{
   align-items:center;
 }
 
+.header h1 {
+  font-family: "Noto Serif JP", "游明朝体", serif;
+}
+
 nav a {
   margin: 0 10px;
   color: white;
@@ -130,10 +134,9 @@ main{ padding:16px; }
 
 /* ⭐ 右側テキスト */
 #caption,
-#story{
+.story-content{
   max-width:320px;
   text-align:left;
-  white-space:pre-line;
 }
 
 #caption{
@@ -142,9 +145,30 @@ main{ padding:16px; }
   margin-bottom:14px;
 }
 
-#story{
-  line-height:1.7;
-  color:#999999;
+.lb-title {
+  font-size:1.5rem;
+  font-weight:700;
+  line-height:1.2;
+}
+
+.lb-caption {
+  font-size:1.1rem;
+  font-weight:normal;
+  line-height:1.4;
+}
+
+.story-content {
+  line-height: 1.8;
+  color: #999999;
+}
+
+.story-content p {
+  margin: 0 0 8px 0;
+  font-size: 0.95rem;
+}
+
+.story-content .story-break {
+  height: 12px;
 }
 
 
@@ -263,7 +287,16 @@ main{ padding:16px; }
   }
 
   #caption,
-  #story{
+  .story-content{
     max-width:90vw;
+    font-size:0.9rem;
+  }
+
+  .story-content p {
+    margin: 0 0 6px 0;
+  }
+
+  .story-content .story-break {
+    height: 8px;
   }
 }

@@ -41,7 +41,7 @@
     <img id="lightImg" alt="preview" />
   <div class="info">
     <figcaption id="caption"></figcaption>
-    <p id="story"></p>
+    <div id="story" class="story-content"></div>
   </div>  </figure>
 </div>
 
@@ -56,6 +56,7 @@ const worlds = [
   "聖灰のVampire",
   "燦然のペリペティア",
   "VELCRYST",
+  "星海のサルヴァトーレ",
   "他企画等"
 ];
 
@@ -125,10 +126,39 @@ function card(a){
   el.querySelector('img').onclick = ()=>{
     lightImg.src = a.src;
 
-    caption.textContent =
-      `${a.title} \n${a.caption}`;
+    // タイトルとキャプションを別要素で挿入（フォントサイズを別にするため）
+    caption.innerHTML = '';
+    const titleEl = document.createElement('div');
+    titleEl.className = 'lb-title';
+    titleEl.textContent = a.title;
 
-    story.textContent = a.story;
+    const capEl = document.createElement('div');
+    capEl.className = 'lb-caption';
+    capEl.textContent = a.caption;
+
+    caption.appendChild(titleEl);
+    caption.appendChild(capEl);
+
+    // ストーリーを段落ごとに表示
+    story.innerHTML = '';
+    if (Array.isArray(a.story)) {
+      a.story.forEach(line => {
+        if (line.trim() === '') {
+          // 空行は段落区切り
+          const spacer = document.createElement('div');
+          spacer.className = 'story-break';
+          story.appendChild(spacer);
+        } else {
+          const p = document.createElement('p');
+          p.textContent = line;
+          story.appendChild(p);
+        }
+      });
+    } else if (typeof a.story === 'string') {
+      const p = document.createElement('p');
+      p.textContent = a.story;
+      story.appendChild(p);
+    }
 
     lightbox.classList.add('open');
   };

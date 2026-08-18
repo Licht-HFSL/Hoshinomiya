@@ -1,23 +1,171 @@
 [
-{  "id": "noir",
-  "name": "ノワール",
-  "appearance": "立ち絵/ノワール.png",
-  "image": "CS/ノワールCS.jpg",
-  "world": "衣依谷",
-  "affiliation": "マルタラット",
-  "race": "猫",
-  "attribute": "風属性",
+{  "id": "vivi",
+  "name": "ビビ",
+  "appearance": "立ち絵/ビビ.png",
+  "image": "icon/ビビ.jpg",
+  "world": "Licht",
+  "affiliation": "名も無き宿",
+  "race": "妖精",
+  "attribute": "無属性",
+  "gender": "女性",
+  "age": "",
+  "birthday": "",
+  "zodiacsign": "星座",
+  "birthdayicon": "顔アイコン/ビビ.png",
+  "hometown": "シルヒューレ",
+  "height": "137cm",
+  "personality": ["アイリンドラさんが管理するお宿の料理長。",
+                  "厨房は彼女にとって神域に等しく、できれば誰も入ってほしくない。",
+                  "厨房に迷い込んだ虫一匹すらそっと捕まえて外へ連れていく。"
+                ],
+  "thinking": "気が強いが殺生を好まず優しい",
+  "firstperson": "あたし",
+  "secondperson": "あなた",
+  "weapon": "フライパン",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
+  "skills": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "abilities": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "likes": ["甘い料理"],
+  "dislikes": ["湿気"],
+  "hobbies": [],
+  "quotes": ["「あたしビビ！よろしく！！」",
+             "「あ、どこから入ってきたの？いまから料理するんだから、ここじゃなくてあっちで待っててね」"],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
+
+  "hidden":{
+    "char-": true
+  },
+  "detailUrl": "燦然.html?id=vivi"
+},
+{  "id": "aelindra",
+  "name": "アイリンドラ・シルヴァネル",
+  "appearance": "立ち絵/アイリンドラ・シルヴァネル.png",
+  "image": "icon/アイリンドラ・シルヴァネル.jpg",
+  "world": "米粒",
+  "affiliation": "名も無き宿",
+  "race": "エルフ",
+  "attribute": "木属性",
+  "gender": "男性",
+  "age": "574歳",
+  "birthday": "",
+  "zodiacsign": "星座",
+  "birthdayicon": "顔アイコン/アイリンドラ・シルヴァネル.png",
+  "hometown": "シルヒューレ",
+  "height": "193+20cm",
+  "personality": ["エルフ族五大元素の木家の長子。",
+                  "幼い頃に人間の違法な魔装具によって羽根を失い、現在も時折痛む。",
+                  "背中にその時の傷跡が残っており、その下に目の模様がある。"
+                ],
+  "thinking":[ "温厚な性格。静かでゆっくりとした時間を好む。" ,
+                "急かされることが苦手で天然な一面もある。",
+                "反応が少し遅い。"
+              ],
+  "firstperson": "私",
+  "secondperson": "お前",
+  "weapon": "無し",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
+  "skills": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "abilities": [
+      {
+    "name": "魔界適応者",
+    "type": "特性",
+    "description": "魔界に適応した存在である。虹彩に固有属性のエフェクトが走る。"
+  },
+      {
+    "name": "傾聴者",
+    "type": "特性",
+    "description": "万物の声を聴くことができる。喜びも悲しみも、怒りも、恐怖も、すべての声が聞こえてくる。"
+  }
+
+  ],
+  "likes": ["ゆっくりすること",
+            "自然の穏やかな声"
+          ],
+  "dislikes": ["人間",
+               "恐ろしい造り方をされた魔装具"
+              ],
+  "hobbies": [
+    "花の水やり",
+    "ぼーっとする",
+    "寝る(年に一度は一週間ほど眠る)"
+  ],
+  "quotes": [
+    "「おはよう、シルバー」",
+    "「はいはい、ちゃんと聴いてるよ。」",
+    "「お前の落とした鍵は……うん、鍵穴に刺さったままだね。」"
+  ],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
+
+  "hidden":{
+    "char-": true
+  },
+  "detailUrl": "燦然.html?id=aelindra"
+},
+{  "id": "phenosteria",
+  "name": "フェノステリア",
+  "appearance": "立ち絵/フェノステリア.png",
+  "image": "icon/フェノステリア.jpg",
+  "world": "暁月フィオナ",
+  "affiliation": "冒険者ギルド",
+  "race": "ガーゴイル",
+  "attribute": "光属性",
   "gender": "男性",
   "age": "",
   "birthday": "",
   "zodiacsign": "星座",
-  "icon": "icon/ノワール.jpg",
+  "birthdayicon": "顔アイコン/フェノステリア.png",
   "hometown": "出身",
   "height": "身長",
   "personality": "設定",
   "thinking": "性格",
-  "firstperson": "一人称",
-  "secondperson": "二人称",
+  "firstperson": "俺",
+  "secondperson": "貴方",
   "weapon": "",
   "finisher": {
     "name": "",
@@ -41,6 +189,71 @@
   "dislikes": [],
   "hobbies": [],
   "quotes": [],
+  "relationships": [
+    {
+      "id": "",
+      "name": "",
+      "type": "",
+      "note": ""
+    }
+  ],
+  "shortstories": [
+    "",
+    ""
+  ],
+
+  "hidden":{
+    "char-": true
+  },
+  "detailUrl": "燦然.html?id=phenosteria"
+},
+{  "id": "noir",
+  "name": "ノワール",
+  "appearance": "立ち絵/ノワール.png",
+  "image": "CS/ノワールCS.jpg",
+  "world": "衣依谷",
+  "affiliation": "海月の館",
+  "race": "猫",
+  "attribute": "風属性",
+  "gender": "男性",
+  "age": "",
+  "birthday": "",
+  "zodiacsign": "星座",
+  "icon": "icon/ノワール.jpg",
+  "hometown": "ｰ",
+  "height": "身長",
+  "personality": ["魔女ネレイアの使い魔。","ネレイアの世話をしながら南の島の工房「海月の館」を切り盛りしている。"],
+  "thinking": "性格",
+  "firstperson": "オイラ、ノワール様",
+  "secondperson": "アンタ、客人",
+  "weapon": "爪",
+  "finisher": {
+    "name": "",
+    "description": ""
+  },
+  "skills": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "abilities": [
+      {
+    "name": "",
+    "type": "",
+    "description": ""
+  }
+  ],
+  "likes": ["お昼寝","買い物","マタタビ"],
+  "dislikes": ["お風呂"],
+  "hobbies": ["料理"],
+  "quotes": [
+    "「ようこそ魔女の工房「海月の館」へ」",
+    "「なんや、猫が喋るのがそんなに珍しいんか？そんじゃそこらの猫と一緒にするやない。はっ倒すぞ！」",
+    "「頼むから静かにしてやぁ、ネレイアが今寝とるんやぁ…起こしたらオイラが怒られるぅ…」",
+    "「ノワール様特性ふわふわトロトロオムライスや！盛り付けも可愛ええやろぉ？味も絶品やで！！」"
+],
   "relationships": [
     {
       "id": "",
@@ -64,7 +277,7 @@
   "appearance": "立ち絵/ネレイア.png",
   "image": "CS/ネレイアCS.jpg",
   "world": "衣依谷",
-  "affiliation": "マルタラット",
+  "affiliation": "海月の館",
   "race": "魔女",
   "attribute": "水属性",
   "gender": "女性",
@@ -72,22 +285,24 @@
   "birthday": "",
   "zodiacsign": "星座",
   "icon": "icon/ネレイア.jpg",
-  "hometown": "出身",
+  "hometown": "マルタラット",
   "height": "身長",
-  "personality": "設定",
-  "thinking": "性格",
-  "firstperson": "一人称",
-  "secondperson": "二人称",
-  "weapon": "",
+  "personality": ["マルタラットにある地図に載らない小さな南の島で、カフェ兼雑貨店を営む女店主。",
+                  "島には結界が張られており、普通はたどり着けない。",
+                  "高いお金を払えば魔装具を作ってくれる…らしい。"],
+  "thinking": ["非常にめんどくさがりで、一日の半分以上は寝て過ごしている。"],
+  "firstperson": "僕",
+  "secondperson": "君",
+  "weapon": "杖",
   "finisher": {
     "name": "",
     "description": ""
   },
   "skills": [
       {
-    "name": "",
-    "type": "",
-    "description": ""
+    "name": "ディレクティブ-ジェリーフィッシュ-(仮)",
+    "type": "使役",
+    "description": "クラゲを自由に操ることができる。大きさも自在で毒や泡を扱う。手持ちの杖はクラゲモチーフではなくクラゲそのもの。"
   }
   ],
   "abilities": [
@@ -97,10 +312,14 @@
     "description": ""
   }
   ],
-  "likes": [],
-  "dislikes": [],
+  "likes": ["睡眠"],
+  "dislikes": ["コーヒー","睡眠妨害"],
   "hobbies": [],
-  "quotes": [],
+  "quotes": [
+    "「僕の島に辿り着けるなんて、運がいいんだか悪いんだか……」",
+    "「ここには僕がいる限り悪いやつは来ない。ゆっくり心と身体を癒しなさい。帰りたくなったら帰ればいい。」",
+    "「あ～…うるさい、うるさい……僕の睡眠の邪魔する奴は出て行って。」"
+  ],
   "relationships": [
     {
       "id": "",
@@ -124,7 +343,7 @@
   "appearance": "立ち絵/トヴァン.png",
   "image": "CS/トヴァンCS.jpg",
   "world": "暁月フィオナ",
-  "affiliation": "マルタラット",
+  "affiliation": "放浪",
   "race": "鳥人",
   "attribute": "風属性",
   "gender": "男性",
@@ -132,13 +351,16 @@
   "birthday": "",
   "zodiacsign": "星座",
   "icon": "icon/トヴァン.jpg",
-  "hometown": "出身",
+  "hometown": "-",
   "height": "身長",
-  "personality": "設定",
-  "thinking": "性格",
-  "firstperson": "一人称",
-  "secondperson": "二人称",
-  "weapon": "",
+  "personality": ["様々な場所を旅するカラスのお兄さん。",
+                  "たまに”違う世界の話”をすることがあるが、本人曰く「あると信じたほうが人生楽しくなると思いませんか？」とのこと。",
+                  "なにかと謎が多い。"
+                ],
+  "thinking": "誰に対しても一定の距離を保って接している。",
+  "firstperson": "私",
+  "secondperson": "貴方",
+  "weapon": "弓、拷問器具",
   "finisher": {
     "name": "",
     "description": ""
@@ -157,10 +379,14 @@
     "description": "魔界に適応した存在である。虹彩に固有属性のエフェクトが走る。"
   }
   ],
-  "likes": [],
-  "dislikes": [],
+  "likes": ["珈琲","一途な人"],
+  "dislikes": ["過度に辛いもの"],
   "hobbies": [],
-  "quotes": [],
+  "quotes": [
+    "「私はトヴァン、ただの旅人ですよ。よろしくお願いしますね。」",
+    "「私を狙うのは結構。ですが相応の覚悟をお持ちですよね？」",
+    "「私は貴方のその一途な心を守りたかった。ただそれだけです。」"
+  ],
   "relationships": [
     {
       "id": "",
@@ -254,10 +480,15 @@
   "icon": "icon/コル・スコルピィ.jpg",
   "hometown": "出身",
   "height": "身長",
-  "personality": "設定",
-  "thinking": "性格",
-  "firstperson": "一人称",
-  "secondperson": "二人称",
+  "personality": [
+    "薬屋を営む善良なサソリ人間。",
+    "悪人面だけど悪いお薬は売ってないよ。",
+    "常に飲酒しており、酔っ払っていることが多く、生活力は皆無。",
+    "時間を忘れて薬の研究や調剤に勤しむ薬オタク。"
+  ],
+  "thinking": "洞察力が鋭く聡明。意外と理性的に動く。",
+  "firstperson": "俺",
+  "secondperson": "君",
   "weapon": "",
   "finisher": {
     "name": "",
@@ -280,7 +511,11 @@
   "likes": [],
   "dislikes": [],
   "hobbies": [],
-  "quotes": [],
+  "quotes": [
+    "「散らかっててごめんね。おいで、君の薬は用意してあるよ。」",
+    "「おはよう。よく眠れた？え、もう夕方なの？」",
+    "「怒ってなんかないよ。ただ、君と会うのはこれで最後だ。」"
+  ],
   "relationships": [
     {
       "id": "",
@@ -548,16 +783,19 @@
   "race": "妖精",
   "attribute": "光属性",
   "gender": "女性",
-  "age": "",
-  "birthday": "",
+  "age": "224歳",
+  "birthday": "7/7",
   "zodiacsign": "星座",
   "icon": "icon/キノエ＝カノラ.jpg",
-  "hometown": "出身",
-  "height": "身長",
-  "personality": "設定",
-  "thinking": "性格",
-  "firstperson": "一人称",
-  "secondperson": "二人称",
+  "hometown": "ヴロモンロス",
+  "height": "143cm",
+  "personality": [
+    "不思議ちゃん。",
+    "時間の感覚を感じさせない話し方や行動を取る。"
+  ],
+  "thinking": "おっとりしていてマイペース。警戒心が薄い。",
+  "firstperson": "私",
+  "secondperson": "貴方",
   "weapon": "",
   "finisher": {
     "name": "",
@@ -577,10 +815,14 @@
     "description": ""
   }
   ],
-  "likes": [],
-  "dislikes": [],
-  "hobbies": [],
-  "quotes": [],
+  "likes": ["仲間たちの作る星空"],
+  "dislikes": ["盗掘者"],
+  "hobbies": ["外の話を聞いて書き留めること"],
+  "quotes": [
+    "「ヴロモンロスの地下洞窟に入ってくるなんて…命知らず？」",
+    "「ふふ、私はキノエ＝カノラ。迷ったときは知らせてね。」",
+    "「はぁめんどくさい。山岳なんかに街を作るからよ。きっと洞窟の方が何倍も住みやすいのに。」"
+  ],
   "relationships": [
     {
       "id": "",
@@ -792,12 +1034,12 @@
   "birthday": "",
   "zodiacsign": "星座",
   "icon": "icon/ファントレア.jpg",
-  "hometown": "出身",
+  "hometown": "シルヒューレ",
   "height": "身長",
   "personality": "設定",
   "thinking": "性格",
-  "firstperson": "一人称",
-  "secondperson": "二人称",
+  "firstperson": "私",
+  "secondperson": "君",
   "weapon": "",
   "finisher": {
     "name": "",

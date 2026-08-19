@@ -1,3 +1,5 @@
+@import url("characters.css");
+
 body {
   font-family: 'Sawarabi Mincho', 'Noto Serif JP', serif;
   margin: 0;
@@ -13,19 +15,54 @@ body {
 header, footer {
   text-align: center;
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.4);
   color: #fff;}
 
 nav a {
-  margin: 0 10px;
+  display: block;
+  width: 100%;
+  padding: 0.8rem 0.8rem;
   color: white;
   text-decoration: none;
+  border-radius: 8px;
+  background: var(--panel-soft);
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background: var(--panel-hover);
+}
+.header-open-btn {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1001;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 0.6rem 0.8rem;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
+header.hidden + .header-open-btn {
+  display: inline-flex;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.page-content {
+  margin-left: 240px;
+  padding: 1rem;
+  max-width: 1200px;
+  margin-inline: auto;
+}
 
 #characterList {
   display: flex;

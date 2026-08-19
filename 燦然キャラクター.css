@@ -1,5 +1,9 @@
 @import url("characters.css");
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Sawarabi Mincho', 'Noto Serif JP', serif;
   margin: 0;

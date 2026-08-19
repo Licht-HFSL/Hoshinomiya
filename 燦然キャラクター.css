@@ -31,6 +31,14 @@ nav a:hover {
   background: var(--panel-hover);
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+}
+
 header.hidden {
   position: fixed;
   transform: translateX(-100%);

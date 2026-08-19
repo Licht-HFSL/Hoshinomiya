@@ -28,7 +28,7 @@ header {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  background: var(--panel);
+  background: var(--panel, rgba(0, 0, 0, 0.95));
   z-index: 1000;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -65,7 +65,7 @@ nav a {
   color: #fff;
   text-decoration: none;
   border-radius: 8px;
-  background: var(--panel-soft);
+  background: var(--panel-soft, rgba(255, 255, 255, 0.08));
 }
 
 nav a:hover {
